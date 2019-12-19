@@ -17,35 +17,6 @@ body { color: #fff; background-color: #676767; background-image: url(https://u.c
 .status-msg-wrap { width: 100%!important; margin: 10px auto -18px!important; }
 .status-msg-body { font: 14px/1.4 'Lato', Calibri, Arial, sans-serif!important; background: rgba(0, 0, 0, 0.4)!important; border-radius: 3px!important; border: 1px solid rgba(255, 255, 255, 0.2)!important; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4)!important; padding: 8px 0!important; position: relative!important; }
 
-/*-------------------------------*/
-/*---------- DEFAULT ------------*/
-/*-------------------------------*/
-#container:before { content: "DUVIDAS?"; }
-#container:after { content: "ESTOU AQUI!"; }
-.downTxt:after { content: "toque para entrar"; }
-
-
-.item-0 a::before, .item-0 strong::before { content: "Página Inícial"; }
-a.item-1::before { content: "Sobre"; }
-a.item-2::before { content: "Clãs"; }
-a.item-3::before { content: "Eventos"; }
-a.item-4::before { content: "WhatsApp"; }
-a.item-5::before { content: "Discord"; }
-a.item-6::before { content: "NimoTV"; }
-a.item-7::before { content: "Facebook"; }
-a.item-8::before { content: "YouTube"; }
-a.item-9::before { content: "Ajuda"; }
-a.item-10::before { content: "Desenvolvedor"; }
-
-.hs-line-1::before { content: "Ride Out Heroes"; }
-.hs-line-3::before { content: "Comunidade"; }
-.hs-line-4::before { content: "Criamos a experiencia unica"; }
-.hs-line-4::after { content: "de uma excelente ideia"; }
-
-
-.copyright li:before { content: "Desgin desenvolvido por "; }
-.clearfix li.cl1:before { content: "É proibida qualquer reprodução desta página."; }
-.clearfix li.cl2:before { content: "Desenvolvido no "; }
 
 /*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
