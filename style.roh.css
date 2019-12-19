@@ -37,7 +37,7 @@ a.item-8::before { content: "YouTube"; }
 a.item-9::before { content: "Help"; }
 a.item-10::before { content: "Developer"; }
 
-
+.hs-line-1::before { content: "Ride Out Heroes"; }
 .hs-line-3::before { content: "Community"; }
 .hs-line-4::before { content: "We created the unique experience"; }
 .hs-line-4::after { content: "of an excellent idea."; }
