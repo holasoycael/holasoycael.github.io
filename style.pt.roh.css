@@ -1,0 +1,26 @@
+#container:before { content: "DUVIDAS?"; }
+#container:after { content: "ESTOU AQUI!"; }
+.downTxt:after { content: "toque para entrar"; }
+
+
+.item-0 a::before, .item-0 strong::before { content: "Página Inícial"; }
+a.item-1::before { content: "Sobre"; }
+a.item-2::before { content: "Clãs"; }
+a.item-3::before { content: "Eventos"; }
+a.item-4::before { content: "WhatsApp"; }
+a.item-5::before { content: "Discord"; }
+a.item-6::before { content: "NimoTV"; }
+a.item-7::before { content: "Facebook"; }
+a.item-8::before { content: "YouTube"; }
+a.item-9::before { content: "Ajuda"; }
+a.item-10::before { content: "Desenvolvedor"; }
+
+
+.hs-line-3::before { content: "Comunidade"; }
+.hs-line-4::before { content: "Criamos a experiencia unica"; }
+.hs-line-4::after { content: "de uma excelente ideia"; }
+
+
+.copyright li:before { content: "Desgin desenvolvido por "; }
+.clearfix li.cl1:before { content: "É proibida qualquer reprodução desta página."; }
+.clearfix li.cl2:before { content: "Desenvolvido no "; }

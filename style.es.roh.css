@@ -1,0 +1,26 @@
+#container:before { content: "¿DUDAS?"; }
+#container:after { content: "¡ESTOY AQUI!"; }
+.downTxt:after { content: "toca para entrar"; }
+
+
+.item-0 a::before, .item-0 strong::before { content: "Página de inicio"; }
+a.item-1::before { content: "Acerca de"; }
+a.item-2::before { content: "Clanes"; }
+a.item-3::before { content: "Eventos"; }
+a.item-4::before { content: "WhatsApp"; }
+a.item-5::before { content: "Discord"; }
+a.item-6::before { content: "NimoTV"; }
+a.item-7::before { content: "Facebook"; }
+a.item-8::before { content: "YouTube"; }
+a.item-9::before { content: "Ayuda"; }
+a.item-10::before { content: "Desarrollador"; }
+
+
+.hs-line-3::before { content: "Comunidad"; }
+.hs-line-4::before { content: "Creamos la experiencia única"; }
+.hs-line-4::after { content: "de una excelente idea."; }
+
+
+.copyright li:before { content: "Diseño desarrollado por "; }
+.clearfix li.cl1:before { content: "Se prohíbe la reproducción de esta página."; }
+.clearfix li.cl2:before { content: "Desarrollado en "; }
