@@ -1,5 +1,5 @@
 /*---------- SETTINGS -----------*/
-*{margin:0;outline:0;padding:0;text-align:left;list-style:none;border:none;vertical-align:baseline;outline:none;}
+*{margin:0;outline:0;padding:0;text-align:left;list-style:none;border:none;text-decoration:none;vertical-align:baseline;outline:none;}
 body { color: #fff; background-color: #676767; background-image: url(https://u.cubeupload.com/holasoycael/bggrey.jpg); background-attachment: fixed; background-repeat: repeat; }
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#1ebea5; }
