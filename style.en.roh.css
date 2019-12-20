@@ -1,6 +1,6 @@
-#container:before { content: "DOUBTS?"; }
-#container:after { content: "I'M HERE!"; }
-.downTxt:after { content: "tap to enter"; }
+#container::before { content: "DOUBTS?"; }
+#container::after { content: "WE'RE HERE!"; }
+.downTxt::after { content: "tap the arrow to enter the site"; }
 
 
 .item-0 a::before, .item-0 strong::before { content: "Home page"; }
@@ -21,6 +21,23 @@ a.item-10::before { content: "Developer"; }
 .hs-line-4::after { content: "of an excellent idea."; }
 
 
-.copyright li:before { content: "Design developed by "; }
-.clearfix li.cl1:before { content: "Reproduction of this page is prohibited."; }
-.clearfix li.cl2:before { content: "Developed in "; }
+.copyright li::before { content: "Design developed by "; }
+.clearfix li.cl1::before { content: "Any reproduction of this page is prohibited."; }
+.clearfix li.cl2::before { content: "Developed in "; }
+
+#gallery #title::before { content: "Choose a language:"; }
+
+#pageTitle { font: 0/0 a!IMPORTANT; }
+#pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
+.Sobre::before { content: "About"; }
+.Clãs::before { content: "Clans"; }
+.Eventos::before { content: "Events"; }
+.Ajuda::before { content: "Help"; }
+.Desenvolvedor::before { content: "Developer"; }
+
+.bodyPost list li pre a::before { content: "DETAILS"; }
+
+
+.paging header a.bt1::before { content: "News"; }
+.paging header a.bt2::before { content: "Hall of Fame"; }
+.paging header a.bt3::before { content: "Comments"; }
