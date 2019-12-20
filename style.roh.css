@@ -18,54 +18,6 @@ body { color: #fff; background-color: #676767; background-image: url(https://u.c
 .status-msg-body { font: 14px/1.4 'Lato', Calibri, Arial, sans-serif!important; background: rgba(0, 0, 0, 0.4)!important; border-radius: 3px!important; border: 1px solid rgba(255, 255, 255, 0.2)!important; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4)!important; padding: 8px 0!important; position: relative!important; }
 
 /*-------------------------------*/
-/*---------- DEFAULT ------------*/
-/*-------------------------------*/
-#container::before { content: "DOUBTS?"; }
-#container::after { content: "WE'RE HERE!"; }
-.downTxt::after { content: "tap the arrow to enter the site"; }
-
-
-.item-0 a::before, .item-0 strong::before { content: "Home page"; }
-a.item-1::before { content: "About"; }
-a.item-2::before { content: "Clans"; }
-a.item-3::before { content: "Events"; }
-a.item-4::before { content: "WhatsApp"; }
-a.item-5::before { content: "Discord"; }
-a.item-6::before { content: "NimoTV"; }
-a.item-7::before { content: "Facebook"; }
-a.item-8::before { content: "YouTube"; }
-a.item-9::before { content: "Help"; }
-a.item-10::before { content: "Developer"; }
-
-
-.hs-line-3::before { content: "Community"; }
-.hs-line-4::before { content: "We created the unique experience"; }
-.hs-line-4::after { content: "of an excellent idea."; }
-
-
-.copyright li::before { content: "Design developed by "; }
-.clearfix li.cl1::before { content: "Any reproduction of this page is prohibited."; }
-.clearfix li.cl2::before { content: "Developed in "; }
-
-#gallery #title::before { content: "Choose a language:"; }
-
-#pageTitle { font: 0/0 a!IMPORTANT; }
-#pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
-.Sobre::before { content: "About"; }
-.Clãs::before { content: "Clans"; }
-.Eventos::before { content: "Events"; }
-.Ajuda::before { content: "Help"; }
-.Desenvolvedor::before { content: "Developer"; }
-
-.bodyPost list li pre a::before { content: "DETAILS"; }
-
-
-.paging header a.bt1::before { content: "News"; }
-.paging header a.bt2::before { content: "Hall of Fame"; }
-.paging header a.bt3::before { content: "Comments"; }
-
-
-/*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
 /*-------------------------------*/
 .mp-level ul li a:hover { background: rgba(47, 255, 223, 0.2); }
