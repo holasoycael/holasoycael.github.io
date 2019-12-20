@@ -25,3 +25,20 @@ a.item-10::before { content: "Desarrollador"; }
 .copyright li::before { content: "Diseño desarrollado por "; }
 .clearfix li.cl1::before { content: "Se prohíbe la reproducción de esta página."; }
 .clearfix li.cl2::before { content: "Desarrollado en "; }
+
+#gallery #title::before { content: "Selecciona un idioma:"; }
+
+#pageTitle { font: 0/0 a!IMPORTANT; }
+#pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
+.Sobre::before { content: "Acerca de"; }
+.Clãs::before { content: "Clanes"; }
+.Eventos::before { content: "Eventos"; }
+.Ajuda::before { content: "Ayuda"; }
+.Desenvolvedor::before { content: "Desarrollador"; }
+
+.bodyPost list li pre a::before { content: "DETALLES"; }
+
+
+.paging header a.bt1::before { content: "Boletín"; }
+.paging header a.bt2::before { content: "Salón de la fama"; }
+.paging header a.bt3::before { content: "Comentarios"; }
