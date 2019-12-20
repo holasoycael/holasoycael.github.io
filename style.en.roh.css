@@ -15,6 +15,7 @@ a.item-8::before { content: "YouTube"; }
 a.item-9::before { content: "Help"; }
 a.item-10::before { content: "Developer"; }
 
+.flag { background-position: 0 0; }
 
 .hs-line-3::before { content: "Community"; }
 .hs-line-4::before { content: "We created the unique experience"; }
