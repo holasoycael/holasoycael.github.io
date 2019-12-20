@@ -4,16 +4,16 @@
 
 
 .item-0 a::before, .item-0 strong::before { content: "Página Inícial"; }
-a.item-1::before { content: "Sobre"; }
-a.item-2::before { content: "Clãs"; }
-a.item-3::before { content: "Eventos"; }
+a.item-1::before, .Sobre::before { content: "Sobre"; }
+a.item-2::before, .Clãs::before { content: "Clãs"; }
+a.item-3::before, .Eventos::before { content: "Eventos"; }
 a.item-4::before { content: "WhatsApp"; }
 a.item-5::before { content: "Discord"; }
 a.item-6::before { content: "NimoTV"; }
 a.item-7::before { content: "Facebook"; }
 a.item-8::before { content: "YouTube"; }
-a.item-9::before { content: "Ajuda"; }
-a.item-10::before { content: "Desenvolvedor"; }
+a.item-9::before, .Ajuda::before { content: "Ajuda"; }
+a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 
 .flag { background-position: 0 -32px; }
 
@@ -25,3 +25,14 @@ a.item-10::before { content: "Desenvolvedor"; }
 .copyright li::before { content: "Desgin desenvolvido por "; }
 .clearfix li.cl1::before { content: "É proibida qualquer reprodução desta página."; }
 .clearfix li.cl2::before { content: "Desenvolvido no "; }
+
+#gallery #title::before { content: "Selecione um idioma:"; }
+
+.bodyPost list li pre a::before { content: "DETALHES"; }
+
+#pageTitle { font: 0/0 a!IMPORTANT; }
+#pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
+
+.paging header a.bt1::before { content: "Boletim"; }
+.paging header a.bt2::before { content: "Hall da Fama"; }
+.paging header a.bt3::before { content: "Comentários"; }
