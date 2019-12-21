@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-		$('.down').on('click',function (e) {
-	    e.preventDefault();
+	$('.down').on('click',function (e) {
+	e.preventDefault();
 
       	$("body").removeClass("hide");
 	    var target = '.frame';
