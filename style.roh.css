@@ -114,7 +114,7 @@ h3.post-title.entry-title a { text-decoration: none; color: unset; }
 /*-------------------------------*/
 #titleComment { display: inline-table; margin: 10px 0; }
 #comments { background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4); border-radius: 3px; padding: 4px 22px; margin-bottom: 16px; }
-#comments &gt; h4 { margin: 14px 0; }
+#comments > h4 { margin: 14px 0; }
 h4.tileCom { margin: 14px 0; }
 #titleComment h4 { font-size: 14px; font-family: Tahoma, Verdana, Arial, Lucida Grande; font-weight: 700; margin: 0px 0 0 15px; float: left; }
 #titleComment:before { width: 0; height: 0; border: 0.313em solid transparent; border-bottom: none; border-top-color: #ffffff; content: ''; vertical-align: middle; display: inline-block; position: relative; right: -0.413em; }
@@ -313,7 +313,7 @@ div.paging {
   overflow:hidden;
 }
 
-#flip &gt; div &gt; div {
+#flip > div > div {
   color:#fff;
   padding: 0px 12px;
 	height: 47px;
