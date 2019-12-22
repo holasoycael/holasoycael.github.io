@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var jaFoiVistoNasUltimas24Horas = getCookie('nomeCookiePopUp');
+		var jaFoiVistoNasUltimas24Horas = getCookie('nomeCookiePopUp');
         var id = $('#GalleryThemes');
         var hd = $('#mascara');
 
@@ -13,22 +13,22 @@ $(document).ready(function(){
 	}
 
 	function mostrarOuNaoPopUp(condicao){
-	if(condicao=='mostrarSim'){
+		if(condicao=='mostrarSim'){
 
-	//Código para MOSTRAR o pop up
+		//Código para MOSTRAR o pop up
         $(id).show();
         $(hd).fadeIn(0);
-	$(hd).fadeTo("slow",0.6);
+		$(hd).fadeTo("slow",0.6);
 
-	definirNovaDataExpiracao();
-	}else if(condicao=='mostrarNao'){
+		definirNovaDataExpiracao();
+		}else if(condicao=='mostrarNao'){
 
-	//Código para NÃO MOSTRAR pop up
+		//Código para NÃO MOSTRAR pop up
         $(id).hide();
         $(hd).hide();
 
+		}
 	}
-}
 	function definirNovaDataExpiracao(){
 		var data=new Date();
 		var numeroDeDiasParaExpiracao=1;//1 dia
