@@ -40,7 +40,7 @@ $(document).ready(function(){
 	function getCookie(nomeCookie){
 		var ca=document.cookie.split(';');
 		var name=nomeCookie+'=';
-		for(var i=0;i&lt;ca.length;i++){
+		for(var i=0;i<ca.length;i++){
 			var c=ca[i].trim();
 			if(c.indexOf(name)==0){
 				return c.substring(name.length,c.length);
