@@ -1,4 +1,6 @@
+//<![CDATA[
 $(document).ready(function(){
+
 
 		var jaFoiVistoNasUltimas24Horas = getCookie('nomeCookiePopUp');
         var id = $('#GalleryThemes');
@@ -31,7 +33,7 @@ $(document).ready(function(){
 	}
 	function definirNovaDataExpiracao(){
 		var data=new Date();
-		var numeroDeDiasParaExpiracao=1;//1 dia
+		var numeroDeDiasParaExpiracao=30;//30 dias
 		data.setTime(data.getTime()+(numeroDeDiasParaExpiracao*24*60*60*1000));
 		var expires="expires="+data.toUTCString();
 		var cookie='nomeCookiePopUp="Ainda não espirou";'+expires;
@@ -40,7 +42,7 @@ $(document).ready(function(){
 	function getCookie(nomeCookie){
 		var ca=document.cookie.split(';');
 		var name=nomeCookie+'=';
-		for(var i=0;i&lt;ca.length;i++){
+		for(var i=0;i<ca.length;i++){
 			var c=ca[i].trim();
 			if(c.indexOf(name)==0){
 				return c.substring(name.length,c.length);
@@ -73,3 +75,4 @@ $(document).ready(function(){
     });
 
 });
+//]]>
