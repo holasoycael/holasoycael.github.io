@@ -3,20 +3,15 @@
 body { color: #fff; background-color: #676767; background-image: url(https://u.cubeupload.com/holasoycael/bggrey.jpg); background-attachment: fixed; background-repeat: repeat; }
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#1ebea5; }
-
+.active { height: 100%; overflow: hidden; }
+.inline { overflow-y: scroll; }
+.trfrom { transform: translate3d(220px, 0px, 0px); }
 .disabl { pointer-events: none; }
 .navbar { content: ""; background-repeat: no-repeat; background-size: contain; background-position: center 46px; background-attachment: fixed; position: fixed; width: 100%; height: 960px; display: block; z-index: -999; animation: 60s; top: 0; }
 .navbar.White { background-image: url(https://u.cubeupload.com/holasoycael/bgwhitegrey.png); }
 .navbar.Lilith { background-image: url(https://u.cubeupload.com/holasoycael/backgrounLilith.png); }
 .container { overflow-x: hidden; }
-.flag {
-    width: 48px;
-    background: url(https://u.cubeupload.com/holasoycael/flag.png);
-    height: 32px;
-    position: absolute;
-    right: 24px;
-    top: 16px;
-}
+.flag { width: 48px; background: url(https://u.cubeupload.com/holasoycael/flag.png); height: 32px; position: absolute; right: 24px; top: 60px; }
 
 /*---------- NOT FOUND ----------*/
 .status-msg-wrap { width: 100%!important; margin: 10px auto -18px!important; }
@@ -27,18 +22,7 @@ body { color: #fff; background-color: #676767; background-image: url(https://u.c
 /*-------------------------------*/
 .mp-level ul li a:hover { background: rgba(47, 255, 223, 0.2); }
 li.home a:hover { background: #1ebea5!important; }
-.pushmenu {
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    width: 220px;
-    height: 100%;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-}
+.pushmenu { background: white; position: absolute; top: 0; left: 0; z-index: 1; width: 220px; height: 100%; -webkit-transform: translate3d(-100%, 0, 0); -moz-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); }
 .filte::before { content: ""; width: 100%; height: 100%; opacity: 1; -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s; transition: opacity 0.3s; background: rgba(0,0,0,0.3); -webkit-transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s; -moz-transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s; transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s; z-index: 999; display: block; position: absolute; cursor: no-drop; }
 .mp-level ul li a, .mp-level ul li strong { outline: none; box-shadow: inset 0 -1px rgba(0,0,0,0.2); text-shadow: 0 0 1px rgba(255,255,255,0.1); -webkit-transition: background 0.3s, box-shadow 0.3s; -moz-transition: background 0.3s, box-shadow 0.3s; transition: background 0.3s, box-shadow 0.3s; color: rgb(80, 80, 80); text-decoration: none; display: block; padding: 10px 10px 10px 20px; height: 40px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; font: 100 16px/20px 'Lato', Calibri, Arial, sans-serif; text-transform: lowercase; }
 .mp-level .home a, .mp-level .home strong { background: #1ebea5; font: bold 16px/22px 'Open Sans', Helvetica, sans-serif; padding: 12px 20px; color: #fff; height: 46px; box-shadow: none; }
@@ -46,15 +30,7 @@ li.home a:hover { background: #1ebea5!important; }
 /*-------------------------------*/
 /*----------- HEADER ------------*/
 /*-------------------------------*/
-.ct-header {
-    float: left;
-    background: #1ebea5;
-    height: 46px;
-    z-index: 10000;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-}
+.ct-header { background: #1ebea5; position: fixed; width: 100%; top: 0; left: 0; height: 46px; z-index: 10000; }
 #search, p.btn-menu { float: left; }
 #search { overflow: hidden; margin: 10px; }
 #search #txtPesquisar { color: #43ffdc; padding: 6px 8px; font-size: 16px; letter-spacing: 0.6px; height: 14px; background: #189884; float: left; }
@@ -174,11 +150,7 @@ h4.tileCom { margin: 14px 0; }
 #footer a { color: #fff; }
 
 /*---------- HOARDING -----------*/
-#outdoor {
-    font: 14px/1.4 'Lato', Calibri, Arial, sans-serif;
-    margin-top: 36px;
-    margin-bottom: -20px;
-}
+#outdoor { font: 14px/1.4 'Lato', Calibri, Arial, sans-serif; margin-top: 80px; margin-bottom: -20px; }
 #outdoor div { text-align: center; }
 #outdoor strong { font-weight: 700; color: #2fffdf; text-shadow: 2px 0px #189884; }
 .srx { max-width: 370px; margin: 20px auto; }
@@ -222,6 +194,9 @@ li.listStyle:before { content: counter(mynum) "# "; counter-increment: mynum; fo
 .PopularPosts a { color: #fff; text-decoration: none; }
 
 
+
+
+.none { display: none; }
 
 section#inside {
     overflow: hidden;
