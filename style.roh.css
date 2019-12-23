@@ -193,9 +193,6 @@ li.listStyle:before { content: counter(mynum) "# "; counter-increment: mynum; fo
 
 
 
-
-.none { display: none; }
-
 section#inside {
     overflow: hidden;
 }
