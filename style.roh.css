@@ -166,7 +166,11 @@ h4.tileCom { margin: 14px 0; }
 #footer a { color: #fff; }
 
 /*---------- HOARDING -----------*/
-#outdoor { font: 14px/1.4 'Lato', Calibri, Arial, sans-serif; margin-top: 80px; margin-bottom: -20px; }
+#outdoor {
+    font: 14px/1.4 'Lato', Calibri, Arial, sans-serif;
+    margin-top: 36px;
+    margin-bottom: -20px;
+}
 #outdoor div { text-align: center; }
 #outdoor strong { font-weight: 700; color: #2fffdf; text-shadow: 2px 0px #189884; }
 .srx { max-width: 370px; margin: 20px auto; }
