@@ -196,19 +196,7 @@ li.listStyle:before { content: counter(mynum) "# "; counter-increment: mynum; fo
 
 
 
-.none { display: none; }
 
-section#inside {
-    overflow: hidden;
-}
-div.paging {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font: 16px 'Lato', Calibri, Arial, sans-serif;
-    position: relative;
-    z-index: 999999;
-}
 .paging header {
     background: #fff;
     position: absolute;
