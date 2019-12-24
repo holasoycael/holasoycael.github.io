@@ -3,10 +3,7 @@
 body { color: #fff; background-color: #676767; background-image: url(https://u.cubeupload.com/holasoycael/bggrey.jpg); background-attachment: fixed; background-repeat: repeat; }
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#1ebea5; }
-.active { height: 100%; overflow: hidden; }
-.inline { overflow-y: scroll; }
-.trfrom { transform: translate3d(220px, 0px, 0px); }
-.disabl { pointer-events: none; }
+
 .navbar { content: ""; background-repeat: no-repeat; background-size: contain; background-position: center 46px; background-attachment: fixed; position: fixed; width: 100%; height: 960px; display: block; z-index: -999; animation: 60s; top: 0; }
 .navbar.White { background-image: url(https://u.cubeupload.com/holasoycael/bgwhitegrey.png); }
 .navbar.Lilith { background-image: url(https://u.cubeupload.com/holasoycael/backgrounLilith.png); }
