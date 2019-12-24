@@ -176,7 +176,7 @@ h4.tileCom { margin: 14px 0; }
 .support ul { padding-left: 26px; float: left; width: max-content; }
 .support li { list-style: decimal; line-height: 1.7; }
 .support ul ~div[id] { display:none; }
-.support div[id]:target { background: rgba(255,255,255,0.1); counter-reset: mynum; border-radius: 3px; border: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); padding: 8px 12px; margin: 14px 7px 6px; clear: left; display: inline-block; width: 100%; }
+.support div[id]:target { background: rgba(255,255,255,0.1); counter-reset: mynum; border-radius: 3px; border: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); padding: 8px 12px; margin: 14px 7px 6px; clear: left; display: inline-block; width: 94%; }
 .item li:before { content: counter(mynum) ". "; counter-increment: mynum; color: #2ef2d4; }
 .item li { color: #f2b81c; list-style: none; }
 .item li b { color: #fff; }
