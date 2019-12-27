@@ -39,7 +39,7 @@ li.home a:hover { background: #1ebea5!important; }
 /*-------------------------------*/
 /*----------- POSTAGE -----------*/
 /*-------------------------------*/
-.main, #main { margin: 60px 15px 0px; }
+.main, #main { padding: 60px 15px 0px; }
 .postBody { width: 100%!important; background: rgba(0, 0, 0, 0.4); border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4); font-family: 'Lato', Calibri, Arial, sans-serif!important; font-style: italic; text-shadow: 1px 2px rgba(0, 0, 0, 0.7); margin: 0 auto 11px!important; display: block; line-height: 37px; height: 37px; }
 .postBody a { color: #2fffdf; text-decoration: none; }
 .post-location { width: 44px; margin-left: 8px; }
