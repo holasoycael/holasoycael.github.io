@@ -169,6 +169,7 @@ h4.tileCom { margin: 14px 0; }
 
 /*---------- SUPPORT ------------*/
 .support { display: table; }
+.support ul { width: 100%; }
 .support ul { padding-left: 26px; float: left; width: max-content; }
 .support li { list-style: decimal; line-height: 1.7; }
 .support ul ~div[id] { display:none; }
