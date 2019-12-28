@@ -6,10 +6,10 @@ body { color: #fff; background-color: #676767; background-image: url(https://u.c
 body { overflow-y: scroll; overflow-x: hidden; height: 100%; }
 .hide { overflow:hidden }
 .none { display: none; }
-.trfrom { transform: translate3d(220px, 0px, 0px); }
+.trfrom { transform: translate3d(220px, 0px, 0px)!IMPORTANT; }
 .disabl { pointer-events: none; }
-.m-push { transform: translate3d(0px, 0px, 0px); }
-.n-push { transform: translate3d(220px, 0px, 0px); }
+.m-push { transform: translate3d(0px, 0px, 0px)!IMPORTANT; }
+.n-push { transform: translate3d(220px, 0px, 0px)!IMPORTANT; }
 .none { display: none; }
 .navbar { content: ""; background-repeat: no-repeat; background-size: contain; background-position: center 46px; background-attachment: fixed; position: fixed; width: 100%; height: 960px; display: block; z-index: -999; animation: 60s; top: 0; }
 .navbar.White { background-image: url(https://u.cubeupload.com/holasoycael/bgwhitegrey.png); }
