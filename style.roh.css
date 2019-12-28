@@ -38,7 +38,7 @@ li.home a:hover { background: #1ebea5!important; }
 #search { overflow: hidden; margin: 10px; }
 #search #txtPesquisar { color: #43ffdc; padding: 6px 8px; font-size: 16px; letter-spacing: 0.6px; height: 14px; background: #189884; float: left; }
 #search #txtPesquisar:focus { box-shadow: inset 0px 1px #034e41; }
-#inputSubmit { width: 33px; color: #2fffdf; padding: 5.5px; background-color: #16ad96; background-image: url(https://u.cubeupload.com/holasoycael/search.png); background-repeat: no-repeat; background-position: 7px 4px; background-size: 52%; border-width: 0 0 1px 0; border-style: solid; border-color: #2fffdf; }
+#inputSubmit { width: 33px; color: #2fffdf; padding: 5.5px; background-color: #16ad96; background-image: url(https://u.cubeupload.com/holasoycael/search.png); background-repeat: no-repeat; background-position: 7px 4px; background-size: 52%; border-width: 0 0 1px 0; border-style: solid; border-color: #2fffdf; cursor: pointer; }
 #inputSubmit:active { border-width: 1px 0 0; }
 .trigger { position: relative; width: 56px; height: 46px; display: block; }
 .trigger:before { position: absolute; top: 13px; left: 13px; width: 36px; height: 4px; background: #000; box-shadow: 0 4px rgb(0, 0, 0, 0), 0 8px #000, 0 12px rgb(0, 0, 0, 0), 0 16px #000; content: ''; z-index: 9; }
