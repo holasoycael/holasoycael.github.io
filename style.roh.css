@@ -205,6 +205,7 @@ section#inside { overflow: hidden; }
 .member div { border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding-bottom: 8px; margin-bottom: 8px; }
 .member li { margin-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 0 12px 8px; }
 .member li:before { content: ""; width: 18px; height: 18px; background-image: url(https://u.cubeupload.com/holasoycael/members.png); background-position: 0 -36px; background-size: 100%; position: relative; margin: 2px 12px 0 0; float: left; }
+.member li b::before { content: "#"; margin-left: 10px; }
 .member li.adm:before { background-position: 0 -18px; }
 .member li.pres:before { background-position: 0 0; }
 .member div li:before { color: #ff5252; }
