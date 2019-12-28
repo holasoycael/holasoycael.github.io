@@ -3,7 +3,14 @@
 body { color: #fff; background-color: #676767; background-image: url(https://u.cubeupload.com/holasoycael/bggrey.jpg); background-attachment: fixed; background-repeat: repeat; }
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#1ebea5; }
-
+body { overflow-y: scroll; overflow-x: hidden; height: 100%; }
+.hide { overflow:hidden }
+.none { display: none; }
+.trfrom { transform: translate3d(220px, 0px, 0px); }
+.disabl { pointer-events: none; }
+.m-push { transform: translate3d(0px, 0px, 0px); }
+.n-push { transform: translate3d(220px, 0px, 0px); }
+.none { display: none; }
 .navbar { content: ""; background-repeat: no-repeat; background-size: contain; background-position: center 46px; background-attachment: fixed; position: fixed; width: 100%; height: 960px; display: block; z-index: -999; animation: 60s; top: 0; }
 .navbar.White { background-image: url(https://u.cubeupload.com/holasoycael/bgwhitegrey.png); }
 .navbar.Lilith { background-image: url(https://u.cubeupload.com/holasoycael/backgrounLilith.png); }
@@ -43,49 +50,18 @@ li.home a:hover { background: #1ebea5!important; }
 .postBody { width: 100%!important; background: rgba(0, 0, 0, 0.4); border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4); font-family: 'Lato', Calibri, Arial, sans-serif!important; font-style: italic; text-shadow: 1px 2px rgba(0, 0, 0, 0.7); margin: 0 auto 11px!important; display: block; line-height: 37px; height: 37px; }
 .postBody a { color: #2fffdf; text-decoration: none; }
 .post-location { width: 44px; margin-left: 8px; }
-.post-location li {
-    width: 32px;
-    height: 21px;
-    overflow: hidden;
-    display: -webkit-inline-box;
-    padding: 0!important;
-    background: url(https://u.cubeupload.com/holasoycael/flagcm.png) no-repeat 0px 0px;
-    margin: 7.5px 0;
-}
-.post-location li.arg {
-    background-position: 0px 0;
-}
-.post-location li.chi {
-    background-position: 0px -21px;
-}
-.post-location li.usa {
-    background-position: 0px -42px;
-}
-.post-location li.ven {
-    background-position: 0px -63px;
-}
-.post-location li.can {
-    background-position: 0px -84px;
-}
-.post-location li.uru {
-    background-position: 0px -105px;
-}
-.post-location li.col {
-    background-position: 0px -126px;
-}
-.post-location li.mex {
-    background-position: 0px -147px;
-}
-.post-location li.bra {
-    background-position: 0px -168px;
-}
-.post-location li.per {
-    background-position: 0px -189px;
-}
-.post-location li.par {
-    background-position: 0px -210px;
-}
-
+.post-location li { width: 32px; height: 21px; overflow: hidden; display: -webkit-inline-box; padding: 0!important; background: url(https://u.cubeupload.com/holasoycael/flagcm.png) no-repeat 0px 0px; margin: 7.5px 0; }
+.post-location li.arg { background-position: 0px 0; }
+.post-location li.chi { background-position: 0px -21px; }
+.post-location li.usa { background-position: 0px -42px; }
+.post-location li.ven { background-position: 0px -63px; }
+.post-location li.can { background-position: 0px -84px; }
+.post-location li.uru { background-position: 0px -105px; }
+.post-location li.col { background-position: 0px -126px; }
+.post-location li.mex { background-position: 0px -147px; }
+.post-location li.bra { background-position: 0px -168px; }
+.post-location li.per { background-position: 0px -189px; }
+.post-location li.par { background-position: 0px -210px; }
 h3.post-title.entry-title { font-size: 22px!important; width: max-content; z-index: 99; }
 h3.post-title.entry-title, li.chief { font-family: 'Rancho', Calibri, Arial, sans-serif; letter-spacing: 1px; font-weight: 400; }
 h3.post-title.entry-title a:hover { text-shadow: 1px 1px #189884; }
@@ -94,6 +70,7 @@ h3.post-title.entry-title a { text-decoration: none; color: unset; }
 .entry-content a { color: #000; text-decoration: none; }
 .postBody .post-location, .postBody .title, .entry-content { height: 37px; float: left; }
 .postBody .title { margin: 0 -2px; }
+
 /*-------------------------------*/
 /*---------- INFOPOST -----------*/
 /*-------------------------------*/
@@ -105,7 +82,7 @@ h3.post-title.entry-title a { text-decoration: none; color: unset; }
 .input-small { float: right; width: 100px; overflow: hidden; background: rgba(0, 0, 0, 0.4); border: 1px rgb(0, 0, 0) solid; border-top: 1px rgb(0, 0, 0) solid; border-bottom: 1px rgb(0, 0, 0) solid; -moz-box-shadow: inset 1px -1px 2px rgb(0, 0, 0), 0px 1px 0px #565656; -webkit-box-shadow: inset 1px -1px 2px rgb(0, 0, 0), 0px 1px 0px #565656; box-shadow: inset 1px -1px 2px rgb(0, 0, 0), 0px 1px 0px #565656; padding: 3px; height: 18px; }
 .input-small textarea[type="text"] { color: rgb(255, 255, 255); float: left; font-family: Inherit; overflow: hidden; resize: none; line-height: 18px; background: transparent; font-size: 12px; }
 
-
+/*-------------------------------*/
 /*---------- COMMENTS -----------*/
 /*-------------------------------*/
 #titleComment { display: inline-table; margin: 10px 0; }
@@ -172,17 +149,8 @@ h4.tileCom { margin: 14px 0; }
 .support ul { width: 100%; padding-left: 26px; float: left; }
 .support li { list-style: decimal; line-height: 1.7; }
 .support ul ~div[id] { display:none; }
-.support div[id]:target {
-    background: rgba(255,255,255,0.1);
-    counter-reset: mynum;
-    border-radius: 3px;
-    border: 1px solid rgba(0,0,0,0.4);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
-    padding: 8px 12px;
-    margin: 14px 7px 6px;
-    display: block;
-    float: left;
-}
+.support .item .desc { margin: 0 0 12px; padding: 0 0 14px; border-bottom: 1px dashed #ccc; }
+.support div[id]:target { background: rgba(255,255,255,0.1); counter-reset: mynum; border-radius: 3px; border: 1px solid rgba(0,0,0,0.4);  box-shadow: 0 0 0 1px rgba(255,255,255,0.1); padding: 8px 12px; margin: 14px 7px 6px; display: block; float: left; }
 .item li:before { content: counter(mynum) ". "; counter-increment: mynum; color: #2ef2d4; }
 .item li { color: #f2b81c; list-style: none; }
 .item li b { color: #fff; }
@@ -199,284 +167,60 @@ li.listStyle:before { content: counter(mynum) "# "; counter-increment: mynum; fo
 .PopularPosts li:last-child { margin-bottom: 0px!important; }
 .PopularPosts a { color: #fff; text-decoration: none; }
 
+/*-------------------------------*/
+/*--------- FIRST PAGE ----------*/
+/*-------------------------------*/
+.paging { top: 0; width: 100%; height: 100%; overflow: hidden; font: 16px 'Lato', Calibri, Arial, sans-serif; position: fixed; z-index: 999999; left: 0; display: block; }
+.paging header { background: #fff; position: absolute; left: 0; top: 0; width: 100%; height: 2.7rem; z-index: 10; }
+.paging nav { width: 100%; padding: 0.5rem 0; }
+.paging nav ul { margin: 0 0.5rem; list-style: none; width: inherit; }
+.paging nav ul li { background: rgb(30, 170, 190); display: inline-block; border-radius: 2px; line-height: 1.7; }
+.paging nav ul li a { color: #fff; padding: 0.3rem 0.5rem; text-decoration: none; }
+section#inside { overflow: hidden; }
+.panel { width: 100%; height: 100vh; z-index: 0; backface-visibility: hidden; display: none; }
+.panel:first-child { background: rgb(30, 170, 190); }
+.panel { background: rgb(38, 46, 62); }
+.panel:last-child { background: rgb(30, 190, 136); }
+.panel.help { display: block; }
+.down { width: 66px; color: transparent; padding: 10px 0; font-size: 0; z-index: 1; }
+.down::before, .down::after { box-sizing: border-box; -webkit-transform: translateX(3px) rotate(35deg); -webkit-transform-origin: bottom; background-color: #fff; color: #fff; content: ""; cursor: pointer; display: inline-block; height: .1875rem; transform: translateX(3px) rotate(35deg); transform-origin: bottom; width: 2.0625rem; }
+.down::after { -webkit-transform: translateX(-3px) rotate(-35deg); transform: translateX(-3px) rotate(-35deg); }
+#container, #container div { text-align: center; }
+#container { color: #fff; text-transform: uppercase; font-size: 38px; font-weight: bold; padding-top: 200px; position: absolute; width: 100%; bottom: 45%; display: block; }
+#flip { height:45px; overflow:hidden; }
+#flip > div > div { color:#fff; padding: 0px 12px; height: 47px; margin-bottom: 43px; display:inline-block; }
+#flip div:first-child { animation: show 10s linear infinite; }
+#flip div div { background: #42c58a; position: relative; text-transform: none; top: -2px; }
+#flip div:first-child div { background:#4ec7f3; }
+#flip div:last-child div { background: #DC143C; }
+@keyframes show { 0% {margin-top:-900px;} 5% {margin-top:-810px;} 10% {margin-top:-810px;} 15% {margin-top:-720px;} 20% {margin-top:-720px;} 25% {margin-top:-630px;} 30% {margin-top:-630px;} 35% {margin-top:-540px;} 40% {margin-top:-540px;} 45% {margin-top:-450px;} 50% {margin-top:-450px;} 55% {margin-top:-360px;} 60% {margin-top:-360px;} 65% {margin-top:-270px;} 70% {margin-top:-270px;} 75% {margin-top:-180px;} 80% {margin-top:-180px;} 85% {margin-top:-90px;} 90% {margin-top:-90px;} 95% {margin-top:0px;} 99.99% {margin-top:0px;} 100% {margin-top:-900px;} }
+.btnDown { bottom: 2vh; color: transparent; padding: 10px 0; left: 2vh; position: absolute; z-index: 2; }
+.downTxt { color: #000; padding: 6px 8px; opacity: 0.5; bottom: 5.5vh; left: 1vh; width: max-content; position: absolute; font-size: 13px; -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5); box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5); background-color: #FFFFFF; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+.downTxt:before { content: ""; float: left; position: absolute; top: 28px; left: 18px; width: 0; height: 0; border-color: #fff transparent; border-style: solid; border-width: 7px 7px 0px 7px; }
+.commentPanel { padding: 62px 22px 22px 54px; margin-bottom: 16px; }
+.topComment .permalink { width: 16px; float: right; background: url(https://u.cubeupload.com/holasoycael/iconcmmt.png); height: 13px; margin: 0px; }
+.avatar-image-container { height: 37px; left: 9px; position: absolute; width: 37px; }
 
+/*----------- CLANS -------------*/
+.member ul { counter-reset: mynum; }
+.member div { border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding-bottom: 8px; margin-bottom: 8px; }
+.member li { margin-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding: 0 12px 8px; }
+.member li:before { color: #88f; content: counter(mynum) " "; counter-increment: mynum; font-weight: bold; position: relative; margin-right: 12px; float: left; }
+.member div li:before { color: #ff5252; }
+.member div li:first-child:before { color: #ffff6f; }
+.member li:last-child { border: none; padding-bottom: 0; margin: 0; }
+.topPage { background: rgba(255, 255, 255, 0.2); position: relative; display: flex; margin: -14px -14px 12px; padding: 12px 16px 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+.topPage p { position: relative; display: inline-table; margin-left: 8px; }
+.topPage p:before { content: ""; position: relative; margin-right: 11px; left: 4px; display: -webkit-inline-box; color: #aaa; width: 18px; height: 18px; background: url(https://u.cubeupload.com/holasoycael/quote.png) center no-repeat; }
 
-
-
-.paging header {
-    background: #fff;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 2.7rem;
-    z-index: 10;
-}
-.paging nav {
-    width: 100%;
-    padding: 0.5rem 0;
-}
-.paging nav ul {
-    margin: 0 0.5rem;
-    list-style: none;
-    width: inherit;
-}
-.paging nav ul li {
-	background: rgb(30, 170, 190);
-    display: inline-block;
-    border-radius: 2px;
-    line-height: 1.7;
-}
-.paging nav ul li a {
-    color: #fff;
-    padding: 0.3rem 0.5rem;
-    text-decoration: none;
-}
-.panel {
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-
-    backface-visibility: hidden;
-	display: none;
-}
-.panel:first-child {
-	background: rgb(30, 170, 190);
-}
-.panel {
-	background: rgb(38, 46, 62);
-}
-.panel:last-child {
-    background: rgb(30, 190, 136);
-}
-.panel.help {
-    display: block;
-}
-
-
-
-
-
-.down {
-    width: 66px;
-    color: transparent;
-    padding: 10px 0;
-    font-size: 0;
-    z-index: 1;
-}
-.down::before, .down::after {
-	box-sizing: border-box;
-	-webkit-transform: translateX(3px) rotate(35deg);
-    -webkit-transform-origin: bottom;
-    background-color: #fff;
-    color: #fff;
-    content: "";
-    cursor: pointer;
-    display: inline-block;
-    height: .1875rem;
-    transform: translateX(3px) rotate(35deg);
-    transform-origin: bottom;
-    width: 2.0625rem;
-}
-.down::after {
-    -webkit-transform: translateX(-3px) rotate(-35deg);
-    transform: translateX(-3px) rotate(-35deg);
-}
-
-
-
-
-
-#container, #container div {
-    text-align: center;
-}
-#container {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 38px;
-    font-weight: bold;
-    padding-top: 200px;
-    position: absolute;
-    width: 100%;
-    bottom: 45%;
-    display: block;
-}
-
-#flip {
-  height:45px;
-  overflow:hidden;
-}
-
-#flip > div > div {
-  color:#fff;
-  padding: 0px 12px;
-	height: 47px;
-    margin-bottom: 43px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 10s linear infinite;
-}
-
-#flip div div {
-    background: #42c58a;
-    position: relative;
-    text-transform: none;
-    top: -2px;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-    background: #DC143C;
-}
-@keyframes show {
-  0% {margin-top:-900px;}
-  5% {margin-top:-810px;}
-  10% {margin-top:-810px;}
-  15% {margin-top:-720px;}
-  20% {margin-top:-720px;}
-  25% {margin-top:-630px;}
-  30% {margin-top:-630px;}
-  35% {margin-top:-540px;}
-  40% {margin-top:-540px;}
-  45% {margin-top:-450px;}
-  50% {margin-top:-450px;}
-  55% {margin-top:-360px;}
-  60% {margin-top:-360px;}
-  65% {margin-top:-270px;}
-  70% {margin-top:-270px;}
-  75% {margin-top:-180px;}
-  80% {margin-top:-180px;}
-  85% {margin-top:-90px;}
-  90% {margin-top:-90px;}
-  95% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-900px;}
-}
-
-
-.btnDown {
-    bottom: 2vh;
-    color: transparent;
-    padding: 10px 0;
-    left: 2vh;
-    position: absolute;
-    z-index: 2;
-}
-.downTxt {
-    color: #000;
-    padding: 6px 8px;
-    opacity: 0.5;
-    bottom: 5.5vh;
-    left: 1vh;
-    width: max-content;
-    position: absolute;
-    font-size: 13px;
-    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
-    background-color: #FFFFFF;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-}
-.downTxt:before {
-    content: "";
-    float: left;
-    position: absolute;
-    top: 28px;
-    left: 18px;
-    width: 0;
-    height: 0;
-    border-color: #fff transparent;
-    border-style: solid;
-    border-width: 7px 7px 0px 7px;
-}
-
-.commentPanel {
-    padding: 62px 22px 22px 54px;
-    margin-bottom: 16px;
-}
-.topComment .permalink {
-    width: 16px;
-    float: right;
-    background: url(https://u.cubeupload.com/holasoycael/iconcmmt.png);
-    height: 13px;
-    margin: 0px;
-}
-
-
-
-
-
-
-
-
-
-.member ul {
-    counter-reset: mynum;
-}
-.member div {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-}
-.member li {
-    margin-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0 12px 8px;
-}
-.member li:before {
-	color: #88f;
-    content: counter(mynum) " ";
-    counter-increment: mynum;
-    font-weight: bold;
-    position: relative;
-    margin-right: 12px;
-    float: left;
-}
-.member div li:before {
-    color: #ff5252;
-}
-.member div li:first-child:before {
-    color: #ffff6f;
-}
-.member li:last-child {
-    border: none;
-    padding-bottom: 0;
-    margin: 0;
-}
-.topPage {
-    background: rgba(255, 255, 255, 0.2);
-    position: relative;
-    display: flex;
-    margin: -14px -14px 12px;
-    padding: 12px 16px 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.topPage p {
-    position: relative;
-    display: inline-table;
-    margin-left: 8px;
-}
-.topPage p:before {
-    content: "";
-    position: relative;
-    margin-right: 11px;
-    left: 4px;
-    display: -webkit-inline-box;
-    color: #aaa;
-    width: 18px;
-    height: 18px;
-    background: url(https://u.cubeupload.com/holasoycael/quote.png) center no-repeat;
-}
-
-.selectIdiom {
-    z-index: 9999999;
-    position: absolute;
-    top: 100px;
-}
+/*----------- MODAL -------------*/
+#gallery { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; float: left; display: block; overflow: hidden; }
+#gallery #title { font-size: 16px; font-weight: 400; color: #3d464d; padding: 14px 18px; border-bottom: 1px solid #d0d4d9; }
+#gallery ul { width: 180px; background: #f6fcf9; padding: 20px; }
+#gallery ul, #gallery a { overflow: hidden; float: left; display: inline-grid; }
+#gallery li { margin: 6px 0; overflow: hidden; float: left; display: block; }
+#gallery strong { color: #1ebea5; font-size: 14px; font-weight: 400; }
+.window { display: none; position: fixed; left: 0; top: 0; background: rgba(255, 255, 255, .3); z-index: 9999999; padding: 9px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; font-family: 'Open Sans', arial, sans-serif; font-weight: 400; }
+.night { background: #fff; }
+#mascara { display: none; position: absolute; left: 0; top: 0; z-index: 999999; background-color: #000; width: 100%; height: 100%; }
+.selectIdiom { z-index: 9999999; position: absolute; top: 100px; }
