@@ -1,8 +1,12 @@
+/*--------- CONTENT ---------*/
+.paging header a.bt1::before { content: "Boletim"; }
+.paging header a.bt2::before { content: "Hall da Fama"; }
+.paging header a.bt3::before { content: "Comentários"; }
 #container::before { content: "DUVIDAS?"; }
 #container::after { content: "ESTOU AQUI!"; }
 .downTxt::after { content: "toque para entrar"; }
 
-
+/*---------- MAIN -----------*/
 .item-0 a::before, .item-0 strong::before { content: "Página Inícial"; }
 a.item-1::before, .Sobre::before { content: "Sobre"; }
 a.item-2::before, .Clãs::before { content: "Clãs"; }
@@ -15,24 +19,56 @@ a.item-8::before { content: "YouTube"; }
 a.item-9::before, .Ajuda::before { content: "Ajuda"; }
 a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 
+/*---------- DOOOR ----------*/
 .flag { background-position: 0 -32px; }
-
 .hs-line-3::before { content: "Comunidade"; }
 .hs-line-4::before { content: "Criamos a experiencia unica"; }
 .hs-line-4::after { content: "de uma excelente ideia"; }
 
-
+/*--------- FOOTER ----------*/
 .copyright li::before { content: "Desgin desenvolvido por "; }
 .clearfix li.cl1::before { content: "É proibida qualquer reprodução desta página."; }
 .clearfix li.cl2::before { content: "Desenvolvido no "; }
 
+/*---------- OTHER ----------*/
 #gallery #title::before { content: "Selecione um idioma:"; }
-
-.bodyPost list li pre a::before { content: "DETALHES"; }
-
 #pageTitle { font: 0/0 a!IMPORTANT; }
 #pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
+.pagenavi .pages::before { content: "página"; }
 
-.paging header a.bt1::before { content: "Boletim"; }
-.paging header a.bt2::before { content: "Hall da Fama"; }
-.paging header a.bt3::before { content: "Comentários"; }
+/*------- PAGE CLANS --------*/
+.bodyPost list li pre a::before { content: "DETALHES"; }
+
+/*--------- EVENTS ----------*/
+.support .st1::before { content: "Torneio PvP Revelação"; }
+.support .st2::before { content: "Torneio PvP Feminino"; }
+
+/*---------- HELP -----------*/
+.support .ad1::before { content: "Como faço para ser membro da comunidade?"; }
+.support .ad2::before { content: "Atualização de nick ou id."; }
+.support .ad3::before { content: "Quero excluir comentário grosseiro."; }
+.support .ad4::before { content: "Quero apagar meu perfil."; }
+.support .ad5::before { content: "Como usar o Discord?"; }
+.support #r1::before { content: "Envie um print do seu perfil de jogo e escreva e o NICK e ID para algum STAFF e qual teu sexo biologico (masculino ou feminino), e também sexualiadade(opcional -porém importante), número de contato e nome verdadeiro (primeiro e último nome -sem como composto ou nome do meio ou divisor de nome- exemplo "Da" Silva ou "De" Olveira). As informações de sexualidade, contato e nome não são expostas ou divulgadas."; }
+.support #r2::before { content: "Em caso de alteração de NICK ou ID, fale com algum STAFF para editar seus dados."; }
+.support #r3::before { content: "Na midias de aplicativos do site, fale com um STAFF e informe o comentário."; }
+.support #r4::before { content: "Em casos de exclusão de perfil, reportar o motivo, nickname e id. Tratar com a administração do site dentro das mídias oficial."; }
+.support #r5::before { content: "O Aplicativo do Discord é um meio de aproimar e conhecer outros jogadores. É difil para alguns se familiarizar com o aplicativo. Há uma pagina de suporte completa no site do aplicativo em Central de Ajuda. E qualuer duvida fale com um administrador."; }
+
+/*-------- DEVELOPER --------*/
+.bodyPost .des1::before { content: "Meu nome é Natanael Lourenço, e sou desenvolvedor web a 10 anos, comecei em 2009 com um Blog para downloads de Mods para GTA San Andreas. A tecnologia web e as linguagens de programação me encantou. Passei a fase de GTA e fiz de um Blog da plataforma Blogger um site de TV Online bem desenvolvido com muitas paginas e escripts que facilitava ao usuário um uso automático. Comprei uma hospedagem com domínio e migrei todo conteúdo do blogger para o a nova hospedagem. Cresci muito utilizando WampServe para reproduzir meus projetos que a plataforma Blogger limitava. E entre domínios e sub domínios me fez enxergar o tanto que é possível fazer com tão pouco."; }
+.bodyPost .des2::before { content: "Ao abrir o Ride Out Heroes Comunidade do Brasil decidi desenvolver na plataforma Blogger por possuir todo necessário do esperado e não tive gasto algum. O Blogger oferece endereço www grátis pre programado com postagens e paginas com navegação e arquivo de postagens gratuito. O registro de domínio é grátis por um ano e posso renovar pagando uma taxa ao expirar o tempo de uso. Os arquivos estão hospedado no Google Sites e suas url são compatíveis como arquivos css e js, de forma gratuita."; }
+.bodyPost .des3::before { content: "Em resumo decidi abrir uma comunidade sem ter gastos proporcionando interação com os visitantes da página sendo esta bonita e bem produzida. A plataforma do Blogger me da este esperado. E se algum dia as necessidades do site ir além do que o Blogger pode proporcionar, compro uma hospedagem e faço melhor. Hoje a plataforma Blogger é suficiente. Agradecimentos ao Blogger.com."; }
+.bodyPost .des4::before { content: "28/12/2019: Decidi investi em um dóminio pago devido as necessidades do site e equipamentos de streaming deixando a comunidade mais participativa com todo o público em PortuguÊs, Espanhol e Inglês. Um atualização do sistema de postagem e bugs do site foram corrigidos e tudo para um sistema automatico e rapido."; }
+.bodyPost .des5::before { content: "Eu sou Natanael Lourenço, desenvolvedor web."; }
+
+/*---------- ABOUT ----------*/
+.bodyPost .sob1 { content: "Tudo começou com um grupo no WhatsApp que adicionavamos as pessoas legais que conheciamos no jogo. Criado por Rodrigo Souza(SrRodrick) e Karine Souza(souul) em 11/09/2019 a comunidade teve início com um simples grupo no WhatsApp para amigos do jogo. Mas, em um momento o grupo quebrou depois de algumas desavenças e foi então que Rodrigo Souza deixou a liderança do grupo para mim. Eu já vinha tendo ideias sobre criar uma pagína para tirar os nick e id da descrião e colocar na web. Isso sobraria mais espaço na descrição do grupo, Eu pensei."; }
+.bodyPost .sob2 { content: "Iniciei a página com o Rodrigo, mas a correria da faculdade e trabalho com os problemas do grupo o suforam e ele deixou o jogo. Karine Souza se desgastou e deu um tempo do jogo. Eu, Natanael Lourenço (holasoycael) acreditando que aquele grupo quebrado séria algo muito maior, desenvolvi o www.rideoutheroes.tk e o servidor no Discord para aproximar os jogadores e trabalhei para juntar uma equipe de jogadores ativos que pudesse confiar para levantar a comunidade do Ride Out Heroes."; }
+.bodyPost .sob3 { content: "As coisas passo a passo foram expandindo mediante a quantidade de publico que entrava na comunidade. Começamos com um grupo que adicionava nome e id em um unica pagina para amigos do jogo. Logo esta página abriu espaço para os grupos fechados de clãs do jogo dando suporte de design grafico e tudo que for necessário para o grupo crescer. O próximo passo foi um grande desafio, recebemos doações de para promover eventos em torneio pvp e entre clãs, com isso evoluimos para às mídias sociais e estamos no Facebook, YouTube e NimoTV. Com tudo isso vi que era hora de alcaçar um outro público e ir mais além."; }
+.bodyPost .sob4 { content: "Conheci Alexandra Guim, uma jogadora Peruana e convidei para abrirmos os outros idiomas da comunidade juntos. E fizemos isso muito bem e acabei por deixar o nome Ride Out Heroes Comunidade do Brasil para Ride Out Heroes America cm. ocupando todo LATAM_SERVER nos três idiomas. Português, Inglês e Espanhol. Este foi um passo importantíssimo a comunidade decidi investi no site com um dominio pago, e equipamentos de produção de streaming. Há três equipes e cada equipe há um representante em Português, Inglês e Espanhol. HanaMegami está a frente da equipe do público Espanhol."; }
+.bodyPost .sob5 { content: "Até aqui é isso, somos Ride Out Heroes America cm."; }
+
+/*--------- EVENTS ----------*/
+.support .item .dc1 { content: "O Evento PVP Revelação é um torneio de ganhador único de classificação e três etapas. Proibido o uso de qualuer Emulador Windows, Emulador Gameboy ou Emulador Gamepad. Não é permitido o uso do heroi Chaos. Descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Cartão Google Play de R$50. O evento é exclisivo para aqueles que estão abaixo do top 100 e os cem do ranking na segunda temporada continuam sem poer participar. Para se increver fale com um administrador."; }
+.support .item .dc2 { content: "O Evento PVP Feminino é um torneio de ganhador único de classificação e três etapas. Proibido o uso de qualuer Emulador Windows, Emulador Gameboy ou Emulador Gamepad. Não é permitido o uso do heroi Chaos. Descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Cartão Google Play de R$50. O evento é exclisivo para mulheres e qualquer outro genero oposto ao femino não é permitido a participação. Para se increver fale com um administrador."; }
