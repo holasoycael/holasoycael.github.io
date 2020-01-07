@@ -34,6 +34,7 @@ a.item-10::before { content: "Desarrollador"; }
 #gallery #title::before { content: "Selecciona un idioma:"; }
 #pageTitle { font: 0/0 a!IMPORTANT; }
 #pageTitle::before { font: 38px 'Rancho' !IMPORTANT; }
+.pagenavi .pages::before { content: "página"; }
 .Sobre::before { content: "Acerca de"; }
 .Clãs::before { content: "Clanes"; }
 .Eventos::before { content: "Eventos"; }
