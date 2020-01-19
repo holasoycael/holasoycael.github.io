@@ -62,6 +62,7 @@ li.home a:hover { background: #1ebea5!important; }
 .post-location li.bra { background-position: 0px -168px; }
 .post-location li.per { background-position: 0px -189px; }
 .post-location li.par { background-position: 0px -210px; }
+.post-location li.bol { background-position: 0px -231px; }
 h3.post-title.entry-title { font-size: 22px!important; width: max-content; z-index: 99; }
 h3.post-title.entry-title, li.chief { font-family: 'Rancho', Calibri, Arial, sans-serif; letter-spacing: 1px; font-weight: 400; }
 h3.post-title.entry-title a:hover { text-shadow: 1px 1px #189884; }
