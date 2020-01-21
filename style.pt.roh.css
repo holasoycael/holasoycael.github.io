@@ -40,8 +40,10 @@ a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 .bodyPost list li pre a::before { content: "DETALHES"; }
 
 /*--------- EVENTS ----------*/
-.support .st1::before { content: "Torneio PvP Revelação"; }
-.support .st2::before { content: "Torneio PvP Feminino"; }
+.support .st1::before { content: "TORNEIO PvP SOLO ABERTO"; }
+.support .st2::before { content: "TORNEIO DE CLÃS — DUO ALEATÓRIO"; }
+.support .item .dc1::before { content: "O Evento Solo Aberto é um torneio com 3 vencedores, Primeiro, Segundo e Terceiro lugar de partida única. Proibido o uso de qualquer Emulador Windows, Gameboy ou Emulador Gamepad, descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Google Play de R$50 para o jogador com maior número de abate, Gift Card Google Play de R$30 para segundo e Gift Card Google Play de R$20 para o terceiro. Para se inscrever fale com um administrador."; }
+.support .item .dc2::before { content: "Haverá 3 partidas com todas as duplas sorteadas, duplas enviada por cada clã. Cada partida haverá um intervalo de 5 minutos. O Objetivo de cada dupla é conseguir duas vitoria das 3 partida, caso contrario será levado em consideração o vencedor por pontos. Cada abate vale 1 ponto para a dupla. Terminar uma partida em primeiro lugar ganha 6 pontos, e em segundo lugar ganha 4 pontos e em terceiro lugar ganha 2 pontos de acréscimo. A dupla vencedora receberá um Gift Card Google Play R$50 cada jogador."; }
 
 /*---------- HELP -----------*/
 .support .ad1::before { content: "Como faço para ser membro da comunidade?"; }
@@ -68,7 +70,3 @@ a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 .bodyPost .sob3::before { content: "As coisas passo a passo foram expandindo mediante a quantidade de publico que entrava na comunidade. Começamos com um grupo que adicionava nome e id em um unica pagina para amigos do jogo. Logo esta página abriu espaço para os grupos fechados de clãs do jogo dando suporte de design grafico e tudo que for necessário para o grupo crescer. O próximo passo foi um grande desafio, recebemos doações de para promover eventos em torneio pvp e entre clãs, com isso evoluimos para às mídias sociais e estamos no Facebook, YouTube e NimoTV. Com tudo isso vi que era hora de alcaçar um outro público e ir mais além."; }
 .bodyPost .sob4::before { content: "Conheci Alexandra Guim, uma jogadora Peruana e convidei para abrirmos os outros idiomas da comunidade juntos. E fizemos isso muito bem e acabei por deixar o nome Ride Out Heroes Comunidade do Brasil para Ride Out Heroes America cm. ocupando todo LATAM_SERVER nos três idiomas. Português, Inglês e Espanhol. Este foi um passo importantíssimo a comunidade decidi investi no site com um dominio pago, e equipamentos de produção de streaming. Há três equipes e cada equipe há um representante em Português, Inglês e Espanhol. HanaMegami está a frente da equipe do público Espanhol."; }
 .bodyPost .sob5::before { content: "Até aqui é isso, somos Ride Out Heroes America cm."; }
-
-/*--------- EVENTS ----------*/
-.support .item .dc1::before { content: "O Evento PVP Revelação é um torneio de ganhador único de classificação e três etapas. Proibido o uso de qualquer Emulador Windows, Emulador Gameboy ou Emulador Gamepad. Não é permitido o uso do herói Chaos. Descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Cartão Google Play de R$50. O evento é exclusivo para aqueles que estão abaixo do top 100 e os mesmo que terminar a temporada no top seguem sem poder participar. Para se inscrever fale com um administrador."; }
-.support .item .dc2::before { content: "O Evento PVP Feminino é um torneio de ganhador único de classificação e três etapas. Proibido o uso de qualquer Emulador Windows, Emulador Gameboy ou Emulador Gamepad. Não é permitido o uso do herói Chaos. Descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Cartão Google Play de R$50. O evento é exclusivo para mulheres e qualquer outro gênero oposto ao feminino não é permitido a participação. Para se inscrever fale com um administrador."; }
