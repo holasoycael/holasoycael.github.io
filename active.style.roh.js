@@ -47,12 +47,13 @@ function readCookie(name) {
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
   return null;
-}
+
 
 window.onload = function(e) {
   var cookie = readCookie("style");
   var title = cookie ? cookie : getPreferredStyleSheet();
   setActiveStyleSheet(title);
+}
 }
 
 window.onunload = function(e) {
