@@ -49,7 +49,7 @@ a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 .support .ad3::before { content: "Quero excluir comentário grosseiro."; }
 .support .ad4::before { content: "Quero apagar meu perfil."; }
 .support .ad5::before { content: "Como usar o Discord?"; }
-.support #r1::before { content: "Envie um print do seu perfil de jogo e escreva e o NICK e ID para algum STAFF e qual teu sexo biologico (masculino ou feminino), e também sexualiadade(opcional -porém importante), número de contato e nome verdadeiro (primeiro e último nome -sem como composto ou nome do meio ou divisor de nome- exemplo "Da" Silva ou "De" Olveira). As informações de sexualidade, contato e nome não são expostas ou divulgadas."; }
+.support #r1::before { content: "Envie um print do seu perfil de jogo e escreva e o NICK e ID para algum STAFF e qual teu sexo biologico (masculino ou feminino), e também sexualiadade(opcional -porém importante), número de contato e nome verdadeiro (primeiro e último nome -sem como composto ou nome do meio ou divisor de nome- exemplo [Da] Silva ou [De] Olveira). As informações de sexualidade, contato e nome não são expostas ou divulgadas."; }
 .support #r2::before { content: "Em caso de alteração de NICK ou ID, fale com algum STAFF para editar seus dados."; }
 .support #r3::before { content: "Na midias de aplicativos do site, fale com um STAFF e informe o comentário."; }
 .support #r4::before { content: "Em casos de exclusão de perfil, reportar o motivo, nickname e id. Tratar com a administração do site dentro das mídias oficial."; }
