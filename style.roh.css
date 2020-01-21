@@ -4,7 +4,7 @@ body { color: #fff; background-color: #676767; background-image: url(https://u.c
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#1ebea5; }
 body { overflow-y: scroll; overflow-x: hidden; height: 100%; }
-.hide { overflow:hidden position: relative; }
+.hide { overflow:hidden; position: relative; }
 .none { display: none; }
 .trfrom { transform: translate3d(220px, 0px, 0px)!IMPORTANT; }
 .disabl { pointer-events: none; }
