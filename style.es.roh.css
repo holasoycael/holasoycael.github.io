@@ -47,6 +47,7 @@ a.item-10::before { content: "Desarrollador"; }
 /*---------- EVENTS -------------*/
 .support .st1::before { content: "TORNEO PvP SOLO ABIERTO"; }
 .support .st2::before { content: "TORNEO DE CLANES — DUO MESCLADO"; }
+.support .item b.day::before { content: "FECHA: 22/FEB "; }
 .support .item .end::before { content: "¡TORNEO CERRADO!  "; }
 .support .item .dc1::after { content: "El Evento Solo Abierto es un torneo con 3 vencedores, Primero, Segundo y Tercer lugar de partida única. Prohibido el uso de cualquier Emulador Windows, Gameboy o Emulador Gamepad, incumplir las reglas durante el torneo es descalificación inmediata. Premiacion de Gift Card Google Play de R$50 para el jugador con mayor número de kill, Gift Card Google Play de R$30 para el segundo y Gift Card Google Play de R$20 para el tercero. Para registrarse, hable con un administrador."; }
 .support .item .dc2::after { content: "Habrá 3 partidas con todas las duplas sorteadas, duplas enviadas por cada clan. Cada partida tendrá un intervalo de 5 minutos. El Objetivo de cada dupla es conseguir dos victorias de 3 partidas, caso contrario será llevado considerando al vencedor por puntos. Cada kill vale 1 punto para la dupla. Al terminar una partida, el primer lugar gana 6 puntos, el segundo lugar gana 4 puntos y el tercer lugar gana 2 puntos adicionales. La dupla vencedora recibirá una Gift Card Google Play R$50 para cada jugador."; }
