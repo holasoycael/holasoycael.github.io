@@ -42,6 +42,7 @@ a.item-10::before, .Desenvolvedor::before { content: "Desenvolvedor"; }
 /*--------- EVENTS ----------*/
 .support .st1::before { content: "TORNEIO PvP SOLO ABERTO"; }
 .support .st2::before { content: "TORNEIO DE CLÃS — DUO ALEATÓRIO"; }
+.support .item b.day::before { content: "DATA: 22/FEV "; }
 .support .item .end::before { content: "TORNEIO ENCERRADO!  "; }
 .support .item .dc1::after { content: "O Evento Solo Aberto é um torneio com 3 vencedores, Primeiro, Segundo e Terceiro lugar de partida única. Proibido o uso de qualquer Emulador Windows, Gameboy ou Emulador Gamepad, descumprir as regras em meio ao torneio é desclassificação imediata. Premiação de Gift Card Google Play de R$50 para o jogador com maior número de abate, Gift Card Google Play de R$30 para segundo e Gift Card Google Play de R$20 para o terceiro. Para se inscrever fale com um administrador."; }
 .support .item .dc2::after { content: "Haverá 3 partidas com todas as duplas sorteadas, duplas enviada por cada clã. Cada partida haverá um intervalo de 5 minutos. O Objetivo de cada dupla é conseguir duas vitoria das 3 partida, caso contrario será levado em consideração o vencedor por pontos. Cada abate vale 1 ponto para a dupla. Terminar uma partida em primeiro lugar ganha 6 pontos, e em segundo lugar ganha 4 pontos e em terceiro lugar ganha 2 pontos de acréscimo. A dupla vencedora receberá um Gift Card Google Play R$50 cada jogador."; }
