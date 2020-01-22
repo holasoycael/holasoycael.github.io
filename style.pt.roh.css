@@ -12,6 +12,7 @@ a.item-1::before, .Sobre::before { content: "Sobre"; }
 a.item-2::before, .Clãs::before { content: "Clãs"; }
 a.item-3::before, .Eventos::before { content: "Eventos"; }
 a.item-4::before { content: "WhatsApp 🇧🇷"; }
+a.item-4.item-4-2 { display: none; }
 a.item-5::before { content: "Discord"; }
 a.item-6::before { content: "NimoTV"; }
 a.item-7::before { content: "Facebook"; }
