@@ -58,7 +58,7 @@ a.item-10::before { content: "Desarrollador"; }
 .support .ad3::before { content: "¿Como eliminar comentarios groseros?"; }
 .support .ad4::before { content: "¿Como borrar mi perfil?"; }
 .support .ad5::before { content: "¿Cómo usar Discord?"; }
-.support #r1::before { content: "Envíe una captura de pantalla de su perfil del juego y escriba el NICK y la ID de para el contato oficial de la comunidad y cuál es su género biológico (masculino o femenino), así como si eres LGBT o no, número de contacto y nombre de verdad (nombre y apellido) -no necesita nombre compuesto o segundo nombre o separador de nombres- ejemplo "Da" Silva o "De" Olveira). La información sobre sexualidad, contacto y nombre no se expone ni se divulga."; }
+.support #r1::before { content: "Envíe una captura de pantalla de su perfil del juego y escriba el NICK y la ID de para el contato oficial de la comunidad y cuál es su género biológico (masculino o femenino), así como si eres LGBT o no, número de contacto y nombre de verdad (nombre y apellido) -no necesita nombre compuesto o segundo nombre o separador de nombres- ejemplo [Da] Silva o [De] Olveira). La información sobre sexualidad, contacto y nombre no se expone ni se divulga."; }
 .support #r2::before { content: "En caso de cambio de NICK o problemas con el ID, comuníquese con el contacto oficial de la comunidad para editar sus datos."; }
 .support #r3::before { content: "Escriba al contacto oficial de la comunidad que se encuentra como aministrador en el grupo WhatsApp o al correo del sitio web y proporcione el comentario."; }
 .support #r4::before { content: "Informe el motivo de la eliminación, envíe su NICK, ID y tratar con el contacto oficial de la comunidad."; }
