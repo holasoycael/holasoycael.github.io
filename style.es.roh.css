@@ -45,8 +45,11 @@ a.item-10::before { content: "Desarrollador"; }
 .bodyPost list li pre a::before { content: "DETALLES"; }
 
 /*---------- EVENTS -------------*/
-.support .st1::before { content: "Torneo PvP Revelación"; }
-.support .st2::before { content: "Torneo PvP Femenino"; }
+.support .st1::before { content: "TORNEO PvP SOLO ABIERTO"; }
+.support .st2::before { content: "TORNEO DE CLANES — DUO MESCLADO"; }
+.support .item .end::before { content: "¡TORNEO CERRADO!  "; }
+.support .item .dc1::after { content: "El Evento Solo Abierto es un torneo con 3 vencedores, Primero, Segundo y Tercer lugar de partida única. Prohibido el uso de cualquier Emulador Windows, Gameboy o Emulador Gamepad, incumplir las reglas durante el torneo es descalificación inmediata. Premiacion de Gift Card Google Play de R$50 para el jugador con mayor número de kill, Gift Card Google Play de R$30 para el segundo y Gift Card Google Play de R$20 para el tercero. Para registrarse, hable con un administrador."; }
+.support .item .dc2::after { content: "Habrá 3 partidas con todas las duplas sorteadas, duplas enviadas por cada clan. Cada partida tendrá un intervalo de 5 minutos. El Objetivo de cada dupla es conseguir dos victorias de 3 partidas, caso contrario será llevado considerando al vencedor por puntos. Cada kill vale 1 punto para la dupla. Al terminar una partida, el primer lugar gana 6 puntos, el segundo lugar gana 4 puntos y el tercer lugar gana 2 puntos adicionales. La dupla vencedora recibirá una Gift Card Google Play R$50 para cada jugador."; }
 
 /*---------- HELP -----------*/
 .support .ad1::before { content: "¿Como me registro en la comunidad?"; }
@@ -73,7 +76,3 @@ a.item-10::before { content: "Desarrollador"; }
 .bodyPost .sob3::before { content: "Las cosas se expandieron paso a paso por la cantidad de audiencia que ingresó a la comunidad. Comenzamos con un grupo que agregó nombre e identificación en una sola página para los amigos del juego. Pronto en esta página abrimos espacio para los grupos de clanes cerrados del juego dando suporte en el diseño gráfico y todo lo necesario para que el grupo crezca. El siguiente paso fue un gran desafío, recibimos donaciones para promover eventos de torneos de pvp y entre clanes, por lo que avanzamos a las redes sociales y estamos en Facebook, YouTube y NimoTV. Con todo esto, vi que era hora de llegar a otra audiencia e ir más allá."; }
 .bodyPost .sob4::before { content: "Conocí a Alexandra Guim (HanaMegami), una jugadora peruana y la invité a abrir juntos otros idiomas de la comunidad. Y lo hicimos muy bien y terminamos dejando el nombre Ride Out Heroes Comunidade do Brasil para Ride Out Heroes America cm. ocupando todos el LATAM_SERVER en los tres idiomas Portugués, Inglés y Español. Este fue un paso muy importante ya que la comunidad decidió invertir en el sitio con un dominio de pago y equipamiento de producción de transmisión. Hay tres equipos y cada equipo tiene un representante en portugués, inglés y español. HanaMegami está a la cabeza del equipo público español."; }
 .bodyPost .sob5::before { content: "Hasta ahora esto es todo, somos Ride Out Heroes America cm."; }
-
-/*--------- EVENTS ----------*/
-.support .item .dc1::before { content: "El evento PVP Revelación es un torneo de ganador único por clasificación de las tres etapas. Prohibido usar cualquier emulador de Windows, de Gameboy o de Gamepad. El uso del héroe del Chaos no está permitido. Romper las reglas en medio del torneo llevará a la desclasificación inmediata. Premiacion de Gift Card (Tarjeta Google Play) R$50 (U$12). El evento es exclusivo para aquellos que están por debajo del top 100  y los 100 en el ranking de la segunda temporada aún siguen sin poder participar. Para registrarse, hable con un administrador."; }
-.support .item .dc2::before { content: "El evento PVP Revelación es un torneo de ganador único por clasificación de las tres etapas. Prohibido usar cualquier emulador de Windows, de Gameboy o de Gamepad. El uso del héroe del Chaos no está permitido. Romper las reglas en medio del torneo llevará a la desclasificación inmediata. Premiacion de Gift Card (Tarjeta Google Play) R$50 (U$12). El evento es exclusivo para el género femenino y no se permite la participación de ningún otro género opuesto a ello. Para registrarse, hable con un administrador."; }
