@@ -11,7 +11,7 @@
 a.item-1::before { content: "Acerca de"; }
 a.item-2::before { content: "Clanes"; }
 a.item-3::before { content: "Eventos"; }
-a.item-4::before { content: "WhatsApp"; }
+a.item-4::before { content: "WhatsApp 🇪🇸"; }
 a.item-5::before { content: "Discord"; }
 a.item-6::before { content: "NimoTV"; }
 a.item-7::before { content: "Facebook"; }
