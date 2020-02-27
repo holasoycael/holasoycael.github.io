@@ -6,4 +6,9 @@ $('p.btn-menu a').click(function(){
     $('.pushmenu').toggleClass('m-push');//transform menu
     $('#txtPesquisar, #inputSubmit').toggleClass('disabl');//block search
 });
+
+$('input.accept').click(function(){
+    $('.message-board').hide();
+});
+
 });
