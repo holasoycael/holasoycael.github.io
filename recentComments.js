@@ -63,7 +63,6 @@ function commentDisplay(json) {
     var entry = json.feed.entry[i];
     var alturl;
     var altdat;
-    var altimg;
     var altid;
 
     if (i == json.feed.entry.length) break;
@@ -71,7 +70,6 @@ function commentDisplay(json) {
       if (entry.link[k].rel == 'alternate') {
         alturl = entry.link[k].href;
 		altdat = entry.gd$extendedProperty[1].value;
-		altimg = entry.link[k].src;
         altid  = entry.gd$extendedProperty[0].value;
 		pid    = altid.substr(4)
         break;
@@ -86,7 +84,7 @@ function commentDisplay(json) {
     }
 
 	var re = /<\S[^>]*>/g; 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="'+altimg+'" width="35" height="35"/></span><q>');
+	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="https://u.cubeupload.com/holasoycael/visitorGravatar35.png" width="35" height="35"/></span><q>');
 	if (comment.length < numchars)
 	document.write(comment + '</q>');
 	else
