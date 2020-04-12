@@ -71,7 +71,7 @@ function commentDisplay(json) {
       if (entry.link[k].rel == 'alternate') {
         alturl = entry.link[k].href;
 		altdat = entry.gd$extendedProperty[1].value;
-		altimg = entry.gd$image[0].src;
+		altimg = entry.link[k].src;
         altid  = entry.gd$extendedProperty[0].value;
 		pid    = altid.substr(4)
         break;
