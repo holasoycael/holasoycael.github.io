@@ -86,11 +86,9 @@ function commentDisplay(json) {
 	var re = /<\S[^>]*>/g; 
 	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="https://u.cubeupload.com/holasoycael/visitorGravatar35.png" width="35" height="35"/></span><q>');
 	if (comment.length < numchars)
-	document.write(comment + '</q>');
+	document.write(comment + '</q><section><span class="dateComment">' + altdat + '</span><span class="nameAuthor">' + entry.author[0].name.$t + '</span></section></li>');
 	else
-	document.write(comment.substring(0, numchars) + '...</q>');
-
-	document.write('<section><span class="dateComment">' + altdat + '</span><span class="nameAuthor">' + entry.author[0].name.$t + '</span></section></li>');
+	document.write(comment.substring(0, numchars) + '...</q><section><span class="dateComment">' + altdat + '</span><span class="nameAuthor">' + entry.author[0].name.$t + '</span></section></li>');
 }
 
 }
