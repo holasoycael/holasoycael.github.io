@@ -29,7 +29,7 @@ pid = altid.substr(4);
     }
 
 	var re = /<\S[^>]*>/g; 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+comment+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + entry.author[0].name.$t + '</span></a></section></li>');
+	document.write('<ul class="slides"><li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+comment+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + entry.author[0].name.$t + '</span></a></section></li></ul>');
 }
 
 }
