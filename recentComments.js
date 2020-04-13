@@ -30,28 +30,26 @@ pid = altid.substr(4);
 
     if (comment.length < numchars) { var commentText = comment; }
 	else {
-		commentText = comment.substring(0, numchars);
-
-var partes = commentText.split(' ');
-var posicao_ultima_palavra = partes.length - 1;
-var ultima_palavra = partes[posicao_ultima_palavra]; //pegar na ultima palavra(chover neste caso)
+		
+commentText = comment.substring(0, numchars);
+partes = commentText.split(' ');
+posicao_ultima_palavra = partes.length - 1;
+ultima_palavra = partes[posicao_ultima_palavra]; //pegar na ultima palavra(chover neste caso)
 partes.pop();//remover a ultima palavra do array
-var primeiras_palavras = '';
+primeiras_palavras = '';
 partes.forEach(function(palavra){ //percorrer o array de palavras para formar a frase depois da virgula
 primeiras_palavras += ' '; //espaco entre as palavras
 primeiras_palavras += palavra; // a palavra em causa
 });
-var nova_frase = primeiras_palavras + "(...)";
-
-// corta o html
-String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
-nova_frase = nova_frase.stripHTML();
+nova_frase = primeiras_palavras + "(...)";
 
 	}
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
-	var re = /<\S[^>]*>/g; 
+String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
+nova_frase = nova_frase.stripHTML();
+
 	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+nova_frase+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
 }
 document.write('</ul>');
