@@ -26,6 +26,11 @@ pid = altid.substr(4);
     alturl = alturl.replace("#", "#comment-");
 
 	var comment = entry.content.$t;
+	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
+
+    if (comment.length < numchars) { var commentText = comment; }
+	else {
+		
 commentText = comment.substring(0, numchars);
 partes = commentText.split(' ');
 posicao_ultima_palavra = partes.length - 1;
@@ -36,22 +41,17 @@ partes.forEach(function(palavra){ //percorrer o array de palavras para formar a 
 primeiras_palavras += ' '; //espaco entre as palavras
 primeiras_palavras += palavra; // a palavra em causa
 });
-	
-	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
-
-    if (comment.length < numchars) { var commentText = comment; }
-	else {
-		
-nova_frase = primeiras_palavras + "(...)";
+commentText = primeiras_palavras + "(...)";
 
 	}
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
+// corta o html
 String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
-nova_frase = nova_frase.stripHTML();
+commentText = commentText.stripHTML();
 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+nova_frase+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
+	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+commentText+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
 }
 document.write('</ul>');
 }
