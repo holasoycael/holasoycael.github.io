@@ -26,11 +26,6 @@ pid = altid.substr(4);
     alturl = alturl.replace("#", "#comment-");
 
 	var comment = entry.content.$t;
-	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
-
-    if (comment.length < numchars) { var commentText = comment; }
-	else {
-		
 commentText = comment.substring(0, numchars);
 partes = commentText.split(' ');
 posicao_ultima_palavra = partes.length - 1;
@@ -41,6 +36,12 @@ partes.forEach(function(palavra){ //percorrer o array de palavras para formar a 
 primeiras_palavras += ' '; //espaco entre as palavras
 primeiras_palavras += palavra; // a palavra em causa
 });
+	
+	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
+
+    if (comment.length < numchars) { var commentText = comment; }
+	else {
+		
 nova_frase = primeiras_palavras + "(...)";
 
 	}
