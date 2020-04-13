@@ -28,7 +28,10 @@ pid = altid.substr(4);
 	var comment = entry.content.$t;
 	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
 
-    if (comment.length < numchars) { var commentText = comment; }
+    if (comment.length < numchars) { var commentText = comment; 
+	String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
+	commentText = commentText.stripHTML();
+	}
 	else {
 		
 commentText = comment.substring(0, numchars);
@@ -43,13 +46,12 @@ primeiras_palavras += palavra; // a palavra em causa
 });
 commentText = primeiras_palavras + "(...)";
 
+	String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
+	commentText = commentText.stripHTML();
+
 	}
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
-
-// corta o html
-String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
-commentText = commentText.stripHTML();
 
 	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+commentText+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
 }
