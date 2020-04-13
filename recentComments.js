@@ -18,7 +18,6 @@ alturl = entry.link[k].href;
 altdat = entry.gd$extendedProperty[1].value;
 altid  = entry.gd$extendedProperty[0].value;
 altimg  = entry.author[0].gd$image.src;
-comment = entry.content.$t;
 pid = altid.substr(4);
 
         break;
@@ -26,15 +25,34 @@ pid = altid.substr(4);
     }
     alturl = alturl.replace("#", "#comment-");
 
+	var comment = entry.content.$t;
 	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
 
-    if (comment.length < numchars) { comment = comment; }
-	else { comment = comment.substring(0, numchars); comment = comment + '(...)'; }
+    if (comment.length < numchars) { var commentText = comment; }
+	else {
+		commentText = comment.substring(0, numchars);
+
+var partes = commentText.split(' ');
+var posicao_ultima_palavra = partes.length - 1;
+var ultima_palavra = partes[posicao_ultima_palavra]; //pegar na ultima palavra(chover neste caso)
+partes.pop();//remover a ultima palavra do array
+var primeiras_palavras = '';
+partes.forEach(function(palavra){ //percorrer o array de palavras para formar a frase depois da virgula
+primeiras_palavras += ' '; //espaco entre as palavras
+primeiras_palavras += palavra; // a palavra em causa
+});
+var nova_frase = primeiras_palavras + "(...)";
+
+// corta o html
+String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
+nova_frase = nova_frase.stripHTML();
+
+	}
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
 	var re = /<\S[^>]*>/g; 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+comment+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
+	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+nova_frase+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
 }
 document.write('</ul>');
 }
