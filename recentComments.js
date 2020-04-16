@@ -53,7 +53,7 @@ commentText = primeiras_palavras + "(...)";
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+commentText+'</q><section><span class="dateComment">' + altdat + '</span><a href="' + alturl + '"><span class="nameAuthor">' + authorName + '</span></a></section></li>');
+	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+commentText+'</q><section><span class="dateComment">' + altdat + '</span><span class="nameAuthor">' + authorName + '</span></section></li>');
 }
 document.write('</ul>');
 }
