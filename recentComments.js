@@ -1,7 +1,5 @@
 function commentDisplay(json) {
 
-document.write('<ul class="owl-carousel testimonia">');
-
   for (var i = 0; i < numcomments; i++) {
     var entry = json.feed.entry[i];
     var alturl;
@@ -55,5 +53,4 @@ commentText = primeiras_palavras + "(...)";
 
 	document.write('<li class="item t-slid" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="90" height="90"/></span><section><span class='nameAuthor'>' + authorName + '</span><span class='dateComment'>' + altdat + '</span></section><q>'+commentText+'</q></li>');
 }
-document.write('</ul>');
 }
