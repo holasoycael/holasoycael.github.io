@@ -1,6 +1,6 @@
 function commentDisplay(json) {
 
-document.write('<ul class="slides">');
+document.write('<ul class="owl-carousel testimonia">');
 
   for (var i = 0; i < numcomments; i++) {
     var entry = json.feed.entry[i];
@@ -26,7 +26,7 @@ pid = altid.substr(4);
     alturl = alturl.replace("#", "#comment-");
 
 	var comment = entry.content.$t;
-	var urlNoAvatar = "https://u.cubeupload.com/holasoycael/visitorGravatar35.png";
+	var urlNoAvatar = "data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==";
 
     if (comment.length < numchars) { var commentText = comment; 
 	String.prototype.stripHTML = function() {return this.replace(/<.*?>/g, ' ');}
@@ -53,7 +53,7 @@ commentText = primeiras_palavras + "(...)";
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
-	document.write('<li class="slide" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="35" height="35"/></span><q>'+commentText+'</q><section><span class="dateComment">' + altdat + '</span><span class="nameAuthor">' + authorName + '</span></section></li>');
+	document.write('<li class="item t-slid" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="90" height="90"/></span><section><span class='nameAuthor'>' + authorName + '</span><span class='dateComment'>' + altdat + '</span></section><q>'+commentText+'</q></li>');
 }
 document.write('</ul>');
 }
