@@ -19,6 +19,8 @@ altdat = entry.gd$extendedProperty[1].value;
 altid  = entry.gd$extendedProperty[0].value;
 altimg  = entry.author[0].gd$image.src;
 pid = altid.substr(4);
+up  = entry.updated.$t;
+updated = up.replace(/\D/g, '');
 
         break;
       }
@@ -54,7 +56,7 @@ commentText = primeiras_palavras + "(...)";
 
     if (altimg == "https://img1.blogblog.com/img/blank.gif" != "") { altimg = urlNoAvatar; }
 
-	document.write('<li class="item t-slid" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="90" height="90"/></span><section><span class="nameAuthor">' + authorName + '</span><span class="dateComment">' + altdat + '</span></section><q>'+commentText+'</q></li>');
+	document.write('<li class="item t-slid" id="identity' + pid + '"><span class="imgAuthor"><img src="' + altimg + '" width="90" height="90"/></span><section><span class="nameAuthor">' + authorName + '</span><span class="dateComment">' + altdat + '</span></section><script align="center" async="async" blocktext="" bottomtext="" emptystarimg="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iI0JFQkVCRSI+PHBhdGggZD0iTTE2IDAgTDI2IDMwIEwwIDExIEwzMiAxMSBMNiAzMCIvPjwvc3ZnPg==" ratingname="' + updated + '" firebaseurl="https://blogger-star-rating.firebaseio.com/" fontfamily="Trebuchet MS" fullstarimg="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iI0ZGRjcwQSI+PHBhdGggZD0iTTE2IDAgTDI2IDMwIEwwIDExIEwzMiAxMSBMNiAzMCIvPjwvc3ZnPg==" hoverstarimg="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iI0U5OUQwNSI+PHBhdGggZD0iTTE2IDAgTDI2IDMwIEwwIDExIEwzMiAxMSBMNiAzMCIvPjwvc3ZnPg==" numberofstars="5" src="https://drive.google.com/uc?export=download&amp;id=1_3EXmeXQzNkbuQ369vV4li-eLN1mGcOV" starsize="18" status="active" textsize="12" toptext=""></script><p>'+commentText+'</p></li>');
 }
 document.write('</ul>');
 }
