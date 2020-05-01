@@ -22,5 +22,5 @@ function signIn(){
 
 function signOut(){
 	auth.signOut();
-	alert("Saiu com sucesso! ");
+	alert("Saiu com sucesso!");
 }
