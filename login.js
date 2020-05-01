@@ -7,7 +7,7 @@ function signUp(){
 	const promise = auth.createUserWithEmailAndPassword(email.value, senha.value);
 	promise.catch(e => alert(e.message));
 	
-	alert("Signed In")
+	alert("Cadastro com sucesso!")
 }
 
 function signIn(){
@@ -17,10 +17,10 @@ function signIn(){
 	const promise = auth.signInWithEmailAndPassword(email.value, senha.value);
 	promise.catch(e => alert(e.message));
 	
-	alert("Signed In")
+	alert("Login com sucesso!")
 }
 
 function signOut(){
 	auth.signOut();
-	alert("Signed Out");
+	alert("Saiu com sucesso! ");
 }
