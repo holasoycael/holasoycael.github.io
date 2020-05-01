@@ -1,5 +1,3 @@
-(function (){
-
 const auth = firebase.auth();
 
 function signUp(){
@@ -26,5 +24,3 @@ function signOut(){
 	auth.signOut();
 	alert("Signed Out");
 }
-
-})();
