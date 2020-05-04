@@ -31,7 +31,7 @@ fireBase.createUserWithEmailAndPassword(eItem, pItem).then(function (user) {
 	firebase.database().ref('default/' + userId).set({
     Name: nItem,
     Created: lItem,
-	AccountID: aItem
+	AccountID: aItem,
     Status: status});
 	return Result;
 },function (error){
