@@ -32,7 +32,7 @@ fireBase.createUserWithEmailAndPassword(eItem, pItem).then(function (user) {
     Name: nItem,
     Created: lItem,
 	AccountID: aItem
-    Status: status,});
+    Status: status});
 	return Result;
 },function (error){
 	// Handle Errors here.
