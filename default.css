@@ -38,8 +38,8 @@ NAV.PUSHmenu FOOTER .GUIDEurl A { float: left; color: #AAA; line-height: 20px; }
 NAV.PUSHmenu FOOTER .GUIDEurl A:not(:last-child) { margin-right: 8px; }
 NAV.PUSHmenu FOOTER SPAN { padding: 32px 20px 16px; }
 NAV.PUSHmenu .GUIDEmenu A::before, HEADER.HEADmenu .BTNmenu A::before { position: absolute; top: 13px; left: 9px; width: 20px; height: 2px; background: #606060; box-shadow: 0 3px rgb(0, 0, 0, 0), 0 5px #606060, 0 8px rgb(0, 0, 0, 0), 0 10px #606060; content: ''; z-index: 9; }
-#CONTENTframe.SWIPEopen::before { content: ""; background: rgba(0,0,0,0.3); }
-#CONTENTframe::before { content: ""; width: var(--max-content); height: var(--max-content); z-index: 999; -webkit-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; position: fixed; display: block; }
+#CONTENTframe.SWIPEopen::before { background: rgba(0,0,0,0.3); z-index: 999; }
+#CONTENTframe::before { content: ""; width: var(--max-content); height: var(--max-content); z-index: 0; -webkit-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; position: fixed; display: block; }
 
 /*-------------------------------*/
 /*----------- HEADER ------------*/
