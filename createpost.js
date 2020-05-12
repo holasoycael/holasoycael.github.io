@@ -5,6 +5,15 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	var img = div.getElementsByTagName("img");
 	var p = pLOCAL.replace(/[^0-9\.]+/g, '');
 	var priceOut = p.length;
+	
+	var nDATA = pDATE.split(' ');
+	var POSTdata = nDATA[0];
+	var POSTtime = nDATA[1];
+	var DATAsplt = POSTtime.split(':');
+	var DATAhour = DATAsplt[0];
+	var DATAmini = DATAsplt[1];
+	var POSTampm = nDATA[2];
+	var pDATE = POSTdata + ' ÀS ' + DATAhour + ':' + DATAmini + ' ' +POSTampm;
 
 	// MOEDA
 	var BR = "R$ ";
