@@ -77,7 +77,7 @@ MAIN.BODYmain { display: block; }
 @media screen and (min-width: 754px) { .Blog, .page-navi { max-width: 100%; } DIV.POSTbox { max-width: 50%; } }
 @media screen and (min-width: 900px) { .Blog, .page-navi { max-width: 100%; } }
 @media screen and (min-width: 1166px) { .Blog, .page-navi { max-width: 1056px; } }
-@media screen and (min-width: 1056px) { .Blog, .page-navi { padding: 16px; } }
+@media screen and (min-width: 1056px) { .Blog { padding: 16px; } }
 
 /*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
