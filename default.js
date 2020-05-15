@@ -113,6 +113,8 @@ POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SE
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
+var postBody = document.querySelector('.postBody');
+postBody.parentNode.removeChild(postBody);
 var BLOGinst = document.querySelector('.Blog');
 
 var GETitem = localStorage.BOOKmark;
