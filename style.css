@@ -216,7 +216,6 @@ DIV.HEADERnav LI {
 }
 DIV.HEADERnav LI:not(:last-child) a, .SHOTurl DIV:not(:last-child), .SEARCHpopular A:not(:last-child) {
     margin-right: 6px;
-    padding-left: 0;
 }
 DIV.HEADERnav LI:not(:first-child) a, .SHOTurl DIV:not(:first-child), .SEARCHpopular A:not(:first-child) {
     margin-left: 6px;
@@ -272,6 +271,7 @@ DIV.HEADERnav LI A.cPANEL {
     font-family: var(--font-lato);
     margin-left: 18px;
     line-height: 14px;
+    margin-right: 10px;
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -282,7 +282,7 @@ DIV.HEADERnav LI A.cPANEL:hover {
 @media screen and (max-width: 848px) {
 UL.HEADERleft, .ITEMdel { display: none; }
 DIV.HEADERnav UL.HEADERright {
-    padding: 0 28px;
+    padding: 0 18px;
 }}
 
 
@@ -398,7 +398,7 @@ FORM.SEARCHform:active {
 }
 FORM.SEARCHform INPUT.SEARCHinput {
     color: var(--input-search);
-    width: calc(100% - 48px);
+    width: calc(100% - 32px);
     background: transparent;
     font-family: var(--font-open);
     font-size: 15px;
@@ -407,14 +407,16 @@ FORM.SEARCHform INPUT.SEARCHinput {
 FORM.SEARCHform INPUT.SEARCHinput::placeholder { font-family: var(--font-open);  color: var(--input-placeholder); }
 FORM.SEARCHform INPUT.SEARCHinput:-ms-input-placeholder { font-family: var(--font-open);  color: var(--input-placeholder); }
 FORM.SEARCHform INPUT.SEARCHinput::-webkit-input-placeholder { font-family: var(--font-open);  color: var(--input-placeholder); }
-LABEL.SEARCHit {
+FORM.SEARCHform .SEARCHit {
     position: absolute;
     width: 32px;
     height: 32px;
     font-size: 0;
     top: 0;
     right: 0;
-    margin: 8px;
+    margin: 10px 0;
+    background: transparent;
+    cursor: pointer;
 }
 .SEARCHpopular {
     font-family: var(--font-lato);
@@ -429,14 +431,14 @@ LABEL.SEARCHit {
 .POPULARinst {
     display: inline-block;
 }
-.SEARCHpopular I.CROSSicon {
+.SEARCHpopular I.CROSSicon, .SEARCHpopular I.LASTsearch {
     display: inline-block;
     padding: 3px 0;
     height: 24px;
     margin-right: 8px;
     float: left;
 }
-.SEARCHpopular .CROSSicon::before {
+.SEARCHpopular .CROSSicon::before, .SEARCHpopular .LASTsearch::before {
     content: '';
     width: 24px;
     height: 24px;
@@ -451,6 +453,7 @@ LABEL.SEARCHit {
     text-decoration: none;
     color: #ffeb59;
     background-size: 76% 100%;
+    text-transform: lowercase;
 }
 .SEARCHpopular A:hover {
     background-size: 100% 100%;
@@ -817,7 +820,7 @@ display:none;
 
 @media screen and (min-width: 849px) {
 DIV.HEADERnav {
-    padding: 9px 32px;
+    padding: 9px 16px;
 }}
 
 
@@ -913,6 +916,42 @@ DIV.POSTbox SECTION {
     display: block;
     position: relative;
 }
+DIV.POSTbox SECTION .POSTimg::before {
+    content: '';
+    width: 100%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    height: 70%;
+    padding: 0;
+    background: linear-gradient( to top, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, 0) 57% );
+    bottom: 0;
+    z-index: 9;
+}
+DIV.POSTbox .POSTup:hover .POSTimg::before { opacity: 1; }
+DIV.POSTbox SECTION .POSTspot {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    z-index: 11;
+    bottom: 16px;
+    right: 16px;
+}
+DIV.POSTbox SECTION .POSTspot:hover I.BTNfav::before {
+    opacity: 0.5;
+}
+DIV.POSTbox SECTION I.BTNfav::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    display: block;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+DIV.POSTbox .POSTup:hover I.BTNfav::before { opacity: 0.2; }
 DIV.POSTbox SECTION IMG {
     width: 100%;
     display: block;
@@ -940,10 +979,11 @@ DIV.POSTbox SECTION.POSTup:after {
     z-index: 11;
 }
 SECTION.POSTup.free:before {
-    border-color: #14d08c transparent !IMPORTANT;
+    border-color: #00bfa5 transparent !IMPORTANT;
+/*	border-color: #14d08c transparent !IMPORTANT; */
 }
 SECTION.POSTup.excl:before {
-    border-color: #cc0000 transparent !IMPORTANT;
+    border-color: #bd9537 transparent !IMPORTANT;
 }
 DIV.POSTbox SECTION.POSTup.excl:after {
     background-size: 16px;
