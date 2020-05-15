@@ -31,6 +31,7 @@ PUSHmenu.style.removeProperty('transform');
 GUIDEmenu.style.removeProperty('left');
 SWIPEopen.classList.remove('SWIPEopen');}
 
+//MOSTRAR MAIS E MOSTRAR MENOS DO FOOTER [OK]
 var _SPOTone = document.querySelector('._SPOTone');
 var FORSPOTone = document.getElementById('FORSPOTone');
 FORSPOTone.addEventListener('click', function(){
@@ -61,4 +62,94 @@ if (_SPOTtre.style.display === "block") {
 _SPOTtre.style.display = "none";
 }else{
 FORSPOTtre.classList.add('CROSSup');
-_SPOTtre.style.display = "block";}});}
+_SPOTtre.style.display = "block";}});
+
+//GRAVADOR DE BUSCA [OK]
+var SEARCHit = document.querySelector('.SEARCHit');
+SEARCHit.addEventListener('click', SEARCHfind);
+
+function SEARCHfind(){
+var INPUTfind = document.querySelector('.SEARCHinput').value;
+if(INPUTfind != ''){
+if(localStorage.LASTsearch != undefined){
+var GETitem = localStorage.LASTsearch;
+var GETiteq = GETitem.length;
+var GETitef = GETitem.substring(2, GETiteq-2);
+var LASTes = GETitef.split('","');
+var LASTel = LASTes.length;
+var OUTirm = GETitef + '","' + INPUTfind;
+var OUTinst = '["' + OUTirm + '"]';
+
+if(3 < LASTel){
+var SEARC_1 = LASTes[4];
+var SEARC_2 = LASTes[3];
+var SEARC_3 = LASTes[2];
+var SEARC_4 = LASTes[1];
+var SEARCtag = '["' +SEARC_4+ '","' +SEARC_3+ '","' +SEARC_2+ '","' +INPUTfind+ '"]';
+localStorage.setItem('LASTsearch', SEARCtag);
+}else{
+localStorage.setItem('LASTsearch', OUTinst);}
+
+}else{
+var BAAHit = '["' +INPUTfind+ '"]';
+localStorage.setItem('LASTsearch', BAAHit);}}};
+
+if(localStorage.LASTsearch != undefined){	
+var arr = localStorage.LASTsearch;
+var arr = arr.substring(2, arr.length-2);
+var arr = arr.split('","');
+
+if(arr[arr.length-1] != undefined){ var SEARCHtag_1 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-1] +'&amp;max-results=9">'+ arr[arr.length-1] +'</a>' }
+else{ var SEARCHtag_1 = '' }
+if(arr[arr.length-2] != undefined){ var SEARCHtag_2 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-2] +'&amp;max-results=9">'+ arr[arr.length-2] +'</a>' }
+else{ var SEARCHtag_2 = '' }
+if(arr[arr.length-3] != undefined){ var SEARCHtag_3 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-3] +'&amp;max-results=9">'+ arr[arr.length-3] +'</a>' }
+else{ var SEARCHtag_3 = '' }
+if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-4] +'&amp;max-results=9">'+ arr[arr.length-4] +'</a>' }
+else{ var SEARCHtag_4 = '' }
+
+var POPULARinst = document.querySelector('.POPULARinst');
+POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
+
+//RESGATA BOOKMARKS [OK]
+if(window.location.href.indexOf('favoritos') > -1){
+var BLOGinst = document.querySelector('.Blog');
+let GETitem = localStorage.BOOKmark;
+var JSONparse = JSON.parse(GETitem);
+var OBJname = Object.getOwnPropertyNames(JSONparse);
+
+for(var i = 0; i < OBJname.length; i++){
+var pTITLE = JSONparse[OBJname[i]].POSTtitle;
+var pURL = JSONparse[OBJname[i]].POSTurl;
+var pPRICE = JSONparse[OBJname[i]].RELprice;
+var pIMG = JSONparse[OBJname[i]].RELimage;
+var pDATE = JSONparse[OBJname[i]].POSTdate;
+
+var CONTENTpage = '<div class="POSTbox"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
+
+//ENVIAR BOOKMARK [OK]
+var BTNcount = document.querySelectorAll('.BTNfav').length;
+for(var i = 0; i < BTNcount; i++){
+var BTNclick = document.querySelectorAll('.BTNfav');
+
+BTNclick[i].addEventListener('click', function(){
+var BTNrel = this.getAttribute('rel');
+var POSTinst = document.getElementById(BTNrel);
+var RELtitle = POSTinst.querySelector('.POSTurl').innerText;
+var RELhref = POSTinst.querySelector('.POSTurl').href;
+var RELdate = POSTinst.querySelector('.POSTdate').innerText;
+var RELimage = POSTinst.querySelector('.THUMBnail').src;
+var RELprice = POSTinst.querySelector('.POSTprice').innerText;
+
+var GETitem = localStorage.BOOKmark
+if(GETitem != undefined){
+if(!~GETitem.indexOf(BTNrel)){
+var MARKexist = GETitem.substring(1, GETitem.length-1);
+var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
+localStorage.setItem('BOOKmark', BOOKmark)
+}}else{
+console.log('primeiro item enviado')
+var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
+localStorage.setItem('BOOKmark', BOOKmark)}
+});}}
