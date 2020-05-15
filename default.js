@@ -114,7 +114,9 @@ POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SE
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
 var BLOGinst = document.querySelector('.Blog');
-let GETitem = localStorage.BOOKmark;
+
+var GETitem = localStorage.BOOKmark;
+if(GETitem != undefined){
 var JSONparse = JSON.parse(GETitem);
 var OBJname = Object.getOwnPropertyNames(JSONparse);
 
@@ -125,7 +127,30 @@ var pPRICE = JSONparse[OBJname[i]].RELprice;
 var pIMG = JSONparse[OBJname[i]].RELimage;
 var pDATE = JSONparse[OBJname[i]].POSTdate;
 
-var CONTENTpage = '<div class="POSTbox"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
+var CONTENTpage = '<div class="POSTbox" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
+
+//REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
+for(var i = 0; i < OBJname.length; i++){
+var BTNclick = document.querySelectorAll('.BTNdel');
+
+BTNclick[i].addEventListener('click', function(){
+var BTNrel = this.getAttribute('rel');
+var RECENTitem = localStorage.BOOKmark;
+var JSONparse = JSON.parse(RECENTitem);
+var OBJname = Object.getOwnPropertyNames(JSONparse);
+
+if(~OBJname.indexOf(BTNrel)){
+delete JSONparse[BTNrel]; // deleta o item selecionado
+var JSONstr = JSON.stringify(JSONparse); //converte em texto
+localStorage.setItem('BOOKmark', JSONstr)
+
+var THISpost = document.getElementById(BTNrel)
+THISpost.parentNode.removeChild(THISpost);
+}});}}
+else{
+var BLOGinst = document.querySelector('.Blog');
+var CONTENTpage = '<div class="EMPTYfav"><p>NÃO HÁ FAVORITOS NA SUA LISTA</p><span>Esta página tu encontra todos os templates selecionados como favoritos.</span></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
 
 //ENVIAR BOOKMARK [OK]
@@ -142,14 +167,13 @@ var RELdate = POSTinst.querySelector('.POSTdate').innerText;
 var RELimage = POSTinst.querySelector('.THUMBnail').src;
 var RELprice = POSTinst.querySelector('.POSTprice').innerText;
 
-var GETitem = localStorage.BOOKmark
+var GETitem = localStorage.BOOKmark;
 if(GETitem != undefined){
 if(!~GETitem.indexOf(BTNrel)){
 var MARKexist = GETitem.substring(1, GETitem.length-1);
 var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
-localStorage.setItem('BOOKmark', BOOKmark)
+localStorage.setItem('BOOKmark', BOOKmark);
 }}else{
-console.log('primeiro item enviado')
 var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
-localStorage.setItem('BOOKmark', BOOKmark)}
+localStorage.setItem('BOOKmark', BOOKmark);}
 });}}
