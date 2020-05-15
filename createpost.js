@@ -8,7 +8,12 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	
 	var nDATA = pDATE.split(' ');
 	var POSTdata = nDATA[0];
-	var POSTtime = nDATA[1];
+	var nYEAR = POSTdata.split('/');
+	var nDIA_ = nYEAR[1]
+	var nMES_ = nYEAR[0]
+	var nANO_ = nYEAR[2]
+	var POSTdata = nDIA_ + '/' + nMES_ + '/' + nANO_;
+	var POSTtime = nDATA[1];	
 	var DATAsplt = POSTtime.split(':');
 	var DATAhour = DATAsplt[0];
 	var DATAmini = DATAsplt[1];
@@ -55,9 +60,9 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	if(priceOut == 0){ var pricePost = 'EMPTY!'; }
 
 	if(img.length>=1){
-	summary = '<section class="POSTup '+pLOCAL+'"><img src="'+img[0].src+'"></img></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pricePost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section>';
+	summary = '<section class="POSTup '+pLOCAL+'"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTspot"><i class="BTNfav" rel="'+pID+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pricePost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section>';
 	} else { summary = '<span class="msgFailure idPost-'+pID+'">Esta publicação é um fracasso.<p>'+pID+'</p></span>'; }
-	div.innerHTML = summary;
+	div.innerHTML = summary;	
 }
 
 function createPostBody(pID, pTITLE, pDATE, pLABEL){
