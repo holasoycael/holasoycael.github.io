@@ -1,5 +1,11 @@
 //<![CDATA[
 
+var GETitem = localStorage.BOOKmark;
+var JSONparse = JSON.parse(GETitem);
+var OBJname = Object.getOwnPropertyNames(JSONparse);
+if(OBJname.length == 0){
+localStorage.removeItem('BOOKmark')}
+
 function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	var div = document.getElementById(pID);
 	var img = div.getElementsByTagName("img");
