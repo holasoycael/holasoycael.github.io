@@ -113,8 +113,6 @@ POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SE
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
-var postBody = document.querySelector('.postBody');
-postBody.parentNode.removeChild(postBody);
 var BLOGinst = document.querySelector('.Blog');
 
 var GETitem = localStorage.BOOKmark;
@@ -152,7 +150,7 @@ THISpost.parentNode.removeChild(THISpost);
 }});}}
 else{
 var BLOGinst = document.querySelector('.Blog');
-var CONTENTpage = '<div class="EMPTYfav"><p>NÃO HÁ FAVORITOS NA SUA LISTA</p><span>Esta página tu encontra todos os templates selecionados como favoritos.</span></div>';
+var CONTENTpage = '<div class="EMPTYfav"><p>Você não adicionou nenhum item ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl EXEfav TITLEex" href="javascript:void()"></a></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><a class="BTNlive EXEfav" href="javascript:void()"></a></li><li><a class="BTNinfo EXEfav" href="javascript:void()"></a></li></div></div></div></section></div></div></div><span>Quando gostar de um tema, adicione a sua lista clicando no botão ao passar o mouse ou tocar no tema.</span></div><a href="#" class="BACKhome">Mostrar todos os temas</a></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
 
 //ENVIAR BOOKMARK [OK]
