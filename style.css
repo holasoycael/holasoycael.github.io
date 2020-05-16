@@ -1001,7 +1001,7 @@ DIV.POSTbox .POSTbt_inner H3.POSTtitle {
     overflow: hidden;
     margin: 0 0 2px;
 }
-DIV.POSTbox .POSTbt_inner H3.POSTtitle A.POSTurl {
+DIV.POSTbox .POSTbt_inner H3.POSTtitle A.POSTurl, DIV.POSTbox .POSTbt_inner H3.POSTtitle SPAN.POSTurl {
     color: #4d4d4d;
     font-weight: 400;
     font-family: 'Open Sans', arial, sans-serif;
@@ -1053,7 +1053,7 @@ DIV.POSTbox .POSTbtn LI {
 DIV.POSTbox .POSTbtn LI:last-child {
     margin-left: 12px;
 }
-DIV.POSTbox .POSTbtn LI A {
+DIV.POSTbox .POSTbtn LI A, DIV.POSTbox .POSTbtn LI SPAN {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -1064,11 +1064,11 @@ DIV.POSTbox .POSTbtn LI A {
     letter-spacing: .5px;
     display: block;
 }
-DIV.POSTbox .POSTbtn LI A.BTNlive {
+DIV.POSTbox .POSTbtn LI A.BTNlive, DIV.POSTbox .POSTbtn LI SPAN.BTNlive {
     color: #606060;
     background: #E0E0E0;
 }
-DIV.POSTbox .POSTbtn LI A.BTNinfo {
+DIV.POSTbox .POSTbtn LI A.BTNinfo, DIV.POSTbox .POSTbtn LI SPAN.BTNinfo {
     color: #fff;
     background: #C00;
 }
@@ -1099,51 +1099,53 @@ DIV.POSTbox .POSTbtn LI A.BTNinfo {
     width: 100%;
     float: left;
 }
-.EMPTYfav SPAN {
-    margin: 16px 0;
+.EMPTYfav SPAN.MSGfav {
+    margin: 80px 0;
     font-family: var(--font-open);
     font-size: 14px;
     line-height: 26px;
     font-weight: 100;
     color: rgb(51, 51, 51);
     display: block;
+    text-indent: 20px;
     float: left;
     position: inherit;
-    width: 70%;
+    padding: 0 5%;
+    width: 90%;
 }
 .EMPTYfav A.BACKhome {
-    color: #333333;
+    color: #ffffff;
     font-size: 14px;
     line-height: 32px;
     letter-spacing: 0.5px;
     padding: 7px 14px;
     font-family: var(--font-open);
-    background: linear-gradient(rgb(255, 255, 255) 0%, rgb(250, 250, 250) 100%);
+    background: linear-gradient(#e60000 0%, rgb(204, 0, 0) 100%);
     transition: all 200ms ease-in-out 0s;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
     margin: 0 auto;
     display: table;
 }
 .EMPTYfav A.BACKhome:hover {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 0px 0px 4px;
+    box-shadow: rgba(255, 0, 0, 0.1) 0px 0px 0px 1px, rgba(255, 0, 0, 0.2) 0px 0px 0px 4px;
 }
 .EXEfav, .POSTprice.EXEfav.PRICEex::before {
 border-radius: 3px }
 .POSTbox.EXEfav {
     max-width: 100%;
 }
-A.POSTurl.EXEfav, .POSTdate.EXEfav, .POSTprice.EXEfav::before {
+SPAN.POSTurl.EXEfav, .POSTdate.EXEfav, .POSTprice.EXEfav::before {
     background: #EEE !IMPORTANT;
     color: transparent !IMPORTANT;
 }
-a.POSTurl.EXEfav.TITLEex {
+SPAN.POSTurl.EXEfav.TITLEex {
     width: 70% !IMPORTANT;
 }
 .POSTdate.EXEfav.DATEex {
     width: 40% !IMPORTANT;
 }
-a.POSTurl.EXEfav.TITLEex, .POSTdate.EXEfav.DATEex {
+SPAN.POSTurl.EXEfav.TITLEex, .POSTdate.EXEfav.DATEex {
     height: 19px !IMPORTANT;
     display: block;
 }
@@ -1161,7 +1163,7 @@ a.POSTurl.EXEfav.TITLEex, .POSTdate.EXEfav.DATEex {
 .POSTbtn.EXEfav.BUTTONSex {
     width: 50%;
 }
-a.BTNlive.EXEfav, a.BTNinfo.EXEfav {
+SPAN.BTNlive.EXEfav, SPAN.BTNinfo.EXEfav {
     height: 32px !IMPORTANT;
     width: 100% !IMPORTANT;
 }
@@ -1181,6 +1183,39 @@ DIV.POSTbox .POSTup:hover .POSTspot.EXEfav .BTNfav::before {
 DIV.POSTbox .POSTup .POSTspot.EXEfav:hover .BTNfav::before {
     opacity: 1 !IMPORTANT;
 }
+.BOTFAVright {
+    float: left;
+    position: inherit;
+    padding: 86px 0;
+    width: 70%;
+}
+@media screen and (max-width: 754px) {
+.SPOTfav {
+display: block;
+}
+.BOTFAVright {
+    padding: 16px 0;
+    width: 100%;
+}
+.EMPTYfav SPAN.MSGfav {
+    width: 100%;
+    padding: 0;
+    margin: 32px 0 52px;
+}
+}
+@media screen and (max-width: 854px) {
+.BOTFAVright {
+    padding: 0;
+}}
+@media screen and (max-width: 580px) {
+.BOTFAVright {
+	width: calc(100% + -32px);
+    padding: 0 16px;
+}.EMPTYfav P {
+	width: calc(100% + -32px);
+    padding: 0 16px;
+}}
+
 
 .owl-carousel,.owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
 .owl-carousel { display: none; width: 100%; z-index: 1; }
