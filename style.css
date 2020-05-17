@@ -75,7 +75,7 @@ MAIN.BODYmain { display: block; }
     margin: auto;
 }
 @media screen and (min-width: 550px) { .Blog, .page-navi { max-width: 550px; } }
-@media screen and (min-width: 754px) { .Blog, .page-navi { max-width: 100%; } DIV.POSTbox { max-width: 50%; } }
+@media screen and (min-width: 754px) { .Blog, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
 @media screen and (min-width: 900px) { .Blog, .page-navi { max-width: 100%; } }
 @media screen and (min-width: 1166px) { .Blog, .page-navi { max-width: 1056px; } }
 @media screen and (min-width: 1056px) { .Blog { padding: 16px; } }
@@ -954,10 +954,10 @@ DIV.POSTbox SECTION I.BTNfav::before, DIV.POSTbox SECTION I.BTNdel::before {
     width: 22px;
     height: 22px;
     display: block;
-    -moz-transition: opacity 0.4s ease;
-    -ms-transition: opacity 0.4s ease;
-    -o-transition: opacity 0.4s ease;
-    transition: opacity 0.4s ease;
+    -moz-transition: opacity 0.4s ease, background 0.2s ease;
+    -ms-transition: opacity 0.4s ease, background 0.2s ease;
+    -o-transition: opacity 0.4s ease, background 0.2s ease;
+    transition: opacity 0.4s ease, background 0.2s ease;
     opacity: 0;
 }
 DIV.POSTbox .POSTup:hover I.BTNfav::before, DIV.POSTbox .POSTup:hover I.BTNdel::before { opacity: 0.2; }
@@ -1362,11 +1362,11 @@ display: block;
 text-align: center;
 }
 DIV.POSTbox.BOOKmark {
-    -webkit-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
-    -moz-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
-    -ms-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
-    -o-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
-    transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    -webkit-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
+    -moz-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
+    -ms-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
+    -o-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
+    transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
     overflow: hidden;
     max-height: 412px;
     opacity: 1;
@@ -1379,4 +1379,64 @@ DIV.POSTbox.BOOKmark {
     transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
     max-height: 0;
     opacity: 0;
+}
+@media screen and (max-width: 753px) {
+DIV.POSTbox, DIV.POSTbox.BOOKmark {
+    max-width: 100%;
+}}
+@media screen and (max-width: 1055px) {
+.Blog.BOOKmark {
+    padding: 16px 0;
+}}
+H3.BOOKtitle {
+    color: #333;
+    display: block;
+    border-left: 1px solid #606060;
+    background: -webkit-gradient(linear,left top,right top,from(#606060),to(transparent));
+    background: linear-gradient(90deg,#606060,transparent);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: relative;
+    width: 70%;
+    float: left;
+    padding: 12px 10px 13px 56px;
+    text-align: left;
+    font-size: 14px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 6px 16px;
+    -webkit-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -moz-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -ms-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -o-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 46px;
+}
+H3.BOOKtitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 60%;
+    background: -webkit-gradient(linear,left top,right top,from(#606060),to(transparent));
+    background: linear-gradient(09deg,#606060,transparent);
+}
+H3.BOOKtitle::before {
+    content: "";
+    font-style: italic;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    color: #cc0000;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    position: absolute;
+    left: 1.2rem;
+    margin-right: 14px;
+    height: 24px;
+    top: 10px;
 }
