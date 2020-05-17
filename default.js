@@ -130,8 +130,10 @@ var pDATE = JSONparse[OBJname[i]].POSTdate;
 
 var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
-
-var BOOKtitle = '<h3 class="BOOKtitle">Há ' +OBJname.length+ ' temas na sua lista!</h3>';
+if(OBJname.length > 1){
+var BOOKtitle = '<h3 class="BOOKtitle">Há ' +OBJname.length+ ' temas na sua lista!</h3>';}
+else{
+var BOOKtitle = '<h3 class="BOOKtitle">Só há ' +OBJname.length+ ' tema na sua lista!</h3>';}
 BLOGinst.insertAdjacentHTML('afterbegin', BOOKtitle)
 
 //REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
@@ -150,9 +152,13 @@ var JSONstr = JSON.stringify(JSONparse); //converte em texto
 localStorage.setItem('BOOKmark', JSONstr)
 
 function DELTEpost(){
-if(OBJname.length > 1){
+if(OBJname.length > 2){
 var BOOKtitle = document.querySelector('.BOOKtitle');
 var BOOKtxt = `Há ${OBJname.length-1} temas na sua lista!`;
+	BOOKtitle.innerHTML = BOOKtxt;}
+else{
+var BOOKtitle = document.querySelector('.BOOKtitle');
+var BOOKtxt = `Só há ${OBJname.length-1} tema na sua lista!`;
 	BOOKtitle.innerHTML = BOOKtxt;}
 
 var THISpost = document.getElementById(BTNrel)
