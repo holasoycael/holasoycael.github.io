@@ -114,6 +114,7 @@ POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SE
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
 var BLOGinst = document.querySelector('.Blog');
+BLOGinst.classList.add('BOOKmark');
 
 if(localStorage.BOOKmark != undefined){
 var GETitem = localStorage.BOOKmark;
@@ -129,6 +130,9 @@ var pDATE = JSONparse[OBJname[i]].POSTdate;
 
 var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
+
+var BOOKtitle = '<h3 class="BOOKtitle">Há ' +OBJname.length+ ' temas na sua lista!</h3>';
+BLOGinst.insertAdjacentHTML('afterbegin', BOOKtitle)
 
 //REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
 for(var i = 0; i < OBJname.length; i++){
@@ -146,16 +150,24 @@ var JSONstr = JSON.stringify(JSONparse); //converte em texto
 localStorage.setItem('BOOKmark', JSONstr)
 
 function DELTEpost(){
+if(OBJname.length > 1){
+var BOOKtitle = document.querySelector('.BOOKtitle');
+var BOOKtxt = `Há ${OBJname.length-1} temas na sua lista!`;
+	BOOKtitle.innerHTML = BOOKtxt;}
+
 var THISpost = document.getElementById(BTNrel)
 THISpost.parentNode.removeChild(THISpost);}
 
-document.getElementById(BTNrel).style.cssText = "max-height:0;opacity:0;max-width:0";
-setTimeout(DELTEpost, 1000)}
+document.getElementById(BTNrel).style.cssText = "max-width:0;max-height:0;opacity:0";
+setTimeout(DELTEpost, 920)}
 
 function ZEROmark(){
+var BOOKtitle = document.querySelector('.BOOKtitle');
+BOOKtitle.parentNode.removeChild(BOOKtitle);
 document.querySelector('.EMPTYfav').style.cssText = "max-height:900px;opacity:1";}
 
 if(OBJname.length -1 == 0){
+	document.querySelector('.BOOKtitle').style.cssText = "opacity:0;max-height:0";
 	localStorage.removeItem('BOOKmark')
 var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav BOOKmark"><p>Nao há nenhum tema em seus favoritos... Não deixe-a solitaria. 😥</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Os temas adicionados a sua lista de favoritos duram até a limpeza dos dados do seu navegador ou excluí-los manualmente. Coloque novo temas a sua lista!</span><a href="#" class="BACKhome">Mostrar mais temas</a></div></div></div>';
