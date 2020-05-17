@@ -115,8 +115,8 @@ POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SE
 if(window.location.href.indexOf('favoritos') > -1){
 var BLOGinst = document.querySelector('.Blog');
 
+if(localStorage.BOOKmark != undefined){
 var GETitem = localStorage.BOOKmark;
-if(GETitem != undefined){
 var JSONparse = JSON.parse(GETitem);
 var OBJname = Object.getOwnPropertyNames(JSONparse);
 
@@ -127,7 +127,7 @@ var pPRICE = JSONparse[OBJname[i]].RELprice;
 var pIMG = JSONparse[OBJname[i]].RELimage;
 var pDATE = JSONparse[OBJname[i]].POSTdate;
 
-var CONTENTpage = '<div class="POSTbox" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
+var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
 
 //REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
@@ -145,13 +145,36 @@ delete JSONparse[BTNrel]; // deleta o item selecionado
 var JSONstr = JSON.stringify(JSONparse); //converte em texto
 localStorage.setItem('BOOKmark', JSONstr)
 
+function DELTEpost(){
 var THISpost = document.getElementById(BTNrel)
-THISpost.parentNode.removeChild(THISpost);
-}});}}
+THISpost.parentNode.removeChild(THISpost);}
+
+document.getElementById(BTNrel).style.cssText = "max-height:0;opacity:0;max-width:0";
+setTimeout(DELTEpost, 1000)}
+
+function ZEROmark(){
+document.querySelector('.EMPTYfav').style.cssText = "max-height:900px;opacity:1";}
+
+if(OBJname.length -1 == 0){
+	localStorage.removeItem('BOOKmark')
+var BLOGinst = document.querySelector('.Blog');
+var CONTENTpage = '<div class="EMPTYfav BOOKmark"><p>Nao há nenhum tema em seus favoritos... Não deixe-a solitaria. 😥</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Os temas adicionados a sua lista de favoritos duram até a limpeza dos dados do seu navegador ou excluí-los manualmente. Coloque novo temas a sua lista!</span><a href="#" class="BACKhome">Mostrar mais temas</a></div></div></div>';
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage);
+setTimeout(ZEROmark, 700)}});}}
 else{
 var BLOGinst = document.querySelector('.Blog');
-var CONTENTpage = '<div class="EMPTYfav"><p>Você não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
+var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
+
+//BOOOKMARK EXISTENTE
+if(~window.location.href.indexOf('favoritos') > -1){
+if(localStorage.BOOKmark != undefined){
+	var GETitem = localStorage.BOOKmark;
+	var JSONparse = JSON.parse(GETitem);
+	var OBJname = Object.getOwnPropertyNames(JSONparse);
+for(var i = 0; i < OBJname.length; i++){
+	var ACTIVEpost = document.getElementById(OBJname[i]);
+ACTIVEpost.classList.add('ACTIVElist');}}}
 
 //ENVIAR BOOKMARK [OK]
 var BTNcount = document.querySelectorAll('.BTNfav').length;
@@ -167,8 +190,11 @@ var RELdate = POSTinst.querySelector('.POSTdate').innerText;
 var RELimage = POSTinst.querySelector('.THUMBnail').src;
 var RELprice = POSTinst.querySelector('.POSTprice').innerText;
 
+	var ACTIVEpost = document.getElementById(BTNrel);
+	ACTIVEpost.classList.add('ACTIVElist');
+
+if(localStorage.BOOKmark != undefined){
 var GETitem = localStorage.BOOKmark;
-if(GETitem != undefined){
 if(!~GETitem.indexOf(BTNrel)){
 var MARKexist = GETitem.substring(1, GETitem.length-1);
 var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
