@@ -619,7 +619,10 @@ FOOTER.FOOTERit A {
     transform: translateX(-2px) rotate(-40deg);
 }
 .FOOTERcolumn I.CROSSicon:hover {
-    background: #2b2e3287;
+    background: #2b2e3287;    -webkit-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    -moz-transition: background-color 0s ease-out;
+    -ms-transition: background-color 0s ease-out;
+    -o-transition: background-color 0s ease-out;
     transition: background-color 0s ease-out;
     box-shadow: 0 0 6px 1px #292929;
 }
@@ -921,6 +924,9 @@ DIV.POSTbox SECTION .POSTimg::before {
     width: 100%;
     display: block;
     opacity: 0;
+    -moz-transition: opacity 0.4s ease;
+    -ms-transition: opacity 0.4s ease;
+    -o-transition: opacity 0.4s ease;
     transition: opacity 0.4s ease;
     position: absolute;
     height: 70%;
@@ -948,6 +954,9 @@ DIV.POSTbox SECTION I.BTNfav::before, DIV.POSTbox SECTION I.BTNdel::before {
     width: 22px;
     height: 22px;
     display: block;
+    -moz-transition: opacity 0.4s ease;
+    -ms-transition: opacity 0.4s ease;
+    -o-transition: opacity 0.4s ease;
     transition: opacity 0.4s ease;
     opacity: 0;
 }
@@ -1130,6 +1139,9 @@ DIV.POSTbox .POSTbtn LI A.BTNinfo, DIV.POSTbox .POSTbtn LI SPAN.BTNinfo {
     padding: 7px 14px;
     font-family: var(--font-open);
     background: linear-gradient(#e60000 0%, rgb(204, 0, 0) 100%);
+    -moz-transition: all 200ms ease-in-out 0s;
+    -ms-transition: all 200ms ease-in-out 0s;
+    -o-transition: all 200ms ease-in-out 0s;
     transition: all 200ms ease-in-out 0s;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
@@ -1350,12 +1362,20 @@ display: block;
 text-align: center;
 }
 DIV.POSTbox.BOOKmark {
+    -webkit-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    -moz-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    -ms-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    -o-transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
+    transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
     overflow: hidden;
     max-height: 412px;
-    transition: max-height 1s ease-in-out, max-width 1s ease-in-out, opacity 0.5s linear;
     opacity: 1;
 }
 .EMPTYfav.BOOKmark {
+    -webkit-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -moz-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -ms-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    -o-transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
     transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
     max-height: 0;
     opacity: 0;
