@@ -1388,7 +1388,7 @@ DIV.POSTbox, DIV.POSTbox.BOOKmark {
 .Blog.BOOKmark {
     padding: 16px 0;
 }}
-H3.BOOKtitle {
+H3.BOOKtitle, .status-msg-wrap.dts {
     color: #333;
     display: block;
     border-left: 1px solid #606060;
@@ -1415,7 +1415,7 @@ H3.BOOKtitle {
     overflow: hidden;
     max-height: 46px;
 }
-H3.BOOKtitle::after {
+H3.BOOKtitle::after, .status-msg-wrap.dts::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1425,7 +1425,7 @@ H3.BOOKtitle::after {
     background: -webkit-gradient(linear,left top,right top,from(#606060),to(transparent));
     background: linear-gradient(09deg,#606060,transparent);
 }
-H3.BOOKtitle::before {
+H3.BOOKtitle::before, .status-msg-wrap.dts::before {
     content: "";
     font-style: italic;
     font-weight: 400;
