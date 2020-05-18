@@ -64,6 +64,44 @@ _SPOTtre.style.display = "none";
 FORSPOTtre.classList.add('CROSSup');
 _SPOTtre.style.display = "block";}});
 
+//GRAVA O VALOR DA BUSCA [OK]
+document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
+function SEARCHform(event) {
+	var SEARCHinput = document.querySelector('.SEARCHinput').value;
+if(SEARCHinput != ''){
+if(localStorage.LASTsearch != undefined){
+	var GETitem = localStorage.LASTsearch;
+	var GETitef = GETitem.substring(2, GETitem.length-2);
+	var OUTirm = '["' +GETitef+ '","' +SEARCHinput+ '"]';
+	var LASTes = GETitef.split('","');
+
+if(LASTes.length < 3){
+	localStorage.setItem('LASTsearch', OUTirm);
+}else{
+	var SEARCtag = '["' +LASTes[1]+ '","' +LASTes[2]+ '","' +LASTes[3]+ '","' +SEARCHinput+ '"]';
+	localStorage.setItem('LASTsearch', SEARCtag);}}
+else{
+	var BAAHit = '["' +SEARCHinput+ '"]';
+	localStorage.setItem('LASTsearch', BAAHit);}}}
+
+//REGASTA E EXIBE O VALOR DA BUSCA [...]
+if(localStorage.LASTsearch != undefined){
+var arr = localStorage.LASTsearch;
+var arr = arr.substring(2, arr.length-2);
+var arr = arr.split('","');
+
+if(arr[arr.length-1] != undefined){ var SEARCHtag_1 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-1] +'&amp;max-results=9">'+ arr[arr.length-1] +'</a>' }
+else{ var SEARCHtag_1 = '' }
+if(arr[arr.length-2] != undefined){ var SEARCHtag_2 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-2] +'&amp;max-results=9">'+ arr[arr.length-2] +'</a>' }
+else{ var SEARCHtag_2 = '' }
+if(arr[arr.length-3] != undefined){ var SEARCHtag_3 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-3] +'&amp;max-results=9">'+ arr[arr.length-3] +'</a>' }
+else{ var SEARCHtag_3 = '' }
+if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-4] +'&amp;max-results=9">'+ arr[arr.length-4] +'</a>' }
+else{ var SEARCHtag_4 = '' }
+
+var POPULARinst = document.querySelector('.POPULARinst');
+POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
+
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
 var BLOGinst = document.querySelector('.Blog');
