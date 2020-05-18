@@ -107,7 +107,7 @@ if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href
 else{ var SEARCHtag_4 = '' }
 
 var POPULARinst = document.querySelector('.POPULARinst');
-POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
+POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
