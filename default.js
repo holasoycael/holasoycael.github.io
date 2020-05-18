@@ -75,7 +75,7 @@ if(localStorage.LASTsearch != undefined){
 	var OUTirm = '["' +GETitef+ '","' +SEARCHinput+ '"]';
 	var LASTes = GETitef.split('","');
 
-if(LASTes.length < 4){
+if(LASTes.length <= 3){
 	localStorage.setItem('LASTsearch', OUTirm);
 }else{
 	var SEARCtag = '["' +LASTes[1]+ '","' +LASTes[2]+ '","' +LASTes[3]+ '","' +SEARCHinput+ '"]';
