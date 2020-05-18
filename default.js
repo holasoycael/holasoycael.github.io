@@ -64,6 +64,7 @@ _SPOTtre.style.display = "none";
 FORSPOTtre.classList.add('CROSSup');
 _SPOTtre.style.display = "block";}});
 
+/*
 //GRAVADOR DE BUSCA [OK]
 var SEARCHit = document.querySelector('.SEARCHit');
 SEARCHit.addEventListener('click', SEARCHfind);
@@ -110,6 +111,7 @@ else{ var SEARCHtag_4 = '' }
 
 var POPULARinst = document.querySelector('.POPULARinst');
 POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
+*/
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
