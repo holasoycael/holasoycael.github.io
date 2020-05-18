@@ -64,21 +64,18 @@ _SPOTtre.style.display = "none";
 FORSPOTtre.classList.add('CROSSup');
 _SPOTtre.style.display = "block";}});
 
-/*
 //GRAVADOR DE BUSCA [OK]
-var SEARCHit = document.querySelector('.SEARCHit');
-SEARCHit.addEventListener('click', SEARCHfind);
-
-function SEARCHfind(){
-var INPUTfind = document.querySelector('.SEARCHinput').value;
-if(INPUTfind != ''){
+document.querySelector('.SEARCHform').addEventListener('submit', SEARCHfind);
+function SEARCHfind(event){
+  var SEARCHinput = document.querySelector('.SEARCHinput').value;
+if(SEARCHinput != ''){
 if(localStorage.LASTsearch != undefined){
 var GETitem = localStorage.LASTsearch;
 var GETiteq = GETitem.length;
 var GETitef = GETitem.substring(2, GETiteq-2);
 var LASTes = GETitef.split('","');
 var LASTel = LASTes.length;
-var OUTirm = GETitef + '","' + INPUTfind;
+var OUTirm = GETitef + '","' + SEARCHinput;
 var OUTinst = '["' + OUTirm + '"]';
 
 if(3 < LASTel){
@@ -86,16 +83,16 @@ var SEARC_1 = LASTes[4];
 var SEARC_2 = LASTes[3];
 var SEARC_3 = LASTes[2];
 var SEARC_4 = LASTes[1];
-var SEARCtag = '["' +SEARC_4+ '","' +SEARC_3+ '","' +SEARC_2+ '","' +INPUTfind+ '"]';
+var SEARCtag = '["' +SEARC_4+ '","' +SEARC_3+ '","' +SEARC_2+ '","' +SEARCHinput+ '"]';
 localStorage.setItem('LASTsearch', SEARCtag);
 }else{
 localStorage.setItem('LASTsearch', OUTinst);}
 
 }else{
-var BAAHit = '["' +INPUTfind+ '"]';
+var BAAHit = '["' +SEARCHinput+ '"]';
 localStorage.setItem('LASTsearch', BAAHit);}}};
 
-if(localStorage.LASTsearch != undefined){	
+if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
 var arr = arr.substring(2, arr.length-2);
 var arr = arr.split('","');
@@ -110,8 +107,7 @@ if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href
 else{ var SEARCHtag_4 = '' }
 
 var POPULARinst = document.querySelector('.POPULARinst');
-POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
-*/
+POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
