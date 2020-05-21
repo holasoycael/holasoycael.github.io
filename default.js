@@ -85,7 +85,7 @@ else{
 	localStorage.setItem('LASTsearch', BAAHit);}}}
 
 //REGASTA E EXIBE O VALOR DA BUSCA [...]
-function LASTsearch(){
+if(document.querySelector('.POPULARinst') > -1 ? false : true == true){
 if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
 var arr = arr.substring(2, arr.length-2);
