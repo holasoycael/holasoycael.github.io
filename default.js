@@ -63,7 +63,7 @@ _SPOTtre.style.display = "none";
 }else{
 FORSPOTtre.classList.add('CROSSup');
 _SPOTtre.style.display = "block";}});
-
+	
 //GRAVA O VALOR DA BUSCA [OK]
 document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
 function SEARCHform(event) {
@@ -85,6 +85,7 @@ else{
 	localStorage.setItem('LASTsearch', BAAHit);}}}
 
 //REGASTA E EXIBE O VALOR DA BUSCA [...]
+function LASTsearch(){
 if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
 var arr = arr.substring(2, arr.length-2);
@@ -100,7 +101,7 @@ if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href
 else{ var SEARCHtag_4 = '' }
 
 var POPULARinst = document.querySelector('.POPULARinst');
-POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}
+POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('favoritos') > -1){
@@ -176,7 +177,7 @@ var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum te
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
 
 //BOOOKMARK EXISTENTE
-if(~window.location.href.indexOf('favoritos') > -1){
+if(window.location.href.indexOf('favoritos') > -1){
 if(localStorage.BOOKmark != undefined){
 	var GETitem = localStorage.BOOKmark;
 	var JSONparse = JSON.parse(GETitem);
@@ -212,11 +213,30 @@ localStorage.setItem('BOOKmark', BOOKmark);
 var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
 localStorage.setItem('BOOKmark', BOOKmark);}
 });}
+	
+if(document.querySelector('.SEARCHbar') > -1 ? false : true == true){
+var SEARCHwhere = document.querySelector('.SEARCHwhere');
+var SEARCHbar = document.querySelector('.SEARCHbar');
+var HEADERnav = document.querySelector('.HEADERnav');
+var BACKmenu = document.querySelector('.BACKmenu');
+SEARCHwhere.addEventListener('click', function(){
+HEADERnav.style.cssText = "opacity:0;";
+SEARCHbar.style.cssText = "display:block";
+setTimeout(HEADmenuON, 100)});
+
+function HEADmenuON(){
+HEADERnav.style.cssText = "top: -56px;opacity:0;";
+SEARCHbar.style.cssText = "opacity:1;display:flex;";}
+
+BACKmenu.addEventListener('click', function(){
+SEARCHbar.style.cssText = "opacity:0;display:flex";
+setTimeout(HEADmenuOFF, 100)});
+
+function HEADmenuOFF(){
+SEARCHbar.removeAttribute("style");
+HEADERnav.style.cssText = "top:0;opacity:1";}}
 
 if(window.location.href.indexOf('sobre') > -1){
-
 var BLOGinst = document.querySelector('.Blog');
-var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Home</a><em class="CROSSicon"></em><a href="#">Blogger Templates</a><em class="CROSSicon"></em><a href="#" class="CURRENTurl">Blog/Magazine</a></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
-BLOGinst.innerHTML = POSTstatic;
-
-}}
+var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
+BLOGinst.innerHTML = POSTstatic;}}
