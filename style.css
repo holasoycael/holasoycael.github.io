@@ -65,7 +65,6 @@ MAIN.BODYmain { display: block; }
 
 .main, #main {
     position: relative;
-    overflow: hidden;
     display: block;
     margin: 0 auto;
 }
@@ -191,7 +190,7 @@ ASIDE.GUIDEmenu A::before {
 /*-------------------------------*/
 HEADER.HEADmenu { background: var(--navbar-bg); position: fixed; width: calc( var(--max-content) + 6px); top: 0; left: 0; height: 56px; z-index: 99; }
 HEADER.HEADmenu .BTNmenu {
-    padding: 0px 18px;
+    padding: 0px 8px;
     display: none;
     float: left;
 }
@@ -202,12 +201,20 @@ HEADER.HEADmenu .BTNhref::focus::hover { background-color: rgba(60,64,67,0.1); }
 HEADER.HEADmenu .BTNmenu A::before { position: absolute; top: 13px; left: 10px; width: 20px; height: 2px; background: var(--color-dark-gray); box-shadow: 0 3px transparent, 0 5px var(--color-dark-gray), 0 8px transparent, 0 10px var(--color-dark-gray); content: ''; z-index: 9; }
 @media screen and (max-width: 848px) { HEADER.HEADmenu .BTNmenu { display: block; } }
 
-DIV.HEADERnav {
+DIV.HEADERnav, .SEARCHbar {
     max-width: 1056px;
     padding: 9px 0;
     font-family: var(--font-poppins);
     margin: 0 auto;
-    display: flow-root;
+    display: block;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -ms-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+    overflow: hidden;
+    width: 100%;
+    opacity: 1;
 }
 DIV.HEADERnav UL.HEADERright {
     float: right;
@@ -231,7 +238,11 @@ DIV.HEADERnav LI A {
 DIV.HEADERnav LI A:hover {
     color: var(--color-clean);
 }
-DIV.HEADERnav LI A.NOTIFYon {
+.SEARCHwhere {
+    display: block;
+    cursor: pointer;
+}
+DIV.HEADERnav LI A.NOTIFYit, DIV.HEADERnav LI I.SEARCHwhere {
     padding: 0;
     width: 28px;
     height: 28px;
@@ -239,7 +250,7 @@ DIV.HEADERnav LI A.NOTIFYon {
     margin-bottom: 5px;
     font-size: 0;
 }
-DIV.HEADERnav LI A.NOTIFYon I.ALERTit {
+DIV.HEADERnav LI A.NOTIFYit I.ALERTon {
     background: #FBC013;
     width: 10px;
     height: 10px;
@@ -248,11 +259,11 @@ DIV.HEADERnav LI A.NOTIFYon I.ALERTit {
     position: absolute;
     top: 0;
     right: 0;
-    -webkit-animation: ALERTit 1s ease infinite !important;
-    -moz-animation: ALERTit 1s ease infinite !important;
-    animation: ALERTit 1s ease infinite !important;
+    -webkit-animation: ALERTon 1s ease infinite !important;
+    -moz-animation: ALERTon 1s ease infinite !important;
+    animation: ALERTon 1s ease infinite !important;
 }
-@keyframes ALERTit {
+@keyframes ALERTon {
 0% {
     opacity: 0;
 }
@@ -270,7 +281,6 @@ DIV.HEADERnav LI A.cPANEL {
     padding: 8px 16px !important;
     letter-spacing: 1px;
     font-family: var(--font-lato);
-    margin-left: 18px;
     line-height: 14px;
     margin-right: 10px;
     margin-top: 4px;
@@ -283,7 +293,7 @@ DIV.HEADERnav LI A.cPANEL:hover {
 @media screen and (max-width: 848px) {
 UL.HEADERleft, .ITEMdel { display: none; }
 DIV.HEADERnav UL.HEADERright {
-    padding: 0 18px;
+    padding: 0 8px;
 }}
 
 
@@ -1388,7 +1398,7 @@ DIV.POSTbox, DIV.POSTbox.BOOKmark {
 .Blog.BOOKmark {
     padding: 16px 0;
 }}
-H3.BOOKtitle, .status-msg-wrap.dts {
+H3.BOOKtitle {
     color: #333;
     display: block;
     border-left: 1px solid #606060;
@@ -1415,7 +1425,7 @@ H3.BOOKtitle, .status-msg-wrap.dts {
     overflow: hidden;
     max-height: 46px;
 }
-H3.BOOKtitle::after, .status-msg-wrap.dts::after {
+H3.BOOKtitle::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1425,18 +1435,114 @@ H3.BOOKtitle::after, .status-msg-wrap.dts::after {
     background: -webkit-gradient(linear,left top,right top,from(#606060),to(transparent));
     background: linear-gradient(09deg,#606060,transparent);
 }
-H3.BOOKtitle::before, .status-msg-wrap.dts::before {
+H3.BOOKtitle::before {
     content: "";
     font-style: italic;
     font-weight: 400;
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
-    color: #cc0000;
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     position: absolute;
     left: 1.2rem;
-    margin-right: 14px;
     height: 24px;
     top: 10px;
+}
+
+
+.SEARCHbar {
+    top: -56px;
+    display: none;
+    width: 100%;
+    opacity: 0;
+}
+.SEARCHbar FORM.SEARCHform {
+    width: calc(100% + -44px);
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin: 0 16px;
+}
+.SEARCHbar FORM.SEARCHform FIELDSET {
+    margin: 0 16px;
+}
+.SEARCHbar FORM.SEARCHform .SEARCHit {
+    margin: 3px 0;
+}
+.SEARCHbar FORM.SEARCHform INPUT.SEARCHinput {
+    padding: 9px 0;
+}
+.SEARCHbar FORM.SEARCHform:active {
+    box-shadow: none;
+}
+SECTION.BREADcrumb {
+    font-size: 13px;
+    font-family: var(--font-open);
+    padding: 0 8px;
+    font-weight: 100;
+    max-width: 1056px;
+    background: var(--body-bg);
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: 1px solid #dedede;
+}
+SECTION.BREADcrumb A, SECTION.BREADcrumb SPAN {
+    color: var(--color-black-out);
+    display: inline-block;
+    float: left;
+    padding: 8px;
+}
+SECTION.BREADcrumb SPAN.CURRENTurl::after {
+    content: '';
+    border-left: .1875rem solid transparent;
+    border-right: .1875rem solid transparent;
+    box-sizing: border-box;
+    border-bottom: .1875rem solid var(--navbar-bg);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+SECTION.BREADcrumb EM.CROSSicon {
+    width: 20px;
+    display: inline-block;
+    float: left;
+    height: 34px;
+}
+SECTION.BREADcrumb EM.CROSSicon::after {
+    content: '\276f';
+    font-size: 10px;
+    font-style: normal;
+    margin: 10px 7.5px;
+    position: absolute;
+}
+H3.STATICtitle {
+    font-weight: 100;
+    color: var(--color-black-out);
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: var(--font-poppins);
+    padding: 12px 16px 0;
+}
+.STATICinst {
+    max-width: 1056px;
+    margin: 0 auto;
+}
+
+
+.POSTstatic {
+    padding: 22px 16px;
+    line-height: 1.7em;
+    font-size: 16px;
+    color: var(--color-black-out);
+    font-family: var(--font-lato);
+    font-weight: 100;
+}
+I.BACKmenu {
+    width: 38px;
+    height: 38px;
+    display: block;
+    float: left;
+    background-position: center;
+    margin-left: 6px;
+    cursor: pointer;
 }
