@@ -86,7 +86,7 @@ else{
 
 //REGASTA E EXIBE O VALOR DA BUSCA [...]
 function LASTsearch(){
-if((localStorage.LASTsearch != undefined) && (~window.location.hostname == true)){
+if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
 var arr = arr.substring(2, arr.length-2);
 var arr = arr.split('","');
