@@ -1,4 +1,3 @@
-if(document.status != 200){
 window.onload = function(){
 var BTNmenu = document.querySelector('.BTNhref');
 var SWIPEc_ = document.querySelector('.SWIPEc_');
@@ -239,7 +238,4 @@ HEADERnav.style.cssText = "top:0;opacity:1";}}
 if(window.location.href.indexOf('sobre') > -1){
 var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
-BLOGinst.innerHTML = POSTstatic;}}}
-else{
-	alert('erro')
-}
+BLOGinst.innerHTML = POSTstatic;}}
