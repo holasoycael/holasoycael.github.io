@@ -84,7 +84,7 @@ else{
 	var BAAHit = '["' +SEARCHinput+ '"]';
 	localStorage.setItem('LASTsearch', BAAHit);}}}
 
-//REGASTA E EXIBE O VALOR DA BUSCA [...]
+//REGASTA E EXIBE O VALOR DA BUSCA [OK]
 if(document.querySelector('.POPULARinst') > -1 ? false : true == true){
 if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
@@ -104,7 +104,7 @@ var POPULARinst = document.querySelector('.POPULARinst');
 POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
 
 //RESGATA BOOKMARKS [OK]
-if(window.location.href.indexOf('favoritos') > -1){
+if(window.location.href.indexOf('/p/favoritos.html') > -1){
 var BLOGinst = document.querySelector('.Blog');
 BLOGinst.classList.add('BOOKmark');
 
@@ -174,10 +174,9 @@ setTimeout(ZEROmark, 700)}});}}
 else{
 var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
-BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
 
 //BOOOKMARK EXISTENTE
-if(window.location.href.indexOf('favoritos') > -1){
 if(localStorage.BOOKmark != undefined){
 	var GETitem = localStorage.BOOKmark;
 	var JSONparse = JSON.parse(GETitem);
