@@ -80,16 +80,16 @@ MAIN.BODYmain { display: block; }
     display: block;
     margin: 0 auto;
 }
-.postBody, .page-navi {
+.postBody, .MAINsec, .page-navi {
     overflow: hidden;
     background: #f1f1f1;
     margin: auto;
 }
-@media screen and (min-width: 550px) { .postBody, .page-navi { max-width: 550px; } }
-@media screen and (min-width: 754px) { .postBody, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
-@media screen and (min-width: 900px) { .postBody, .page-navi { max-width: 100%; } }
-@media screen and (min-width: 1166px) { .postBody, .page-navi { max-width: 1056px; } }
-@media screen and (min-width: 1056px) { .postBody { padding: 16px; } }
+@media screen and (min-width: 550px) { .postBody, .MAINsec, .page-navi { max-width: 550px; } }
+@media screen and (min-width: 754px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
+@media screen and (min-width: 900px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } }
+@media screen and (min-width: 1166px) { .postBody, .MAINsec, .page-navi { max-width: 1056px; } }
+@media screen and (min-width: 1056px) { .postBody, .MAINsec { padding: 16px; } }
 
 /*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
@@ -1669,14 +1669,14 @@ a.btn.checkoutButton {
 SPAN.PREMIUMval {
     font-size: 28px;
     font-family: var(--font-oswald);
-    color: #7a4;
+    color: #42a31f;
     float: right;
 }
 .TOOLSpost {
     background: #fff;
     padding: 16px;
 }
-.ACTIONpost A.FREEbtn {
+.ACTIONpost A.LIVEtemplate {
     color: black;
     background: #eee;
     border-radius: 4px;
@@ -1848,7 +1848,7 @@ H2.HEADERtitle {
     outline: none;
     transition: all .2s;
 }
-.FAVORITEthis {
+.LIVEspot {
     float: right;
     padding: 4px 0;
 }
@@ -1934,9 +1934,17 @@ H2.HEADERtitle {
 }
 .ITEMdeatails {
     border-bottom: 1px solid #eee;
+    font-family: var(--font-oswald);
     background: #f9f9f9;
     margin: 0 0 16px;
     padding: 16px;
+}
+.ITEMdeatails strong {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.ITEMdeatails i {
+    font-weight: 100;
 }
 .ITEMdeatails LI:not(:last-child) {
     margin: 0 0 10px;
