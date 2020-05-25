@@ -82,14 +82,13 @@ MAIN.BODYmain { display: block; }
 }
 .postBody, .MAINsec, .page-navi {
     overflow: hidden;
-    background: #f1f1f1;
     margin: auto;
 }
 @media screen and (min-width: 550px) { .postBody, .MAINsec, .page-navi { max-width: 550px; } }
 @media screen and (min-width: 754px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
 @media screen and (min-width: 900px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } }
 @media screen and (min-width: 1166px) { .postBody, .MAINsec, .page-navi { max-width: 1056px; } }
-@media screen and (min-width: 1056px) { .postBody, .MAINsec { padding: 16px; } }
+@media screen and (min-width: 1056px) { .postBody, .MAINsec { padding: 16px 16px 0; } }
 
 /*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
@@ -1731,10 +1730,10 @@ blockquote {
     border: 1px solid #d4d4d4;
     border-radius: 0;
 }
-.POSTimg {
+.POSTdoor {
     display: table;
 }
-.POSTimg img {
+.POSTdoor img {
     width: 100%;
     float: left;
     border-radius: 3px 3px 0 0;
@@ -1888,7 +1887,12 @@ H2.HEADERtitle {
     background: rgba(255, 255, 255, 0.25);
     color: #fff;
 }
-
+.MENUpost li:not(.CURRENTspot) {
+    cursor: pointer;
+}
+.MENUpost li:not(.CURRENTspot):hover {
+    background: rgba(255, 255, 255, 0.35);
+}
 .DESCpost {
     padding: 6px 16px 16px;
     font-size: 14px;
@@ -1967,6 +1971,12 @@ H2.HEADERtitle {
     height: 65px;
     transition: all .3s;
     width: 100%;
+}
+.FREEdownload A.URLfree:hover {
+    -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    -webkit-transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    transform: translateY(-1px);
 }
 .FREEdownload LI.SECURITYitem {
     margin: 12px 0 0;
