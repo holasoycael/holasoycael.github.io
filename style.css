@@ -1695,11 +1695,32 @@ SPAN.PREMIUMval {
     border-radius: 4px;
     border: 1px solid rgba(0,0,0,0.2);
     border-bottom-width: 4px;
-    padding: 12px 16px;
+    padding: 8px 16px;
     line-height: 17px;
-    font-family: var(--font-poppins);
+    font-family: var(--font-oswald);
     display: inline-block;
 }
+.ACTIONpost A.LIVEtemplate SPAN {
+    line-height: 1.8;
+    font-weight: 400;
+    color: #979797;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+A.LIVEtemplate I.SEEit {
+    display: inherit;
+    top: 4px;
+    margin-right: 8px;
+}
+A.LIVEtemplate I.SEEit, A.LIVEtemplate I.SEEit::before {
+    height: 18px;
+    width: 18px;
+}
+A.LIVEtemplate I.SEEit::before {
+    content: '';
+    display: block;
+}
+
 .FEATURESthis {
     padding: 16px 26px 0;
     color: #606060;
