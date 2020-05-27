@@ -53,8 +53,7 @@ A {
 
 DIV.POSTbox .POSTbtn LI A,
 .PURCHASEbox,
-span.CHECKOUTbtn a,
-.GOOGLEtrend,
+SPAN.CHECKOUTbtn A,
 .INFORMATIONpage {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1705,7 +1704,9 @@ SPAN.CHECKOUTbtn A {
     margin: 16px 0 0;
     display: block;
 }
-
+SPAN.CHECKOUTbtn A:hover {
+    background-color: #5ce02c;
+}
 SPAN.CHECKOUTbtn A:active {
     background-color: #42a31f;
     transition: all 0s;
@@ -1758,7 +1759,15 @@ SPAN.PREMIUMval {
     padding: 8px 16px;
     line-height: 17px;
     font-family: var(--font-oswald);
+    transition: all .3s;
     display: inline-block;
+}
+.ACTIONpost A.LIVEtemplate:hover {
+    background: #f6f6f6;
+}
+.ACTIONpost A.LIVEtemplate:active {
+    transition: all 0s;
+    background: #ddd;
 }
 .ACTIONpost A.LIVEtemplate SPAN {
     line-height: 1.8;
@@ -1791,7 +1800,7 @@ A.LIVEtemplate I.SEEit::before {
 .FEATURESthis h4 {
     font-weight: 400;
     font-size: 22px;
-    padding: 0 2.918% 14px;
+    padding: 0 2.918% 22px;
     color: #0d141b;
     position: relative;
 }
@@ -1833,44 +1842,6 @@ blockquote {
     float: left;
     border-radius: 3px 3px 0 0;
 }
-.TRENDbox {
-    margin: 6px 0 0;
-    overflow: hidden;
-    max-height: 270px;
-}
-.GOOGLEtrend {
-    margin: 22px 0 0 0;
-    overflow: hidden;
-}
-.GOOGLEtrend, .TRENDbox {
-    background: #fff;
-    font-family: var(--font-lato);
-}
-H2.HEADERtitle {
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    color: #1c1c1c;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 16px;
-    font-weight: 700;
-    height: 50px;
-    line-height: 22px;
-    margin: 0;
-    padding: 0 15px;
-    border-bottom: 1px solid #f3f3f3;
-}
-.GOOGLEtrend IFRAME {
-    -webkit-box-shadow: none!important;
-    box-shadow: none!important;
-    position: relative;
-    top: -30px;
-    width: calc(100% + 18px);
-    left: -9px;
-}
-
 
 
 .SHAREpage {
@@ -1977,6 +1948,7 @@ H2.HEADERtitle {
     font-size: 14px;
     padding: 0 24px;
     font-weight: 100;
+    transition: all 0.3s;
 }
 .MENUpost LI:not(:first-child) {
     background: rgba(255, 255, 255, 0.25);
@@ -2067,7 +2039,7 @@ H2.HEADERtitle {
     transition: all .3s;
     width: 100%;
 }
-.FREEdownload A.URLfree:hover, .FREEdownload A.URLfree:active, SPAN.CHECKOUTbtn A:hover {
+.FREEdownload A.URLfree:hover, SPAN.CHECKOUTbtn A:hover, .ACTIONpost A.LIVEtemplate:hover {
     -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
     -webkit-transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
