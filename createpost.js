@@ -18,7 +18,7 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	var DATAhour = DATAsplt[0];
 	var DATAmini = DATAsplt[1];
 	var POSTampm = nDATA[2];
-	var pDATE = POSTdata + ' Ã€S ' + DATAhour + ':' + DATAmini + ' ' +POSTampm;
+	var pDATE = POSTdata + ' ÀS ' + DATAhour + ':' + DATAmini + ' ' +POSTampm;
 
 	// MOEDA
 	var BR = "R$ ";
@@ -61,7 +61,7 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 
 	if(img.length>=1){
 	summary = '<section class="POSTup '+pLOCAL+'"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTspot"><i class="BTNfav" rel="'+pID+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pricePost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section>';
-	} else { summary = '<span class="msgFailure idPost-'+pID+'">Esta publicaÃ§Ã£o Ã© um fracasso.<p>'+pID+'</p></span>'; }
+	} else { summary = '<span class="msgFailure idPost-'+pID+'">Esta publicação é um fracasso.<p>'+pID+'</p></span>'; }
 	div.innerHTML = summary;	
 }
 
@@ -74,7 +74,7 @@ function createPostBody(pID, pTITLE, pURL, pDATE, pLOCAL){
 	var MONTHdate = DATEspt[0];
 	if(MONTHdate == 1){ var MONTHdate = "Janeiro" }
 	if(MONTHdate == 2){ var MONTHdate = "Fevereiro" }
-	if(MONTHdate == 3){ var MONTHdate = "MarÃ§o" }
+	if(MONTHdate == 3){ var MONTHdate = "Março" }
 	if(MONTHdate == 4){ var MONTHdate = "Abril" }
 	if(MONTHdate == 5){ var MONTHdate = "Maio" }
 	if(MONTHdate == 6){ var MONTHdate = "Junho" }
@@ -163,39 +163,39 @@ function createPostBody(pID, pTITLE, pURL, pDATE, pLOCAL){
 	var ITEMlayout = doc.body.querySelector('.zip').getAttribute('layout').replace('responsivo','Responsivo');
 
 	if(doc.body.querySelector('responsive') > -1 ? false : true == true){
-	var CODErespon = '<li><strong>Responsivo</strong>: 100% funcionando em todos os dispositivos mÃ³veis e tablets.</li>';}
+	var CODErespon = '<li><strong>Responsivo</strong>: 100% funcionando em todos os dispositivos móveis e tablets.</li>';}
 	else{CODErespon = '';}
 	if(doc.body.querySelector('error') > -1 ? false : true == true){
-	var CODEerror = '<li><strong>PÃ¡gina 404</strong>: conteÃºdo costumizado para pÃ¡ginas nÃ£o encontradas.</li>';}
+	var CODEerror = '<li><strong>Página 404</strong>: conteúdo costumizado para páginas não encontradas.</li>';}
 	else{CODErespon = '';}
 	if(doc.body.querySelector('pagenavi') > -1 ? false : true == true){
-	var PAGEnavi = '<li><strong>Pagenavi</strong>: plug-in para navegaÃ§Ã£o nÃºmeradas das postagens.</li>';}
+	var PAGEnavi = '<li><strong>Pagenavi</strong>: plug-in para navegação númeradas das postagens.</li>';}
 	else{PAGEnavi = '';}
 	if(doc.body.querySelector('cookies') > -1 ? false : true == true){
-	var COOKies = '<li><strong>NotificaÃ§Ã£o do uso de Cookies</strong>: ponto notificando o uso de cookies segundo as leis da uniÃ£o europeia em ordem do alerta aos visitantes da UE sobre os cookies usados e os dados coletados em sua pÃ¡gina.</li>';}
+	var COOKies = '<li><strong>Notificação do uso de Cookies</strong>: ponto notificando o uso de cookies segundo as leis da união europeia em ordem do alerta aos visitantes da UE sobre os cookies usados e os dados coletados em sua página.</li>';}
 	else{COOKies = '';}
 	if(doc.body.querySelector('post') > -1 ? false : true == true){
-	var CONpost = '<li><strong>Postagens por comandos</strong>: o conteÃºdo da postagem Ã© inserido por comandos de texto especÃ­ficos dentro da ediÃ§Ã£o de postagem.</li>';}
+	var CONpost = '<li><strong>Postagens por comandos</strong>: o conteúdo da postagem é inserido por comandos de texto específicos dentro da edição de postagem.</li>';}
 	else{CONpost = '';}
 	if(doc.body.querySelector('comments') > -1 ? false : true == true){
-	var COMMents = '<li><strong>MÃºltiplo sistema de comentÃ¡rios</strong>: nÃ£o apenas para Blogger, mas tambÃ©m o sistema de comentÃ¡rios do Facebook e Disqus com opÃ§Ã£o de escolher quais usar.</li>';}
+	var COMMents = '<li><strong>Múltiplo sistema de comentários</strong>: não apenas para Blogger, mas também o sistema de comentários do Facebook e Disqus com opção de escolher quais usar.</li>';}
 	else{COMMents = '';}
 	if(doc.body.querySelector('seo') > -1 ? false : true == true){
 	var SEOmeta = '<li><strong>SEO Otimizado</strong>: resultados de buscadores prontos.</li>';}
 	else{SEOmeta = '';}
 	if(doc.body.querySelector('ads') > -1 ? false : true == true){
-	var ADSspot = '<li><strong>EspaÃ§o de anÃºncios prontos</strong>: tenha locais especÃ­ficos de anÃºncios para otimizar sua receita.</li>';}
+	var ADSspot = '<li><strong>Espaço de anúncios prontos</strong>: tenha locais específicos de anúncios para otimizar sua receita.</li>';}
 	else{ADSspot = '';}
 	if(doc.body.querySelector('fav') > -1 ? false : true == true){
-	var FAVOrite = '<li><strong>Lista de favoritos</strong>: crie lista personalizada das postagens pÃºblicadas no dominio.</li>';}
+	var FAVOrite = '<li><strong>Lista de favoritos</strong>: crie lista personalizada das postagens públicadas no dominio.</li>';}
 	else{ADSspot = '';}
 
-	var SHAREpage = '<div class="SHAREpage"><h3>Compartilhe essa pÃ¡gina</h3><li class="btnFacebook"><a class="SOCIALurl" data-height="500" data-url="https://www.facebook.com/sharer.php?u=' +pURL+ '" data-width="550" rel="nofollow">Facebook</a></li><li class="btnTwitter"><a class="SOCIALurl" data-height="460" data-url="https://twitter.com/intent/tweet?url=' +pURL+ '&text=' +pTITLE+ '&via=bracael" data-width="550" rel="nofollow">Twitter</a></li><li class="btnWhatsapp"><a alt="Compartilhar no WhatsApp" data-action="share/whatsapp/share" href="whatsapp://send?text=' +pTITLE+ '%20' +pURL+ '" title="Compartilhar no WhatsApp">WhatsApp</a></div>';
+	var SHAREpage = '<div class="SHAREpage"><h3>Compartilhe essa página</h3><li class="btnFacebook"><a class="SOCIALurl" data-height="500" data-url="https://www.facebook.com/sharer.php?u=' +pURL+ '" data-width="550" rel="nofollow">Facebook</a></li><li class="btnTwitter"><a class="SOCIALurl" data-height="460" data-url="https://twitter.com/intent/tweet?url=' +pURL+ '&text=' +pTITLE+ '&via=bracael" data-width="550" rel="nofollow">Twitter</a></li><li class="btnWhatsapp"><a alt="Compartilhar no WhatsApp" data-action="share/whatsapp/share" href="whatsapp://send?text=' +pTITLE+ '%20' +pURL+ '" title="Compartilhar no WhatsApp">WhatsApp</a></div>';
 
 	var FEATURESthis = '<div class="FEATURESthis"><h4>Recursos inclusos</h4><ul>' +PAGEnavi+COOKies+CODEerror+CODErespon+CONpost+COMMents+SEOmeta+ADSspot+FAVOrite+ '</ul></div>';
-	var CHANGElog = '<div class="CHANGElog"><h3>Changelog</h3><blockquote class="tr_bq">- v1.0.0 â€“ ' +nDATE+ '\n<b>lanÃ§amento inicial</b></blockquote></div>'
+	var CHANGElog = '<div class="CHANGElog"><h3>Changelog</h3><blockquote class="tr_bq">- v1.0.0 – ' +nDATE+ '\n<b>lançamento inicial</b></blockquote></div>'
 
-	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><i class="SEEit"></i><span>Visualizar tema</span></a></div></div></div><div class="INFORMATIONpage"><div class="DESCpost"><h3>Nossa opiniÃ£o sobre o ' +pTITLE+ '</h3><p>' +DESCpost+ '</p></div>' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a><span class="PREMIUMval">' +pricePost+ '</span></h4><div class="CHECKOUTwrap"><li>AtualizaÃ§Ã£o do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domÃ­nios ilimitados</li><li>Remover crÃ©ditos</li><span class="CHECKOUTbtn"><a href="' +CHECKOUTbtn+ '" rel="nofollow" class="btn CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div><div class="FILEtools"><div class="ITEMdeatails"><li><strong>AtualizaÃ§Ã£o:</strong><i> ' +ITEMupdate+ '</i></li><li><strong>Criado:</strong><i> ' +ITEMcreate+ '</i></li><li><strong>Layout:</strong><i> ' +ITEMlayout+ '</i></li></li><li><strong>Tipo de Arquivo:</strong><i> Arquivo ZIP</i></li></div><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar GrÃ¡tis</span> <span class="btn-download-right-secondary">versÃ£o de avaliaÃ§Ã£o</span></div></a></li><li class="SECURITYitem">Verificado com <b>AntivÃ­rus</b></li></div></div></div></div></div></div>';
+	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><i class="SEEit"></i><span>Visualizar tema</span></a></div></div></div><div class="INFORMATIONpage"><div class="DESCpost"><h3>Nossa opinião sobre o ' +pTITLE+ '</h3><p>' +DESCpost+ '</p></div>' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a><span class="PREMIUMval">' +pricePost+ '</span></h4><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="CHECKOUTbtn"><a href="' +CHECKOUTbtn+ '" rel="nofollow" class="btn CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div><div class="FILEtools"><div class="ITEMdeatails"><li><strong>Atualização:</strong><i> ' +ITEMupdate+ '</i></li><li><strong>Criado:</strong><i> ' +ITEMcreate+ '</i></li><li><strong>Layout:</strong><i> ' +ITEMlayout+ '</i></li></li><li><strong>Tipo de Arquivo:</strong><i> Arquivo ZIP</i></li></div><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span> <span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div></div></div></div></div>';
 	div.innerHTML = summary;
 
 for(var r = 0; r < 2; r++){
@@ -232,7 +232,7 @@ for(var i = 0, c = 101; i < doc.body.querySelectorAll('.changelog').length; i++,
 
 	if(MONTHlog == 1){ var MONTHlog = "Janeiro" }
 	if(MONTHlog == 2){ var MONTHlog = "Fevereiro" }
-	if(MONTHlog == 3){ var MONTHlog = "MarÃ§o" }
+	if(MONTHlog == 3){ var MONTHlog = "Março" }
 	if(MONTHlog == 4){ var MONTHlog = "Abril" }
 	if(MONTHlog == 5){ var MONTHlog = "Maio" }
 	if(MONTHlog == 6){ var MONTHlog = "Junho" }
