@@ -79,15 +79,15 @@ MAIN.BODYmain { display: block; }
     display: block;
     margin: 0 auto;
 }
-.postBody, .MAINsec, .page-navi {
+.POSTbody, .MAINsec, .page-navi {
     overflow: hidden;
     margin: auto;
 }
-@media screen and (min-width: 550px) { .postBody, .MAINsec, .page-navi { max-width: 550px; } }
-@media screen and (min-width: 754px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
-@media screen and (min-width: 900px) { .postBody, .MAINsec, .page-navi { max-width: 100%; } }
-@media screen and (min-width: 1166px) { .postBody, .MAINsec, .page-navi { max-width: 1056px; } }
-@media screen and (min-width: 1056px) { .postBody, .MAINsec { padding: 16px 16px 0; } }
+@media screen and (min-width: 550px) { .POSTbody, .MAINsec, .page-navi { max-width: 550px; } }
+@media screen and (min-width: 754px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
+@media screen and (min-width: 900px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } }
+@media screen and (min-width: 1166px) { .POSTbody, .MAINsec, .page-navi { max-width: 1056px; } }
+@media screen and (min-width: 1056px) { .POSTbody, .MAINsec { padding: 16px 16px 0; } }
 
 /*-------------------------------*/
 /*---------- PAGENAVI -----------*/
@@ -1459,7 +1459,7 @@ DIV.POSTbox, DIV.POSTbox.BOOKmark {
     max-width: 100%;
 }}
 @media screen and (max-width: 1055px) {
-.postBody.BOOKmark {
+.POSTbody.BOOKmark {
     padding: 16px 0;
 }}
 H3.BOOKtitle {
