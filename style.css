@@ -1868,18 +1868,21 @@ blockquote {
     float: left;
 }
 .SHAREpage li.btnWhatsapp A {
-    color: #009688;
+    box-shadow: inset 0px 0 0px 1px #27ae60;
+    color: #27ae60;
 }
 .SHAREpage li.btnWhatsapp A:hover {
-    background: #009688;
+    background: #27ae60;
 }
 .SHAREpage li.btnTwitter A {
+    box-shadow: inset 0px 0 0px 1px #55acee;
     color: #55acee;
 }
 .SHAREpage li.btnTwitter A:hover {
     background: #55acee;
 }
 .SHAREpage li.btnFacebook A {
+    box-shadow: inset 0px 0 0px 1px #4e6eb5;
     color: #4e6eb5;
 }
 .SHAREpage li.btnFacebook A:hover {
@@ -1898,17 +1901,15 @@ blockquote {
     align-items: center;
     text-align: center;
     background: none;
-    border-style: solid;
-    border-width: 1px;
     border-radius: 4px;
-    line-height: 30px;
+    line-height: 32px;
     cursor: pointer;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-block;
     font-size: 12px;
     font-weight: 400;
-    height: 30px;
+    height: 32px;
     justify-content: center;
     outline: none;
     transition: all .2s;
