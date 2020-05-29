@@ -1634,7 +1634,7 @@ I.BACKmenu {
 
 .POSTcontent, .MAINsec {
     display: table;
-    margin: 32px 0;
+    margin: 32px auto;
 }
 .POSTleft, .POSTright {
     float: left;
