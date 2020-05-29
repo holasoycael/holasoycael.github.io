@@ -54,7 +54,8 @@ A {
 DIV.POSTbox .POSTbtn LI A,
 .PURCHASEbox,
 SPAN.CHECKOUTbtn A,
-.INFORMATIONpage {
+.INFORMATIONpage,
+.relatedSpot A {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -67,6 +68,14 @@ SPAN.CHECKOUTbtn A,
     -ms-border-radius: 0 0 3px 3px;
     -o-border-radius: 0 0 3px 3px;
     border-radius: 0 0 3px 3px;
+}
+.POSTdoor img,
+.relatedSpot IMG {
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -ms-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 
@@ -87,7 +96,6 @@ MAIN.BODYmain { display: block; }
 @media screen and (min-width: 754px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
 @media screen and (min-width: 900px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } }
 @media screen and (min-width: 1166px) { .POSTbody, .MAINsec, .page-navi { max-width: 1056px; } }
-@media screen and (min-width: 1056px) { .POSTbody, .MAINsec { padding: 16px 16px 0; } }
 
 /*-------------------------------*/
 /*---------- PAGENAVI -----------*/
@@ -896,12 +904,6 @@ display:none;
 }}
 
 
-@media screen and (min-width: 849px) {
-DIV.HEADERnav {
-    padding: 9px 16px;
-}}
-
-
 @media screen and (min-width: 848px) {
 .FOOTERinst {
     max-width: 1056px;
@@ -1630,10 +1632,9 @@ I.BACKmenu {
 
 
 
-
-.POSTcontent {
-    width: 100%;
+.POSTcontent, .MAINsec {
     display: table;
+    margin: 32px 0;
 }
 .POSTleft, .POSTright {
     float: left;
@@ -1645,13 +1646,12 @@ I.BACKmenu {
     width: 70%;
 }
 .LEFTinst {
-    margin: 16px 24px 0 0;
+    margin: 0 24px 0 0;
 }
 .PURCHASEbox,
 .FREEspot {
     background: #fff;
     font-family: var(--font-lato);
-    margin: 16px 0 0 0;
     padding: 10px 16px 16px;
 }
 .PURCHASEbox h4 {
@@ -1840,7 +1840,6 @@ blockquote {
 .POSTdoor img {
     width: 100%;
     float: left;
-    border-radius: 3px 3px 0 0;
 }
 
 
@@ -1951,11 +1950,9 @@ blockquote {
     font-weight: 100;
     transition: all 0.3s;
 }
-.MENUpost LI:not(:first-child) {
+.MENUpost li:not(.CURRENTspot) {
     background: rgba(255, 255, 255, 0.25);
     color: #fff;
-}
-.MENUpost li:not(.CURRENTspot) {
     cursor: pointer;
 }
 .MENUpost li:not(.CURRENTspot):hover {
@@ -2127,4 +2124,254 @@ span.btn-download-right-secondary {
 }
 .btn-download-right SPAN {
     color: #fff;
+}
+
+
+
+.comments {
+    max-width: 1056px;
+    margin: 32px auto;
+}
+.COMMENTSinst {
+    background: #fff;
+}
+#comments {
+    /* display: none; */
+    /* max-height: 0; */
+}
+#comments .comment-thread ol{
+margin:0;
+padding-left:0;
+padding-left:0
+}
+#comments .comment .comment-replybox-single,#comments .comment-thread .comment-replies{
+margin-left:60px
+}
+#comments .comment-thread .thread-count{
+display:none
+}
+#comments .comment{
+list-style-type:none;
+padding:0 0 30px;
+position:relative
+}
+#comments .comment .comment{
+padding-bottom:8px
+}
+.comment .avatar-image-container{
+position:absolute
+}
+.comment .avatar-image-container img{
+border-radius:50%
+}
+.avatar-image-container svg,.comment .avatar-image-container .avatar-icon{
+border-radius:50%;
+border:solid 1px #707070;
+box-sizing:border-box;
+fill:#707070;
+height:35px;
+margin:0;
+padding:7px;
+width:35px
+}
+.comment .comment-block{
+margin-top:10px;
+margin-left:60px;
+padding-bottom:0
+}
+#comments .comment-author-header-wrapper{
+margin-left:40px
+}
+#comments .comment .thread-expanded .comment-block{
+padding-bottom:20px
+}
+#comments .comment .comment-header .user,#comments .comment .comment-header .user a{
+color:#212121;
+font-style:normal;
+font-weight:700
+}
+#comments .comment .comment-actions{
+bottom:0;
+margin-bottom:15px;
+}
+#comments .comment .comment-actions>*{
+margin-right:8px
+}
+#comments .comment .comment-header .datetime{
+bottom:0;
+color:rgba(33,33,33,.54);
+display:inline-block;
+font-size:13px;
+font-style:italic;
+margin-left:8px
+}
+#comments .comment .comment-footer .comment-timestamp a,#comments .comment .comment-header .datetime a{
+color:rgba(33,33,33,.54)
+}
+#comments .comment .comment-content,.comment .comment-body{
+margin-top:12px;
+word-break:break-word
+}
+.comment-body{
+margin-bottom:12px
+}
+#comments.embed[data-num-comments="0"]{
+border:0;
+margin-top:0;
+padding-top:0
+}
+#comments.embed[data-num-comments="0"] #comment-post-message,#comments.embed[data-num-comments="0"] div.comment-form>p,#comments.embed[data-num-comments="0"] p.comment-footer{
+display:none
+}
+#comment-editor-src{
+display:none
+}
+.comments .comments-content .loadmore.loaded{
+max-height:0;
+opacity:0;
+overflow:hidden
+}
+.comment-link{
+color:#2196f3;
+position:relative
+}
+.comment-link .num_comments{
+margin-left:8px;
+vertical-align:top
+}
+#comment-holder .continue{
+display:none
+}
+#comment-editor{
+margin-bottom:20px;
+margin-top:20px
+}
+#comments .comment-form h4,#comments h3.title{
+position:absolute;
+clip:rect(1px,1px,1px,1px);
+padding:0;
+border:0;
+height:1px;
+width:1px;
+overflow:hidden
+}
+#comments .comment .comment-actions,.subscribe-popup .FollowByEmail .follow-by-email-submit,.widget.Profile .profile-link,.widget.Profile .profile-link.visit-profile{
+background:0 0;
+border:0;
+box-shadow:none;
+color:#2196f3;
+cursor:pointer;
+font-size:14px;
+font-weight:700;
+outline:0;
+text-decoration:none;
+text-transform:uppercase;
+width:auto
+}
+.hidden {
+display:none
+}
+
+.RELATEDelement {
+    background: #ddd;
+}
+.relatedSpot {
+    max-width: 1056px;
+    margin: 0 auto;
+    font-family: var(--font-poppins);
+    padding: 16px 0 32px;
+}
+.relatedSpot H2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 42px 0 32px;
+    color: #4d4d4d;
+}
+.relatedSpot UL {
+    display: flex;
+}
+.relatedSpot LI {
+    width: 31.2%;
+    margin-bottom: 3%;
+    transition: all 0.4s;
+}
+.relatedSpot LI:hover {
+    box-shadow: 0 45px 85px rgba(0,0,0,.08);
+}
+.relatedSpot LI:not(:last-child) {
+    margin-right: 3%;
+}
+.relatedSpot LI::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    bottom: 0px;
+    width: 80%;
+    height: 50%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    left: 10%;
+    right: 10%;
+}
+.relatedSpot A {
+    background: #fff;
+    float: left;
+    z-index: 5;
+}
+.relatedSpot LI P {
+    padding: 10%!important;
+    font-family: var(--font-lato);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000;
+}
+.relatedSpot IMG {
+    width: 100%;
+}
+
+.POSTbody {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 1056px;
+}
+.POSTbody.GETsize, .POSTbody.GETout{max-height:0}
+.POSTbody, .comments, #SUPPORTtab, #DOCUMENTtab {
+    transition: max-height 0.5s ease-in-out, opacity 0.3s linear!IMPORTANT;	
+}
+.comments, #SUPPORTtab, #DOCUMENTtab {
+    overflow: hidden;
+    max-height: 0;
+    margin: 0 auto;
+    max-width: 1056px;
+    max-height: 0;
+}
+.GETsize {
+    max-width: 100% !IMPORTANT;
+    max-height: 100% !IMPORTANT;
+    transform: translate3d(100%, 0px, 0px);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -999;
+    right: 0;
+}
+.COMMENTSinst, .DOCUMENTinst, .SUPPORTinst {
+    margin: 32px auto;
+}
+.POSTbody.MAINtab{
+    max-height: 0 !IMPORTANT;
+	height:100%;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s linear!IMPORTANT;	
+	opacity:0;
+}
+.SELECTtab[disable] {
+    background: rgba(255, 255, 255, 0.15) !IMPORTANT;
 }
