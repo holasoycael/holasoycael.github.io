@@ -1634,7 +1634,12 @@ I.BACKmenu {
 
 .POSTcontent, .MAINsec {
     display: table;
+}
+.POSTcontent {
     margin: 32px auto;
+}
+.MAINsec {
+    margin: 16px auto 0;
 }
 .POSTleft, .POSTright {
     float: left;
@@ -2375,3 +2380,7 @@ display:none
 .SELECTtab[disable] {
     background: rgba(255, 255, 255, 0.15) !IMPORTANT;
 }
+
+
+
+
