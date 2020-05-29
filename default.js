@@ -63,10 +63,10 @@ _SPOTtre.style.display = "none";
 }else{
 FORSPOTtre.classList.add('CROSSup');
 _SPOTtre.style.display = "block";}});
-	
+
 //GRAVA O VALOR DA BUSCA [OK]
 document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
-function SEARCHform(event) {
+function SEARCHform(event){
 	var SEARCHinput = document.querySelector('.SEARCHinput').value;
 if(SEARCHinput != ''){
 if(localStorage.LASTsearch != undefined){
@@ -128,7 +128,7 @@ else{
 var BOOKtitle = '<h3 class="BOOKtitle">Só há ' +OBJname.length+ ' tema na sua lista!</h3>';}
 BLOGinst.insertAdjacentHTML('afterbegin', BOOKtitle)
 
-//REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
+//REMOVER POST BOOKMARK [OK]
 for(var i = 0; i < OBJname.length; i++){
 var BTNclick = document.querySelectorAll('.BTNdel');
 
@@ -238,4 +238,71 @@ HEADERnav.style.cssText = "top:0;opacity:1";}}
 if(window.location.href.indexOf('sobre') > -1){
 var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
-BLOGinst.innerHTML = POSTstatic;}}
+BLOGinst.innerHTML = POSTstatic;}
+
+var POSTelement = document.querySelector('.POSTbody').offsetHeight;
+var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
+var SUPPORTtab = document.querySelector('.SUPPORTtab').offsetHeight;
+var comments = document.querySelector('.comments').offsetHeight;
+
+//MENUMASTER
+var css = new Blob([".comments.TABon{max-height:" +comments+ "px!IMPORTANT}.POSTbody.TABon{max-height:" +POSTelement+ "px}.DOCUMENTtab.TABon{max-height:" +DOCUMENTtab+ "px!IMPORTANT}.SUPPORTtab.TABon{max-height:" +SUPPORTtab+ "px!IMPORTANT}.POSTbody.MAINtab{max-height:0}.GETout{display:none}"], {type:'text/css'});
+var style = document.createElement('link');
+style.href = URL.createObjectURL(css) + '#style.css';
+style.rel = 'stylesheet';
+document.head.appendChild(style);
+
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+var COMMENTSwid = document.querySelectorAll('.SELECTtab');
+	
+COMMENTSwid[i].addEventListener('click', function(){
+	var SELECTtab = this.getAttribute('for');
+	var CURRENTspot = document.querySelector('.CURRENTspot');
+	var CURRENTurl = document.querySelector('.' +SELECTtab);
+	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
+	console.log(document.querySelector('.SELECTtab').hasAttribute("disable") == false)
+
+if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
+	CURRENTspot.setAttribute('class', 'SELECTtab');
+
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+	COMMENTSwid[i].setAttribute('disable', '');
+	console.log(COMMENTSwid[i]);
+
+function DISABLEbtn(){
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length+1; i++){
+	COMMENTSwid[i].removeAttribute("disable");
+	console.log(COMMENTSwid);}}
+	setTimeout(DISABLEbtn, 2000);}
+
+if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
+	CURRENTurl.classList.add('MAINtab');}
+
+	CURRENTurl.classList.remove('GETsize', 'GETout');
+	
+	FIRSTelement.style.cssText = "opacity:0;max-height:0";
+	FIRSTelement.classList.remove('TABon');
+
+if(this.querySelector('.CURRENTspot') > -1 ? false : true == true){
+	this.setAttribute('class', 'SELECTtab');}
+	else{
+	this.setAttribute('class', 'CURRENTspot');}
+
+	function DISPLAYelement2(){
+	CURRENTurl.removeAttribute("style");
+	
+	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl);
+	FIRSTelement.classList.add('GETsize', 'GETout');
+	FIRSTelement.removeAttribute("style");}
+
+	function DISPLAYelement(){
+	CURRENTurl.classList.add('TABon');
+
+if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
+	CURRENTurl.style.cssText = "opacity:1";
+	CURRENTurl.classList.remove('MAINtab');}
+
+	setTimeout(DISPLAYelement2, 500);}
+
+setTimeout(DISPLAYelement, 100);}
+});}}
