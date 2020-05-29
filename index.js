@@ -66,7 +66,7 @@ _SPOTtre.style.display = "block";}});
 
 //GRAVA O VALOR DA BUSCA [OK]
 document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
-function SEARCHform(event) {
+function SEARCHform(event){
 	var SEARCHinput = document.querySelector('.SEARCHinput').value;
 if(SEARCHinput != ''){
 if(localStorage.LASTsearch != undefined){
@@ -84,8 +84,8 @@ else{
 	var BAAHit = '["' +SEARCHinput+ '"]';
 	localStorage.setItem('LASTsearch', BAAHit);}}}
 
-//REGASTA E EXIBE O VALOR DA BUSCA [...]
-function LASTsearch(){
+//REGASTA E EXIBE O VALOR DA BUSCA [OK]
+if(document.querySelector('.POPULARinst') > -1 ? false : true == true){
 if(localStorage.LASTsearch != undefined){
 var arr = localStorage.LASTsearch;
 var arr = arr.substring(2, arr.length-2);
@@ -104,7 +104,7 @@ var POPULARinst = document.querySelector('.POPULARinst');
 POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
 
 //RESGATA BOOKMARKS [OK]
-if(window.location.href.indexOf('favoritos') > -1){
+if(window.location.href.indexOf('/p/favoritos.html') > -1){
 var BLOGinst = document.querySelector('.Blog');
 BLOGinst.classList.add('BOOKmark');
 
@@ -128,7 +128,7 @@ else{
 var BOOKtitle = '<h3 class="BOOKtitle">Só há ' +OBJname.length+ ' tema na sua lista!</h3>';}
 BLOGinst.insertAdjacentHTML('afterbegin', BOOKtitle)
 
-//REMOVER POST BOOKMARK [EM EDIÇÃO (...)]
+//REMOVER POST BOOKMARK [OK]
 for(var i = 0; i < OBJname.length; i++){
 var BTNclick = document.querySelectorAll('.BTNdel');
 
@@ -174,10 +174,9 @@ setTimeout(ZEROmark, 700)}});}}
 else{
 var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
-BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
 
 //BOOOKMARK EXISTENTE
-if(window.location.href.indexOf('favoritos') > -1){
 if(localStorage.BOOKmark != undefined){
 	var GETitem = localStorage.BOOKmark;
 	var JSONparse = JSON.parse(GETitem);
@@ -213,8 +212,8 @@ localStorage.setItem('BOOKmark', BOOKmark);
 var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
 localStorage.setItem('BOOKmark', BOOKmark);}
 });}
-
-
+	
+if(document.querySelector('.SEARCHbar') > -1 ? false : true == true){
 var SEARCHwhere = document.querySelector('.SEARCHwhere');
 var SEARCHbar = document.querySelector('.SEARCHbar');
 var HEADERnav = document.querySelector('.HEADERnav');
@@ -222,8 +221,7 @@ var BACKmenu = document.querySelector('.BACKmenu');
 SEARCHwhere.addEventListener('click', function(){
 HEADERnav.style.cssText = "opacity:0;";
 SEARCHbar.style.cssText = "display:block";
-setTimeout(HEADmenuON, 100)
-});
+setTimeout(HEADmenuON, 100)});
 
 function HEADmenuON(){
 HEADERnav.style.cssText = "top: -56px;opacity:0;";
@@ -231,18 +229,80 @@ SEARCHbar.style.cssText = "opacity:1;display:flex;";}
 
 BACKmenu.addEventListener('click', function(){
 SEARCHbar.style.cssText = "opacity:0;display:flex";
-setTimeout(HEADmenuOFF, 100)
-});
+setTimeout(HEADmenuOFF, 100)});
 
 function HEADmenuOFF(){
 SEARCHbar.removeAttribute("style");
-HEADERnav.style.cssText = "top:0;opacity:1";
-}
+HEADERnav.style.cssText = "top:0;opacity:1";}}
 
 if(window.location.href.indexOf('sobre') > -1){
-
 var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
-BLOGinst.innerHTML = POSTstatic;
+BLOGinst.innerHTML = POSTstatic;}
 
-}}
+var POSTelement = document.querySelector('.POSTbody').offsetHeight;
+var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
+var SUPPORTtab = document.querySelector('.SUPPORTtab').offsetHeight;
+var comments = document.querySelector('.comments').offsetHeight;
+
+//MENUMASTER
+var css = new Blob([".comments.TABon{max-height:" +comments+ "px!IMPORTANT}.POSTbody.TABon{max-height:" +POSTelement+ "px}.DOCUMENTtab.TABon{max-height:" +DOCUMENTtab+ "px!IMPORTANT}.SUPPORTtab.TABon{max-height:" +SUPPORTtab+ "px!IMPORTANT}.POSTbody.MAINtab{max-height:0}.GETout{display:none}"], {type:'text/css'});
+var style = document.createElement('link');
+style.href = URL.createObjectURL(css) + '#style.css';
+style.rel = 'stylesheet';
+document.head.appendChild(style);
+
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+var COMMENTSwid = document.querySelectorAll('.SELECTtab');
+	
+COMMENTSwid[i].addEventListener('click', function(){
+	var SELECTtab = this.getAttribute('for');
+	var CURRENTspot = document.querySelector('.CURRENTspot');
+	var CURRENTurl = document.querySelector('.' +SELECTtab);
+	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
+	console.log(document.querySelector('.SELECTtab').hasAttribute("disable") == false)
+
+if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
+	CURRENTspot.setAttribute('class', 'SELECTtab');
+
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+	COMMENTSwid[i].setAttribute('disable', '');
+	console.log(COMMENTSwid[i]);
+
+function DISABLEbtn(){
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length+1; i++){
+	COMMENTSwid[i].removeAttribute("disable");
+	console.log(COMMENTSwid);}}
+	setTimeout(DISABLEbtn, 2000);}
+
+if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
+	CURRENTurl.classList.add('MAINtab');}
+
+	CURRENTurl.classList.remove('GETsize', 'GETout');
+	
+	FIRSTelement.style.cssText = "opacity:0;max-height:0";
+	FIRSTelement.classList.remove('TABon');
+
+if(this.querySelector('.CURRENTspot') > -1 ? false : true == true){
+	this.setAttribute('class', 'SELECTtab');}
+	else{
+	this.setAttribute('class', 'CURRENTspot');}
+
+	function DISPLAYelement2(){
+	CURRENTurl.removeAttribute("style");
+	
+	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl);
+	FIRSTelement.classList.add('GETsize', 'GETout');
+	FIRSTelement.removeAttribute("style");}
+
+	function DISPLAYelement(){
+	CURRENTurl.classList.add('TABon');
+
+if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
+	CURRENTurl.style.cssText = "opacity:1";
+	CURRENTurl.classList.remove('MAINtab');}
+
+	setTimeout(DISPLAYelement2, 500);}
+
+setTimeout(DISPLAYelement, 100);}
+});}}
