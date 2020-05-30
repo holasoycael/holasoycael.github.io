@@ -92,10 +92,10 @@ MAIN.BODYmain { display: block; }
     overflow: hidden;
     margin: auto;
 }
-@media screen and (min-width: 550px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 550px; } }
-@media screen and (min-width: 754px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
-@media screen and (min-width: 900px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 100%; } }
-@media screen and (min-width: 1166px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 1056px; } }
+@media screen and (min-width: 550px) { .MAINsec, .STATICpage, .page-navi { max-width: 550px; } }
+@media screen and (min-width: 754px) { .MAINsec, .STATICpage, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
+@media screen and (min-width: 900px) { .MAINsec, .STATICpage, .page-navi { max-width: 100%; } }
+@media screen and (min-width: 1166px) { .MAINsec, .STATICpage, .page-navi { max-width: 1056px; } }
 
 /*-------------------------------*/
 /*---------- PAGENAVI -----------*/
@@ -2135,14 +2135,9 @@ span.btn-download-right-secondary {
 
 .comments {
     max-width: 1056px;
-    margin: 32px auto;
 }
 .COMMENTSinst {
     background: #fff;
-}
-#comments {
-    /* display: none; */
-    /* max-height: 0; */
 }
 #comments .comment-thread ol{
 margin:0;
@@ -2349,13 +2344,10 @@ display:none
 }
 .POSTbody.GETsize, .POSTbody.GETout{max-height:0}
 .POSTbody, .comments, #SUPPORTtab, #DOCUMENTtab {
-    transition: max-height 0.5s ease-in-out, opacity 0.3s linear!IMPORTANT;	
+    transition: max-height 0.5s ease-in-out, opacity 0.5s linear!IMPORTANT;	
 }
 .comments, #SUPPORTtab, #DOCUMENTtab {
     overflow: hidden;
-    max-height: 0;
-    margin: 0 auto;
-    max-width: 1056px;
     max-height: 0;
 }
 .GETsize {
@@ -2374,9 +2366,18 @@ display:none
 .POSTbody.MAINtab{
     max-height: 0 !IMPORTANT;
 	height:100%;
-    transition: max-height 0.5s ease-in-out, opacity 0.3s linear!IMPORTANT;	
+    transition: max-height 0.5s ease-in-out, opacity 0.5s linear!IMPORTANT;	
 	opacity:0;
 }
 .SELECTtab[disable] {
     background: rgba(255, 255, 255, 0.15) !IMPORTANT;
 }
+.ITEMpost {
+    max-width: 1056px;
+    margin: 0 auto;
+}
+.POSTbody.TABon.TABmax, .comments.TABon.TABmax, .DOCUMENTtab.TABon.TABmax, .SUPPORTtab.TABon.TABmax {
+    max-height: 100%!IMPORTANT;
+}
+
+
