@@ -240,6 +240,7 @@ var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
 BLOGinst.innerHTML = POSTstatic;}
 
+if(document.querySelector('.ITEMpost') > -1 ? false : true == true){
 var POSTelement = document.querySelector('.POSTbody').offsetHeight;
 var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
 var SUPPORTtab = document.querySelector('.SUPPORTtab').offsetHeight;
@@ -260,20 +261,17 @@ COMMENTSwid[i].addEventListener('click', function(){
 	var CURRENTspot = document.querySelector('.CURRENTspot');
 	var CURRENTurl = document.querySelector('.' +SELECTtab);
 	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
-	console.log(document.querySelector('.SELECTtab').hasAttribute("disable") == false)
 
 if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
 	CURRENTspot.setAttribute('class', 'SELECTtab');
 
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	COMMENTSwid[i].setAttribute('disable', '');
-	console.log(COMMENTSwid[i]);
 
 function DISABLEbtn(){
-for(var i = 0; i < document.querySelectorAll('.SELECTtab').length+1; i++){
-	COMMENTSwid[i].removeAttribute("disable");
-	console.log(COMMENTSwid);}}
-	setTimeout(DISABLEbtn, 2000);}
+for(var i = 0; i < COMMENTSwid.length; i++){
+	COMMENTSwid[i].removeAttribute("disable");}}
+	setTimeout(DISABLEbtn, 800);}
 
 if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
 	CURRENTurl.classList.add('MAINtab');}
@@ -305,4 +303,4 @@ if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
 	setTimeout(DISPLAYelement2, 500);}
 
 setTimeout(DISPLAYelement, 100);}
-});}}
+});}}}
