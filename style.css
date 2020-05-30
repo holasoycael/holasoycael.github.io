@@ -88,14 +88,14 @@ MAIN.BODYmain { display: block; }
     display: block;
     margin: 0 auto;
 }
-.POSTbody, .MAINsec, .page-navi {
+.POSTbody, .MAINsec, .page-navi, .STATICpage {
     overflow: hidden;
     margin: auto;
 }
-@media screen and (min-width: 550px) { .POSTbody, .MAINsec, .page-navi { max-width: 550px; } }
-@media screen and (min-width: 754px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
-@media screen and (min-width: 900px) { .POSTbody, .MAINsec, .page-navi { max-width: 100%; } }
-@media screen and (min-width: 1166px) { .POSTbody, .MAINsec, .page-navi { max-width: 1056px; } }
+@media screen and (min-width: 550px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 550px; } }
+@media screen and (min-width: 754px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
+@media screen and (min-width: 900px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 100%; } }
+@media screen and (min-width: 1166px) { .POSTbody, .MAINsec, .STATICpage, .page-navi { max-width: 1056px; } }
 
 /*-------------------------------*/
 /*---------- PAGENAVI -----------*/
@@ -1635,7 +1635,7 @@ I.BACKmenu {
 .POSTcontent, .MAINsec {
     display: table;
 }
-.POSTcontent {
+.POSTcontent, .STATICpage {
     margin: 32px auto;
 }
 .MAINsec {
@@ -2380,7 +2380,3 @@ display:none
 .SELECTtab[disable] {
     background: rgba(255, 255, 255, 0.15) !IMPORTANT;
 }
-
-
-
-
