@@ -218,14 +218,14 @@ for(var i = 0, c = 101; i < doc.body.querySelectorAll('.changelog').length; i++,
 
 	if(CHANGElog[i].getAttribute('before') > -1 ? false : true == true){
 	var SPLITfixe = CHANGElog[i].getAttribute('before');
-	var SPLITfixe = '<b>Fixed</b>: '+SPLITfixe+ '\n';}
+	var SPLITfixe = '<b>Retificado</b>: '+SPLITfixe+ '\n';}
 	else{var SPLITfixe = '';}
 
 	if(CHANGElog[i].getAttribute('after') > -1 ? false : true == true){
 	var SPLITadde = CHANGElog[i].getAttribute('after');
-	var SPLITline = SPLITadde.replace(/(\+ )/g, '\n<b>Added</b>: ');
+	var SPLITline = SPLITadde.replace(/(\+ )/g, '\n<b>Novo</b>: ');
 	var SPLITline = SPLITline.replace(/(\ \n)/g, '\n');
-	var SPLITadde = '<b>Added</b>: ' +SPLITline+ '\n';
+	var SPLITadde = '<b>Novo</b>: ' +SPLITline+ '\n';
 	}else{var SPLITadde = '';}
 
 	var MONTHlog = SPLITattr[1];
