@@ -2247,9 +2247,9 @@ vertical-align:top
 #comment-holder .continue{
 display:none
 }
-#comment-editor{
-margin-bottom:20px;
-margin-top:20px
+#comment-editor {
+    margin-top: 20px;
+    display: block;
 }
 #comments .comment-form h4,#comments h3.title{
 position:absolute;
