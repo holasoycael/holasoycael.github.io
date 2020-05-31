@@ -241,13 +241,13 @@ var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BR
 BLOGinst.innerHTML = POSTstatic;}
 
 if(document.querySelector('.ITEMpost') > -1 ? false : true == true){
-var POSTelement = document.querySelector('.POSTbody').offsetHeight;
+var POSTbody = document.querySelector('.POSTbody').offsetHeight;
 var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
 var SUPPORTtab = document.querySelector('.SUPPORTtab').offsetHeight;
 var comments = document.querySelector('.comments').offsetHeight;
 
 //MENUMASTER
-var css = new Blob([".comments.TABon{max-height:" +comments+ "px!IMPORTANT}.POSTbody.TABon{max-height:" +POSTelement+ "px}.DOCUMENTtab.TABon{max-height:" +DOCUMENTtab+ "px!IMPORTANT}.SUPPORTtab.TABon{max-height:" +SUPPORTtab+ "px!IMPORTANT}.POSTbody.MAINtab{max-height:0}.GETout{display:none}"], {type:'text/css'});
+var css = new Blob([".DISABLEdiv{height:0}"], {type:'text/css'});
 var style = document.createElement('link');
 style.href = URL.createObjectURL(css) + '#style.css';
 style.rel = 'stylesheet';
@@ -255,7 +255,7 @@ document.head.appendChild(style);
 
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 var COMMENTSwid = document.querySelectorAll('.SELECTtab');
-	
+
 COMMENTSwid[i].addEventListener('click', function(){
 	var SELECTtab = this.getAttribute('for');
 	var CURRENTspot = document.querySelector('.CURRENTspot');
@@ -263,44 +263,43 @@ COMMENTSwid[i].addEventListener('click', function(){
 	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
 
 if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
-	CURRENTspot.setAttribute('class', 'SELECTtab');
+	FIRSTelement.classList.remove('ZEROdiv');
+	CURRENTurl.classList.remove('ZEROdiv');
 
+setTimeout(function(){
+	// FIRSTelement.classList.add('ZEROdiv', 'DISABLEdiv');
+	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl); }, 700);
+
+setTimeout(function(){
+FIRSTelement.classList.add('DISABLEdiv') }, 700);
+
+//FECHA O PRIMEIRO ELEMENTO
+$(FIRSTelement).animate({ height: 0 },{ duration: 700 });
+
+//ADICIONA ALTURA NA DIV/ABA CHAMADA ------ [ 400 MILI-S ] DEPOIS DO CLICK
+setTimeout(function(){
+if(SELECTtab == 'comments'){	
+$(CURRENTurl).animate({ height: comments, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
+}else if(SELECTtab == 'SUPPORTtab'){
+$(CURRENTurl).animate({ height: SUPPORTtab, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
+}else if(SELECTtab == 'DOCUMENTtab'){
+$(CURRENTurl).animate({ height: DOCUMENTtab, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
+}else if(SELECTtab == 'POSTbody'){
+$(CURRENTurl).animate({ height: POSTbody, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
+}}, 400);
+
+
+//DISABLE BUTTONS
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
-	COMMENTSwid[i].setAttribute('disable', '');
+	COMMENTSwid[i].setAttribute('disable', '');}
+	
+setTimeout(function(){
+	CURRENTurl.classList.remove('DISABLEdiv');
 
-function DISABLEbtn(){
+	FIRSTelement.removeAttribute('style');
+	FIRSTelement.classList.remove('ACTIVEdiv');
 for(var i = 0; i < COMMENTSwid.length; i++){
-	COMMENTSwid[i].removeAttribute("disable");}}
-	setTimeout(DISABLEbtn, 800);}
-
-if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
-	CURRENTurl.classList.add('MAINtab');}
-
-	CURRENTurl.classList.remove('GETsize', 'GETout');
-	
-	FIRSTelement.style.cssText = "opacity:0;max-height:0";
-	FIRSTelement.classList.remove('TABon');
-
-if(this.querySelector('.CURRENTspot') > -1 ? false : true == true){
-	this.setAttribute('class', 'SELECTtab');}
-	else{
-	this.setAttribute('class', 'CURRENTspot');}
-
-	function DISPLAYelement2(){
-	CURRENTurl.removeAttribute("style");
-	
-	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl);
-	FIRSTelement.classList.add('GETsize', 'GETout');
-	FIRSTelement.removeAttribute("style");}
-
-	function DISPLAYelement(){
-	CURRENTurl.classList.add('TABon');
-
-if(!document.querySelector('.POSTbody').isEqualNode(FIRSTelement)){
-	CURRENTurl.style.cssText = "opacity:1";
-	CURRENTurl.classList.remove('MAINtab');}
-
-	setTimeout(DISPLAYelement2, 500);}
-
-setTimeout(DISPLAYelement, 100);}
+	COMMENTSwid[i].removeAttribute("disable");}}, 800);
+	this.setAttribute('class', 'SELECTtab CURRENTspot');
+	CURRENTspot.setAttribute('class', 'SELECTtab');}
 });}}}
