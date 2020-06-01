@@ -160,7 +160,7 @@ function createPostBody(pID, pTITLE, pURL, pDATE, pLOCAL){
 
 	var ITEMupdate = doc.body.querySelector('.zip').getAttribute('update').replace(/(-)/gi,'/');
 	var ITEMcreate = doc.body.querySelector('.zip').getAttribute('created').replace(/(-)/gi,'/');
-	var ITEMlayout = doc.body.querySelector('.zip').getAttribute('layout').replace('responsivo','Responsivo');
+	var ITEMlayout = doc.body.querySelector('.zip').getAttribute('layout');
 
 	if(doc.body.querySelector('responsive') > -1 ? false : true == true){
 	var CODErespon = '<li><strong>Responsivo</strong>: 100% funcionando em todos os dispositivos móveis e tablets.</li>';}
