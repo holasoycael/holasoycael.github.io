@@ -13,15 +13,10 @@ if(condicao=='MOSTRARsim'){
 	$(COOKIESbar).css('display', 'block' );
 setTimeout(function(){
 	$(COOKIESbar).animate({ opacity: 1 }); }, 1600);
-
-$('.COOKIESclose').click(function(ev){
-ev.preventDefault();
-definirNovaDataExpiracao();
-});
-
-}else if(condicao=='MOSTRARnao'){
-// NENHUMA AÇÃO NECESSARIA
-}}
+	$('.COOKIESclose').click(function(ev){
+	ev.preventDefault();
+	definirNovaDataExpiracao();
+});}}
 
 function definirNovaDataExpiracao(){
 var data=new Date();
