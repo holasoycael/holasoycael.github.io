@@ -10,11 +10,18 @@ FUNCTIONcookies('MOSTRARnao');}
 
 function FUNCTIONcookies(condicao){
 if(condicao=='MOSTRARsim'){
-	$(COOKIESbar).show();
+	$(COOKIESbar).css('display', 'block' );
+setTimeout(function(){
+	$(COOKIESbar).animate({ opacity: 1 }); }, 1600);
+
+$('.COOKIESclose').click(function(ev){
+ev.preventDefault();
 definirNovaDataExpiracao();
+});
 
 }else if(condicao=='MOSTRARnao'){
-	$(COOKIESbar).hide();}}
+// NENHUMA AÇÃO NECESSARIA
+}}
 
 function definirNovaDataExpiracao(){
 var data=new Date();
