@@ -2031,6 +2031,9 @@ blockquote {
     text-transform: uppercase;
     font-weight: 400;
 }
+.ITEMdeatails .TYPElayout i {
+    text-transform: capitalize;
+}
 .ITEMdeatails i {
     font-weight: 100;
 }
