@@ -2195,7 +2195,6 @@ span.btn-download-right-secondary {
     z-index: 5;
 }
 .relatedSpot LI P {
-    padding: 10%!important;
     font-family: var(--font-lato);
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -2207,7 +2206,16 @@ span.btn-download-right-secondary {
 }
 .relatedSpot IMG {
     width: 100%;
+    float: left;
 }
+.RELATEDbttm {
+    padding: 10%!important;
+    display: table;
+}
+.RELATEDbttm .RELATEDdate {
+    color: #888;
+}
+
 .POSTbody, .comments, .SUPPORTtab, .DOCUMENTtab {
     overflow: hidden;
     width: 100%;
