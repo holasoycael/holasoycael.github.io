@@ -1918,6 +1918,15 @@ blockquote {
     outline: none;
     transition: all .2s;
 }
+.SHAREpage li A I.CROSSicon {
+    display: inline-block;
+    margin-right: 8px;
+}
+.SHAREpage li A I.CROSSicon SVG {
+    height: 14px;
+    display: -webkit-inline-box;
+    top: 2px;
+}
 .LIVEspot {
     float: right;
     padding: 4px 0;
