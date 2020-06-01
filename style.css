@@ -2208,6 +2208,7 @@ span.btn-download-right-secondary {
 }
 .ITEMpost {
     max-width: 1056px;
+    overflow: hidden;
     margin: 0 auto;
 }
 .ZEROdiv {
