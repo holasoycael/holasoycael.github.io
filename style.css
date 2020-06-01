@@ -379,11 +379,13 @@ SECTION.COOKIESbar {
     font-family: var(--font-oswald);
     letter-spacing: 0.6px;
     position: fixed;
-    display: block;
+    display: none;
     bottom: 0;
     left: 0;
     z-index: 100;
     width: var(--width-overlay);
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 SECTION.COOKIESbar .COOKIESinner {
     padding: 10px 20px;
