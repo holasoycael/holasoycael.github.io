@@ -1561,11 +1561,17 @@ SECTION.BREADcrumb {
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
+.STATICpage SECTION.BREADcrumb {
+    border-bottom: 1px solid var(--border-push-menu-ol);
+}
 SECTION.BREADcrumb A, SECTION.BREADcrumb SPAN {
     color: var(--color-clean);
     display: inline-block;
     float: left;
     padding: 8px;
+}
+.STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN {
+    color: var(--black-transparent-bg);
 }
 SECTION.BREADcrumb SPAN.CURRENTurl::after {
     content: '';
@@ -1592,6 +1598,12 @@ SECTION.BREADcrumb EM.CROSSicon::after {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
 }
+.STATICpage SECTION.BREADcrumb EM.CROSSicon::after {
+    color: var(--input-placeholder);
+}
+.STATICpage SECTION.BREADcrumb SPAN.CURRENTurl::after {
+    border-bottom: .1875rem solid var(--border-push-menu-ol);
+}
 H3.STATICtitle {
     font-weight: 100;
     color: var(--color-clean);
@@ -1600,6 +1612,10 @@ H3.STATICtitle {
     font-family: var(--font-poppins);
     padding: 26px 0;
 }
+.STATICpage H3.STATICtitle {
+    padding: 0 !IMPORTANT;
+    color: var(--navbar-bg-out);
+}
 .STATICinst {
     max-width: 1056px;
     margin: 0 auto;
@@ -1607,7 +1623,7 @@ H3.STATICtitle {
 
 
 .POSTstatic {
-    padding: 22px 16px;
+    padding: 22px 0 0;
     line-height: 1.7em;
     font-size: 16px;
     color: var(--color-black-out);
