@@ -243,7 +243,6 @@ BLOGinst.innerHTML = POSTstatic;}
 if(document.querySelector('.ITEMpost') > -1 ? false : true == true){
 var POSTbody = document.querySelector('.POSTbody').offsetHeight;
 var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
-var SUPPORTtab = document.querySelector('.SUPPORTtab').offsetHeight;
 var comments = document.querySelector('.comments').offsetHeight;
 
 //MENUMASTER
@@ -267,7 +266,6 @@ if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == f
 	CURRENTurl.classList.remove('ZEROdiv');
 
 setTimeout(function(){
-	// FIRSTelement.classList.add('ZEROdiv', 'DISABLEdiv');
 	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl); }, 700);
 
 setTimeout(function(){
@@ -280,14 +278,11 @@ $(FIRSTelement).animate({ height: 0 },{ duration: 700 });
 setTimeout(function(){
 if(SELECTtab == 'comments'){	
 $(CURRENTurl).animate({ height: comments, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
-}else if(SELECTtab == 'SUPPORTtab'){
-$(CURRENTurl).animate({ height: SUPPORTtab, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
 }else if(SELECTtab == 'DOCUMENTtab'){
 $(CURRENTurl).animate({ height: DOCUMENTtab, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
 }else if(SELECTtab == 'POSTbody'){
 $(CURRENTurl).animate({ height: POSTbody, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
 }}, 400);
-
 
 //DISABLE BUTTONS
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
