@@ -2468,6 +2468,7 @@ span.btn-download-right-secondary {
     margin-top: 12px;
 }
 .POSTbody .MSGfailure P {
+    padding: 4px 0;
     font-weight: 100;
 }
 .POSTbody .MSGfailure P B {
@@ -2503,8 +2504,15 @@ span.btn-download-right-secondary {
 .TYPEinfo {
     border: 1px solid #ddd;
     border-radius: 3px;
-    padding: 0px 0 6px;
+    padding: 4px 0 8px;
 }
-.TYPEinfo P {
+.TYPEinfo P, .FAILUREtype LI {
     width: 100%;
+    text-indent: 6px;
+}
+.POSTbody .MSGfailure .SLCTit {
+    background: #ffbfbf;
+}
+.POSTbody .MSGfailure .UNICitem {
+    font-style: italic;
 }
