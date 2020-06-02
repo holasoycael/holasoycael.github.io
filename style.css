@@ -2472,23 +2472,25 @@ span.btn-download-right-secondary {
     font-weight: 100;
 }
 .POSTbody .MSGfailure P B {
-    width: 120px;
     display: inline-block;
+    margin-right: 8px;
 }
 .POSTbody .MSGfailure LI {
     font-family: monospace;
     margin: 4px 8px 0;
 }
 .MSGfailure A.HOMEurl {
+    width: 250px;
     background-color: #279acc;
     border-bottom: 4px solid #1682b5;
     border-radius: 4px;
     color: #fff;
     padding: 12px 16px 10px;
-    display: inline-block;
-    margin: 16px 0 0;
+    display: block;
+    margin: 16px auto 0;
     text-transform: uppercase;
     font-style: italic;
+    text-align: center;
 }
 
 .FAILUREtype {
@@ -2515,4 +2517,9 @@ span.btn-download-right-secondary {
 }
 .POSTbody .MSGfailure .UNICitem {
     font-style: italic;
+}
+.POSTbody .MSGfailure P SPAN {
+    border: 1px solid #ddd;
+    padding: 3px 6px;
+    border-radius: 3px;
 }
