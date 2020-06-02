@@ -158,9 +158,6 @@ function createPostBody(pID, pTITLE, pURL, pDATE, pLOCAL){
 	var xc = doc.body.querySelector('.baixar') > -1 ? false : true;
 	var xd = doc.body.querySelector('.buy') > -1 ? false : true;
 	var xe = doc.body.querySelector('.zip') > -1 ? false : true;
-	// var xea = doc.body.querySelector('.zip').getAttribute('update') > -1 ? false : true;
-	// var xeb = doc.body.querySelector('.zip').getAttribute('created') > -1 ? false : true;
-	// var xec = doc.body.querySelector('.zip').getAttribute('layout') > -1 ? false : true;
 
 if(xa == true){
 	var LIVEtemplate = doc.body.querySelector('.demo').getAttribute('url');}
@@ -171,9 +168,15 @@ if(xc == true){
 if(xd == true){
 	var CHECKOUTbtn = doc.body.querySelector('.buy').getAttribute('url');}
 if(xe == true){
-	var ITEMupdate = doc.body.querySelector('.zip').getAttribute('update').replace(/(-)/gi,'/');
-	var ITEMcreate = doc.body.querySelector('.zip').getAttribute('created').replace(/(-)/gi,'/');
+if(doc.body.querySelector(".zip").hasAttribute("update") == true){
+	var ITEMupdate = doc.body.querySelector('.zip').getAttribute('update').replace(/(-)/gi,'/');}
+	else{ var ITEMupdate = false; }
+if(doc.body.querySelector(".zip").hasAttribute("created") == true){
+	var ITEMcreate = doc.body.querySelector('.zip').getAttribute('created').replace(/(-)/gi,'/');}
+	else { var ITEMcreate = false}
+if(doc.body.querySelector(".zip").hasAttribute("layout") == true){
 	var ITEMlayout = doc.body.querySelector('.zip').getAttribute('layout');}
+	else { var ITEMlayout = false }}
 
 	if(doc.body.querySelector('responsive') > -1 ? false : true == true){
 	var CODErespon = '<li><strong>Responsivo</strong>: 100% funcionando em todos os dispositivos móveis e tablets.</li>';}
@@ -208,8 +211,7 @@ if(xe == true){
 	var FEATURESthis = '<div class="FEATURESthis"><h4>Recursos inclusos</h4><ul>' +PAGEnavi+COOKies+CODEerror+CODErespon+CONpost+COMMents+SEOmeta+ADSspot+FAVOrite+ '</ul></div>';
 	var CHANGElog = '<div class="CHANGElog"><h3>Changelog</h3><blockquote class="tr_bq">- v1.0.0 – ' +nDATE+ '\n<b>lançamento inicial</b></blockquote></div>'
 
-
-if((xa == true) && (xb == true) && (xc == true) && (xd == true) && (xe == true)){
+if((xa == true) && (xb == true) && (xc == true) && (xd == true) && (xe == true) && (ITEMupdate > -1 ? false : true == true) && (ITEMcreate > -1 ? false : true == true) && (ITEMlayout > -1 ? false : true == true)){
 	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><i class="SEEit"></i><span>Visualizar tema</span></a></div></div></div><div class="INFORMATIONpage"><div class="DESCpost"><h3>Nossa opinião sobre o ' +pTITLE+ '</h3><p>' +DESCpost+ '</p></div>' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a><span class="PREMIUMval">' +pricePost+ '</span></h4><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="CHECKOUTbtn"><a href="' +CHECKOUTbtn+ '" rel="nofollow" class="btn CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div><div class="FILEtools"><div class="ITEMdeatails"><li><strong>Atualização:</strong><i> ' +ITEMupdate+ '</i></li><li><strong>Criado:</strong><i> ' +ITEMcreate+ '</i></li><li class="TYPElayout"><strong>Layout:</strong><i> ' +ITEMlayout+ '</i></li></li><li><strong>Tipo de Arquivo:</strong><i> Arquivo ZIP</i></li></div><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span> <span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div></div></div></div></div></div>';
 	div.innerHTML = summary;
 
@@ -267,13 +269,16 @@ for(var i = 0, c = 101; i < doc.body.querySelectorAll('.changelog').length; i++,
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	document.querySelectorAll('.SELECTtab')[i].setAttribute('disable', '');}
 
-	if(xa == false){ var ua = '<li><p>Encerramento inesperado</p><p>demo</p><p>url</p><p>valor</p></li>'; } else { var ua = '' }
-	if(xb == false){ var ub = '<li><p>Encerramento inesperado</p><p>pre</p><p>-</p><p>texto</p></li>'; } else { var ub = '' }
-	if(xc == false){ var uc = '<li><p>Encerramento inesperado</p><p>baixar</p><p>url</p><p>valor</p></li>'; } else { var uc = '' }
-	if(xd == false){ var ud = '<li><p>Encerramento inesperado</p><p>buy</p><p>url</p><p>valor</p></li>'; } else { var ud = '' }
-	if(xe == false){ var ue = '<li><p>Encerramento inesperado</p><p>zip</p><p>-</p><p>valor</p></li>'; } else { var ue = '' }
+	if(xa == false){ var ua = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">demo</p><p>url</p><p>valor</p></li>'; } else { var ua = '' }
+	if(xb == false){ var ub = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">pre</p><p>-</p><p>texto</p></li>'; } else { var ub = '' }
+	if(xc == false){ var uc = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">baixar</p><p>url</p><p>valor</p></li>'; } else { var uc = '' }
+	if(xd == false){ var ud = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">buy</p><p>url</p><p>valor</p></li>'; } else { var ud = '' }
+	if(xe == false){ var ue = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">zip</p><p>-</p><p>valor</p></li>'; } else { var ue = '' }
+	if(ITEMupdate == false){ var uf = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">update</p><p>valor</p></li>'; } else { var uf = '' }
+	if(ITEMcreate == false){ var ug = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">create</p><p>valor</p></li>'; } else { var ug = '' }
+	if(ITEMlayout == false){ var uh = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">layout</p><p>valor</p></li>'; } else { var uh = '' }
 
-	summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+ '</div></div><div class="FAILUREspot MIDDLEfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL:</b> ' + pURL + '</p></li><li><p class="item"><b>ID do Post:</b> ' + pID + '</p></li><li><p class="item"><b>Título:</b> ' + pTITLE + '</p></li><li><p class="item"><b>Data:</b> ' + pDATE + '</p></li><li><p class="item"><b>Autor:</b> N. Lourenço</p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>'
+	summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+uh+ '</div></div><div class="FAILUREspot MIDDLEfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL:</b> ' + pURL + '</p></li><li><p class="item"><b>ID do Post:</b> ' + pID + '</p></li><li><p class="item"><b>Título:</b> ' + pTITLE + '</p></li><li><p class="item"><b>Data:</b> ' + pDATE + '</p></li><li><p class="item"><b>Autor:</b> N. Lourenço</p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>'
 	div.innerHTML = summary;}}
 
 //]]>
