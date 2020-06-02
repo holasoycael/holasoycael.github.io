@@ -269,6 +269,24 @@ for(var i = 0, c = 101; i < doc.body.querySelectorAll('.changelog').length; i++,
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	document.querySelectorAll('.SELECTtab')[i].setAttribute('disable', '');}
 
+	var pDATE = pDATE.split('/');
+	var MONTHlog = pDATE[0];
+
+	if(MONTHlog == 1){ var MONTHlog = "Janeiro" }
+	if(MONTHlog == 2){ var MONTHlog = "Fevereiro" }
+	if(MONTHlog == 3){ var MONTHlog = "Março" }
+	if(MONTHlog == 4){ var MONTHlog = "Abril" }
+	if(MONTHlog == 5){ var MONTHlog = "Maio" }
+	if(MONTHlog == 6){ var MONTHlog = "Junho" }
+	if(MONTHlog == 7){ var MONTHlog = "Julho" }
+	if(MONTHlog == 8){ var MONTHlog = "Agosto" }
+	if(MONTHlog == 9){ var MONTHlog = "Setembro" }
+	if(MONTHlog == 10){ var MONTHlog = "Outubro" }
+	if(MONTHlog == 11){ var MONTHlog = "Novembro" }
+	if(MONTHlog == 12){ var MONTHlog = "Dezembro" }
+	
+	var pDATE = pDATE[0]+ ' de ' +MONTHlog+ ' de ' +pDATE[2];
+
 	if(xa == false){ var ua = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">demo</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var ua = '' }
 	if(xb == false){ var ub = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">pre</p><p>-</p><p>texto</p></li>'; } else { var ub = '' }
 	if(xc == false){ var uc = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">baixar</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var uc = '' }
@@ -278,7 +296,7 @@ for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	if(ITEMcreate == false){ var ug = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">create</p><p>valor</p></li>'; } else { var ug = '' }
 	if(ITEMlayout == false){ var uh = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">layout</p><p>valor</p></li>'; } else { var uh = '' }
 
-	summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+uh+ '</div></div><div class="FAILUREspot MIDDLEfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL:</b> ' + pURL + '</p></li><li><p class="item"><b>ID do Post:</b> ' + pID + '</p></li><li><p class="item"><b>Título:</b> ' + pTITLE + '</p></li><li><p class="item"><b>Data:</b> ' + pDATE + '</p></li><li><p class="item"><b>Autor:</b> N. Lourenço</p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>'
+	summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+uh+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' + pDATE + '</span></p></li><li><p class="item"><b>Autor</b><span>N. Lourenço</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>'
 	div.innerHTML = summary;}}
 
 //]]>
