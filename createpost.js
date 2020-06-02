@@ -269,10 +269,10 @@ for(var i = 0, c = 101; i < doc.body.querySelectorAll('.changelog').length; i++,
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	document.querySelectorAll('.SELECTtab')[i].setAttribute('disable', '');}
 
-	if(xa == false){ var ua = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">demo</p><p>url</p><p>valor</p></li>'; } else { var ua = '' }
+	if(xa == false){ var ua = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">demo</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var ua = '' }
 	if(xb == false){ var ub = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">pre</p><p>-</p><p>texto</p></li>'; } else { var ub = '' }
-	if(xc == false){ var uc = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">baixar</p><p>url</p><p>valor</p></li>'; } else { var uc = '' }
-	if(xd == false){ var ud = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">buy</p><p>url</p><p>valor</p></li>'; } else { var ud = '' }
+	if(xc == false){ var uc = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">baixar</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var uc = '' }
+	if(xd == false){ var ud = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">buy</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var ud = '' }
 	if(xe == false){ var ue = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">zip</p><p>-</p><p>valor</p></li>'; } else { var ue = '' }
 	if(ITEMupdate == false){ var uf = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">update</p><p>valor</p></li>'; } else { var uf = '' }
 	if(ITEMcreate == false){ var ug = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">create</p><p>valor</p></li>'; } else { var ug = '' }
