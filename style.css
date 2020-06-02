@@ -1561,7 +1561,9 @@ SECTION.BREADcrumb {
     max-width: 1056px;
     margin: 0 auto;
     overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.STATICpage SECTION.BREADcrumb {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 .STATICpage SECTION.BREADcrumb {
     border-bottom: 1px solid var(--border-push-menu-ol);
@@ -1575,10 +1577,12 @@ SECTION.BREADcrumb A, SECTION.BREADcrumb SPAN {
 .STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN {
     color: var(--black-transparent-bg);
 }
-SECTION.BREADcrumb SPAN.CURRENTurl::after {
-    content: '';
+.STATICpage SECTION.BREADcrumb SPAN.CURRENTurl::after {
     border-left: .1875rem solid transparent;
     border-right: .1875rem solid transparent;
+}
+SECTION.BREADcrumb SPAN.CURRENTurl::after {
+    content: '';
     box-sizing: border-box;
     border-bottom: .1875rem solid rgba(255, 255, 255, 0.7);
     position: absolute;
@@ -2437,7 +2441,7 @@ span.btn-download-right-secondary {
 }
 
 
-.MSGfailure {
+.MSGfailure, .SUPPORTinst {
     font-family: var(--font-open);
 }
 .MSGfailure H4 {
@@ -2522,4 +2526,10 @@ span.btn-download-right-secondary {
     border: 1px solid #ddd;
     padding: 3px 6px;
     border-radius: 3px;
+}
+
+
+.SUPPORTinst h3 {
+    color: #606060;
+    font-size: 32px;
 }
