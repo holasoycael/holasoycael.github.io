@@ -235,7 +235,7 @@ function HEADmenuOFF(){
 SEARCHbar.removeAttribute("style");
 HEADERnav.style.cssText = "top:0;opacity:1";}}
 
-if(window.location.href.indexOf('sobre') > -1){
+if(window.location.href.indexOf('/p/sobre.html') > -1){
 var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
 BLOGinst.innerHTML = POSTstatic;}
@@ -290,11 +290,123 @@ for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 	
 setTimeout(function(){
 	CURRENTurl.classList.remove('DISABLEdiv');
-
 	FIRSTelement.removeAttribute('style');
 	FIRSTelement.classList.remove('ACTIVEdiv');
+	
 for(var i = 0; i < COMMENTSwid.length; i++){
 	COMMENTSwid[i].removeAttribute("disable");}}, 800);
 	this.setAttribute('class', 'SELECTtab CURRENTspot');
 	CURRENTspot.setAttribute('class', 'SELECTtab');}
-});}}}
+});}}
+
+if(window.location.href.indexOf('/p/login.html') > -1){
+document.body.setAttribute('login', '');
+var fireBase = firebase.auth();
+// var usersList = document.getElementById('usersList');
+var div = document.getElementById("contentHTML");
+
+var signedUser = '<div id="user_div" class="loggedin-div"><h3>Seja bem vindo(a)</h3><div id="usersList"><p id="user_para">Você está conectado no momento.</p></div></div>';
+
+var ACTIVEpass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"></path><path d="M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"></path></svg>';
+
+var OCULTApass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"></path><path d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"></path><path d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"></path></svg>';
+
+var loginUser = '<div class="LOGINspot"><h3>Sign in<span>with your social network</span></h3><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Username or email</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Password</label></div><button class="LOGin" tabindex="3">Fazer login</button></form></div>';
+
+
+var cPANEL = document.querySelector('.cPANEL');
+
+fireBase.onAuthStateChanged(function(user){
+if(user){
+	div.innerHTML = signedUser;
+	user = fireBase.currentUser;
+
+const LOGOUTbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
+cPANEL.parentNode.innerHTML = LOGOUTbtn;
+
+
+
+
+//SAIR DA CONTA ------ FIM DO IF
+document.querySelector('.LOGout').addEventListener('click', function(){
+	fireBase.signOut();
+	var LOGINbtn = '<a href="javascript:void(0);" class="cPANEL">Entrar</a>'
+	this.parentNode.innerHTML = LOGINbtn; });}
+else { div.innerHTML = loginUser;
+var LOGin = document.querySelector('.LOGin');
+LOGin.addEventListener('click', function(){
+var userEmail = document.getElementById("emailInput").value;
+var userPass = document.getElementById("passwordInput").value;
+
+fireBase.signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+var MAILelement = document.getElementById("emailInput");
+var PASSelement = document.getElementById("passwordInput");
+
+if(MAILelement.length == 0){
+var MSGfail = 'Por favor, digite um email.';
+}else{
+var MSGfail = 'E-mail ou senha inválidos.';	
+}
+
+
+var MSGerror = '<div class="MSGerror"><div class="CROSSicon"><svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div><span>' +MSGfail+ '</span></div>';
+
+var parser = new DOMParser();
+var MSGerror = parser.parseFromString(MSGerror, 'text/html');
+var GROUPinput = document.querySelector('.GROUPinput');
+
+//MSG FAILURE ------ [RESOLVIDO]
+var GROUPall = document.querySelector('.GROUPinput');
+if((!GROUPall.hasAttribute("fail") == true) && (document.querySelector('.MSGerror') > -1 ? true : false === true)){
+GROUPinput.insertAdjacentElement("afterend", MSGerror.querySelector('.MSGerror'));}
+
+MAILelement.addEventListener('input', function(){
+$('.MSGerror').animate({ height: 0, opacity: 0 },{duration: 300, complete: function(){ $('.MSGerror').remove() }});
+GROUPall.removeAttribute('fail');});
+
+GROUPall.setAttribute('fail', '');
+
+var errorCode = error.code;
+var errorMessage = error.message;
+console.log("Error: " + errorMessage)});
+});
+
+//MOSTRAR SENHA E ECULTAR SENHA ----- INPUT
+var SHOWpass = document.querySelector('.SHOWpass');
+SHOWpass.addEventListener('click', function(){
+var PASSit = document.querySelector('.PASSit');
+var TYPEbtn = document.getElementById("passwordInput").getAttribute("type");
+
+if(TYPEbtn == "password"){
+	PASSit.parentNode.innerHTML = OCULTApass;
+	INPUTpass.setAttribute("type", "text");}
+if(TYPEbtn == "text"){
+	PASSit.parentNode.innerHTML = ACTIVEpass;
+	INPUTpass.setAttribute("type", "password");}
+});
+
+//FOCUS TEXT
+var INPUTmail = document.getElementById("emailInput");
+var INPUTpass = document.getElementById("passwordInput");
+INPUTmail.addEventListener('focusout', function(){
+	if(INPUTmail.value.length >= 1){
+	INPUTmail.setAttribute('class', 'HAScontent');}
+else {
+	INPUTmail.removeAttribute('class');}});
+
+INPUTpass.addEventListener('focusout', function(){
+	if(INPUTpass.value.length >= 1){
+	INPUTpass.setAttribute('class', 'HAScontent');}
+else {
+	INPUTpass.removeAttribute('class');}});
+
+var LOGINbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
+var parser = new DOMParser();
+var HTMLpanel = parser.parseFromString(LOGINbtn, 'text/html');
+
+var FORMlogin = document.querySelector('.FORMlogin')
+FORMlogin.addEventListener('submit', (e) => {
+	e.preventDefault();});
+
+}});
+}}
