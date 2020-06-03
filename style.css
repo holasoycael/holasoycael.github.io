@@ -2686,8 +2686,10 @@ span.btn-download-right-secondary {
 }
 
 BODY[login] {
-    background: linear-gradient(to bottom right,rgba(232, 62, 227, 0.92),rgba(107, 71, 217, 0.92));
-    background-image: url(https://2.bp.blogspot.com/-Cunhwsdp0mY/XkwPhif1ZJI/AAAAAAAABbQ/QcKYgn8WpuggeTcr90fNXlmGQE0Mpy0JwCK4BGAYYCw/s1600/hero-wrapper.png),linear-gradient(to bottom right,rgba(232, 62, 227, 0.92),rgba(107, 71, 217, 0.92));
-    background-repeat: no-repeat;
+    background: rgba(232, 62, 227, 0.92);
+    background-image: url(https://2.bp.blogspot.com/-Cunhwsdp0mY/XkwPhif1ZJI/AAAAAAAABbQ/QcKYgn8WpuggeTcr90fNXlmGQE0Mpy0JwCK4BGAYYCw/s1600/hero-wrapper.png);
+    position: absolute;
+    background-repeat: repeat;
     background-attachment: fixed;
+    width: 100%;
 }
