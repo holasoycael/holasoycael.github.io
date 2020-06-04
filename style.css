@@ -169,6 +169,9 @@ NAV.PUSHmenu {
     transition: var(--ease-tre-time);
     height: 100vh;
 }
+NAV.PUSHmenu[class*=MENUactive] .BTNmenu {
+    display: block;
+}
 ASIDE.GUIDEmenu {
     padding: 9px;
     position: absolute;
@@ -177,7 +180,7 @@ ASIDE.GUIDEmenu {
     -o-transition: var(--ease-tre-time);
     transition: var(--ease-tre-time);
     z-index: 9999!important;
-    left: -56px;
+    right: -56px;
     top: 0;
 }
 NAV.PUSHmenu ARTICLE {
@@ -260,22 +263,101 @@ ASIDE.GUIDEmenu A::before {
 /*-------------------------------*/
 /*----------- HEADER ------------*/
 /*-------------------------------*/
-HEADER.HEADmenu { background: var(--navbar-bg); position: fixed; width: calc( var(--max-content) + 6px); top: 0; left: 0; height: 56px; z-index: 99; }
-HEADER.HEADmenu .BTNmenu {
-    padding: 0px 8px;
-    display: none;
-    float: left;
+HEADER.HEADmenu {
+    background: var(--navbar-bg);
+    position: fixed;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    top: 0;
+    left: 0;
+    height: 56px;
+    z-index: 99;
 }
-HEADER.HEADmenu .BTNhref, ASIDE.GUIDEmenu .SWIPEc_ { position: relative; width: 38px; height: 38px; display: block; border-radius: 50%; }
+
+
+NAV.PUSHmenu.MENUactive {
+    transform: translate3d(0,0,0);
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu {
+    background: linear-gradient(96deg,#242424 0,#2b2e32 40%);
+    background-color: #2b2e32;
+}
+P.BTNmenu {
+    right: -56px;
+    position: absolute;
+    background: transparent;
+    z-index: 9999!important;
+    width: 56px;
+    display: none;
+    height: 56px;
+    top: 0;
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu, NAV.PUSHmenu.MENUactive P.BTNmenu * {
+    -webkit-transition: all.5s ease;
+    -o-transition: all.5s ease;
+    transition: all.5s ease;
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon {
+    top: 2.2em;
+    background: 0 0;
+    left: 16px;
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before, NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::after {
+    top: 0;
+    width: 24px;
+}
+
+
+.BTNhref {
+    width: 20px;
+    height: 100%;
+    padding: 0 10px;
+    display: block;
+}
+.BTNhref.HREFactive {
+    padding: 0 18px;
+}
+.BTNhref I.CROSSicon, .BTNhref I.CROSSicon::before, .BTNhref I.CROSSicon::after {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    transition: transform .5s ease, top .5s ease, background .5s ease;
+    background: #fff;
+}
+NAV.PUSHmenu P.BTNmenu I.CROSSicon {
+    top: 2.2em;
+    left: 10px;
+}
+.BTNhref I.CROSSicon::before {
+    top: 6px;
+}
+.BTNhref I.CROSSicon::before, .BTNhref I.CROSSicon::after {
+    content: '';
+}
+.BTNhref I.CROSSicon::after {
+    top: -6px;
+}
+
+
 HEADER.HEADmenu .BTNhref::hover { background-color: rgba(60,64,67,0.08); }
 HEADER.HEADmenu .BTNhref::active { background-color: rgba(60,64,67,0.12); }
 HEADER.HEADmenu .BTNhref::focus::hover { background-color: rgba(60,64,67,0.1); }
-HEADER.HEADmenu .BTNmenu A::before { position: absolute; top: 13px; left: 10px; width: 20px; height: 2px; background: var(--color-dark-gray); box-shadow: 0 3px transparent, 0 5px var(--color-dark-gray), 0 8px transparent, 0 10px var(--color-dark-gray); content: ''; z-index: 9; }
-@media screen and (max-width: 848px) { HEADER.HEADmenu .BTNmenu { display: block; } }
+@media screen and (max-width: 848px) { NAV.PUSHmenu .BTNmenu { display: block; } }
 
 DIV.HEADERnav, .SEARCHbar {
     max-width: 1056px;
-    padding: 9px 0;
     font-family: var(--font-poppins);
     margin: 0 auto;
     display: block;
@@ -288,8 +370,13 @@ DIV.HEADERnav, .SEARCHbar {
     width: 100%;
     opacity: 1;
 }
+DIV.HEADERnav UL.HEADERleft {
+    padding: 9px 0;
+    float: left;
+}
 DIV.HEADERnav UL.HEADERright {
     float: right;
+    padding: 9px 0;
 }
 DIV.HEADERnav LI {
     float: left;
@@ -363,10 +450,7 @@ DIV.HEADERnav LI A.cPANEL:hover {
     background: #ffffff !important;
 }
 @media screen and (max-width: 848px) {
-UL.HEADERleft, .ITEMdel { display: none; }
-DIV.HEADERnav UL.HEADERright {
-    padding: 0 8px;
-}}
+UL.HEADERleft, .ITEMdel { display: none; }}
 
 
 DIV.CONTENTblogger { padding: 56px 0 0; display: block; }
