@@ -1,68 +1,25 @@
 window.onload = function(){
-var BTNmenu = document.querySelector('.BTNhref');
-var SWIPEc_ = document.querySelector('.SWIPEc_');
-
-BTNmenu.addEventListener('click', SWIPEopen);
-SWIPEc_.addEventListener('click', SWIPEclose);
-
-var BODYdoc = document.getElementsByTagName("BODY")[0];
+//MENUPUSH LATERAL
 var PUSHmenu = document.querySelector('.PUSHmenu');
-var GUIDEmenu = document.querySelector('.GUIDEmenu');
-var SWIPEopen = document.getElementById('CONTENTframe');
+var CONTENTframe = document.getElementById('CONTENTframe');
+document.querySelector('.BTNhref').addEventListener('click', function(){
+	this.classList.toggle('HREFactive');
+	PUSHmenu.classList.toggle('MENUactive');
+	CONTENTframe.classList.toggle('SWIPEopen');
+if(document.body.contains(document.querySelector('.SWIPEopen')) === true){
+document.querySelector('.SWIPEopen').addEventListener('click', function(){
+	document.querySelector('.BTNhref').classList.remove('HREFactive');
+	PUSHmenu.classList.remove('MENUactive');
+	CONTENTframe.classList.remove('SWIPEopen');
+});}});
 
-function HEADmenu(){
-var HEADmenu = document.querySelector('HEADER.HEADmenu');
-var HTMLoffset = document.querySelector('HTML');
-HEADmenu.style.width = HTMLoffset.offsetWidth + 'px';}
-setInterval(HEADmenu, 0);
-
-function SWIPEopen(){
-BODYdoc.style.cssText = "overflow:hidden";
-PUSHmenu.style.cssText = "transform:translate3d(0,0,0)";
-GUIDEmenu.style.cssText = "left: 240px";
-SWIPEopen.classList.add('SWIPEopen');
-
-var SWIPEcl = document.querySelector('.SWIPEopen');
-SWIPEcl.addEventListener('click', SWIPEclose);}
-
-function SWIPEclose(){
-BODYdoc.style.removeProperty('overflow');
-PUSHmenu.style.removeProperty('transform');
-GUIDEmenu.style.removeProperty('left');
-SWIPEopen.classList.remove('SWIPEopen');}
-
-//MOSTRAR MAIS E MOSTRAR MENOS DO FOOTER [OK]
-var _SPOTone = document.querySelector('._SPOTone');
-var FORSPOTone = document.getElementById('FORSPOTone');
-FORSPOTone.addEventListener('click', function(){
-if (_SPOTone.style.display === "block") {
-FORSPOTone.classList.remove('CROSSup');
-FORSPOTone.classList.add('CROSSdown');
-_SPOTone.style.display = "none";
-}else{
-FORSPOTone.classList.remove('CROSSdown');
-FORSPOTone.classList.add('CROSSup');
-_SPOTone.style.display = "block";}});
-
-var _SPOTtwo = document.querySelector('._SPOTtwo');
-var FORSPOTtwo = document.getElementById('FORSPOTtwo');
-FORSPOTtwo.addEventListener('click', function(){
-if (_SPOTtwo.style.display === "block") {
-FORSPOTtwo.classList.remove('CROSSup');
-_SPOTtwo.style.display = "none";
-}else{
-FORSPOTtwo.classList.add('CROSSup');
-_SPOTtwo.style.display = "block";}});
-
-var _SPOTtre = document.querySelector('._SPOTtre');
-var FORSPOTtre = document.getElementById('FORSPOTtre');
-FORSPOTtre.addEventListener('click', function(){
-FORSPOTtre.classList.remove('CROSSup');
-if (_SPOTtre.style.display === "block") {
-_SPOTtre.style.display = "none";
-}else{
-FORSPOTtre.classList.add('CROSSup');
-_SPOTtre.style.display = "block";}});
+//TOGLE FOOTER
+if(document.body.contains(document.querySelector('.CROSSdown')) === true){
+for(var i = 0; i < document.querySelectorAll('.CROSSdown').length; i++){
+var CROSSdown = document.querySelectorAll('.CROSSdown');
+CROSSdown[i].addEventListener('click', function(){
+var COLUMNspot = this.parentNode.parentNode.querySelector('.COLUMNspot');
+$(COLUMNspot).animate({ height: "toggle", },{duration: 300});});}}
 
 //GRAVA O VALOR DA BUSCA [OK]
 document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
@@ -303,7 +260,7 @@ if(window.location.href.indexOf('/p/login.html') > -1){
 document.body.setAttribute('login', '');
 var fireBase = firebase.auth();
 // var usersList = document.getElementById('usersList');
-var div = document.getElementById("contentHTML");
+var contentHTML = document.getElementById("contentHTML");
 
 var signedUser = '<div id="user_div" class="loggedin-div"><h3>Seja bem vindo(a)</h3><div id="usersList"><p id="user_para">Você está conectado no momento.</p></div></div>';
 
@@ -311,14 +268,14 @@ var ACTIVEpass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="f
 
 var OCULTApass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"></path><path d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"></path><path d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"></path></svg>';
 
-var loginUser = '<div class="LOGINspot"><h3>Sign in<span>with your social network</span></h3><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Username or email</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Password</label></div><button class="LOGin" tabindex="3">Fazer login</button></form></div>';
+var loginUser = '<div class="LOGINspot"><h3>Bem vindo(a)<span>Esta é uma area privada.</span></h3><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Username or email</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Password</label></div><button class="LOGin" tabindex="3">Fazer login</button></form></div>';
 
 
 var cPANEL = document.querySelector('.cPANEL');
 
 fireBase.onAuthStateChanged(function(user){
 if(user){
-	div.innerHTML = signedUser;
+	contentHTML.innerHTML = signedUser;
 	user = fireBase.currentUser;
 
 const LOGOUTbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
@@ -332,7 +289,7 @@ document.querySelector('.LOGout').addEventListener('click', function(){
 	fireBase.signOut();
 	var LOGINbtn = '<a href="javascript:void(0);" class="cPANEL">Entrar</a>'
 	this.parentNode.innerHTML = LOGINbtn; });}
-else { div.innerHTML = loginUser;
+else { contentHTML.innerHTML = loginUser;
 var LOGin = document.querySelector('.LOGin');
 LOGin.addEventListener('click', function(){
 var userEmail = document.getElementById("emailInput").value;
