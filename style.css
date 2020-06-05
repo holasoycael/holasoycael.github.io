@@ -2646,21 +2646,21 @@ span.btn-download-right-secondary {
     text-align: center;
     color: #1d262d;
 }
-.con h3 SPAN {
+.LOGINspot h3 SPAN {
     font-size: 18px;
     font-weight: 100;
     display: block;
     text-align: center;
     margin-top: 6px;
 }
-.con label {
+.LOGINspot label {
     font-weight: 100;
     position: absolute;
     top: 16px;
     font-size: 16px;
     left: 1em;
 }
-.con input {
+.LOGINspot input {
     width: 100%;
     background: transparent;
     padding: 16px 0;
@@ -2675,10 +2675,10 @@ span.btn-download-right-secondary {
     border-radius: 3px;
     z-index: 10;
 }
-.con input:focus {
+.LOGINspot input:focus {
     box-shadow: inset 0 0 0 1px #1273EB;
 }
-.con button {
+.LOGINspot button {
     color: #fff;
     display: block;
     min-height: 46px;
@@ -2691,18 +2691,17 @@ span.btn-download-right-secondary {
     border-radius: 3px;
     cursor: pointer;
 }
-.con button:focus {
+.LOGINspot button:focus {
     -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
     box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
 }
-.con button:hover {
+.LOGINspot button:hover {
     background: #0e75e8;
 }
-.con button:active {
+.LOGINspot button:active {
     background: #00f;
 }
-.missed { background: #ffb8b8; border-color: #d87979; }
-.con input#showPassword { color: #fff; position: absolute; top: 0; width: 136px; background: #c1c1c1; border-color: #3c3c3c; margin: 0; right: 0; cursor: pointer; }
+.LOGINspot input#showPassword { color: #fff; position: absolute; top: 0; width: 136px; background: #c1c1c1; border-color: #3c3c3c; margin: 0; right: 0; cursor: pointer; }
 
 .GROUPinput {
     position: relative;
@@ -2718,7 +2717,7 @@ span.btn-download-right-secondary {
 .LOGINspot .GROUPinput input:focus ~ label {
     color: #1273EB;
 }
-.con input:focus {
+.LOGINspot input:focus {
     color: #202124;
 }
 .LOGINspot .GROUPinput input:focus ~ label, .LOGINspot .GROUPinput input.HAScontent ~ label {
@@ -2745,23 +2744,23 @@ span.btn-download-right-secondary {
 	color: #aaa
 }
 
-#contentHTML {
+.LOGINspot {
+    font-family: var(--font-lato);
     max-width: 632px;
     margin: 0 auto;
 }
-.LOGINspot {
-    background: #fff;
-    font-family: var(--font-lato);
-    border-radius: 6px;
+.LOGINSPOTinst {
     padding: 32px 46px 46px;
+    max-width: 632px;
     margin: 32px 16px;
+    background: #fff;
+    border-radius: 6px;
 }
 
-
-.con .GROUPinput[fail] input {
+.LOGINspot .GROUPinput[fail] input {
     box-shadow: inset 0 0 0 1px #d50000;
 }
-.con .GROUPinput[fail] input:focus ~ label, .GROUPinput[fail] input.HAScontent ~ label, .MSGerror, .GROUPinput[fail] .SHOWpass:hover {
+.LOGINspot .GROUPinput[fail] input:focus ~ label, .GROUPinput[fail] input.HAScontent ~ label, .MSGerror, .GROUPinput[fail] .SHOWpass:hover {
     color: #d50000;
 }
 
