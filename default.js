@@ -1,4 +1,8 @@
 window.onload = function(){
+setInterval(function(){
+var HTMLoffset = document.querySelector('HTML');
+document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);
+
 //MENUPUSH LATERAL
 var PUSHmenu = document.querySelector('.PUSHmenu');
 var CONTENTframe = document.getElementById('CONTENTframe');
@@ -21,10 +25,53 @@ CROSSdown[i].addEventListener('click', function(){
 var COLUMNspot = this.parentNode.parentNode.querySelector('.COLUMNspot');
 $(COLUMNspot).animate({ height: "toggle", },{duration: 300});});}}
 
-//GRAVA O VALOR DA BUSCA [OK]
-document.querySelector('.SEARCHform').addEventListener('submit', SEARCHform);
-function SEARCHform(event){
+//SEARCH --- BAR
+if(document.body.contains(document.querySelector('.SEARCHbar')) === true){
+var SEARCHbar = document.querySelector('.SEARCHbar');
+var CONTENTframe = document.getElementById('CONTENTframe');
+document.querySelector('.SEARCHit').addEventListener('click', function(){
+SEARCHbar.classList.add('ACTIVEit');
+this.onclick = document.querySelector('.SEARCHinput').select();
+document.querySelector('.SEARCHinput').addEventListener('focusout', function(){
+SEARCHbar.classList.remove('ACTIVEit');});});}
+
+//CONTENT TRANSITION POST
+if(document.body.contains(document.querySelector('.ITEMpost')) === true){
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+var COMMENTSwid = document.querySelectorAll('.SELECTtab');
+
+COMMENTSwid[i].addEventListener('click', function(){
+	var SELECTtab = this.getAttribute('for');
+	var CURRENTspot = document.querySelector('.CURRENTspot');
+	var CURRENTurl = document.querySelector('.' +SELECTtab);
+	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
+	
+if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
+FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl);
+$(FIRSTelement).animate({ height: "toggle", opacity: "toggle" },{duration: 700});
+setTimeout(function(){	
+$(CURRENTurl).animate({ height: "toggle", opacity: "toggle" },{duration: 700});}, 520);
+
+//------DISABLE BUTTONS
+for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
+	COMMENTSwid[i].setAttribute('disable', '');}
+	
+setTimeout(function(){	
+for(var i = 0; i < COMMENTSwid.length; i++){
+	COMMENTSwid[i].removeAttribute("disable");}}, 1000);
+	this.setAttribute('class', 'SELECTtab CURRENTspot');
+	CURRENTspot.setAttribute('class', 'SELECTtab');
+}});}}
+
+//PAGINA DE LOGIN
+if(window.location.href.indexOf('/p/login.html') > -1){
+document.body.setAttribute('login', '');}
+
+//ENVIA O VALOR DO CAMPO DE BUSCA
+if(document.body.contains(document.querySelector('.SEARCHform')) === true){
+document.querySelector('.SEARCHform').addEventListener('submit', function(){
 	var SEARCHinput = document.querySelector('.SEARCHinput').value;
+
 if(SEARCHinput != ''){
 if(localStorage.LASTsearch != undefined){
 	var GETitem = localStorage.LASTsearch;
@@ -33,32 +80,50 @@ if(localStorage.LASTsearch != undefined){
 	var LASTes = GETitef.split('","');
 
 if(LASTes.length <= 3){
-	localStorage.setItem('LASTsearch', OUTirm);
-}else{
+	localStorage.setItem('LASTsearch', OUTirm);}
+	else{
 	var SEARCtag = '["' +LASTes[1]+ '","' +LASTes[2]+ '","' +LASTes[3]+ '","' +SEARCHinput+ '"]';
 	localStorage.setItem('LASTsearch', SEARCtag);}}
-else{
-	var BAAHit = '["' +SEARCHinput+ '"]';
-	localStorage.setItem('LASTsearch', BAAHit);}}}
+	else{
+	var SEARCtag = '["' +SEARCHinput+ '"]';
+localStorage.setItem('LASTsearch', SEARCtag);}}});}
 
 //REGASTA E EXIBE O VALOR DA BUSCA [OK]
-if(document.querySelector('.POPULARinst') > -1 ? false : true == true){
+if(document.body.contains(document.querySelector('.POPULARinst')) === true){
 if(localStorage.LASTsearch != undefined){
-var arr = localStorage.LASTsearch;
-var arr = arr.substring(2, arr.length-2);
-var arr = arr.split('","');
+var SPLITsearch = localStorage.LASTsearch.substring(2, localStorage.LASTsearch.length-2).split('","');
+var ITEMsearch = new Array();
+for(var i = 0; i < SPLITsearch.length; i++){
+ITEMsearch += '<a class="SEARCHtag" href="/search?q=' +SPLITsearch[i]+'&amp;max-results=9">' +SPLITsearch[i]+ '</a>';}
+document.querySelector('.POPULARinst').innerHTML = '<i class="LASTsearch"></i>' +ITEMsearch;}}
 
-if(arr[arr.length-1] != undefined){ var SEARCHtag_1 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-1] +'&amp;max-results=9">'+ arr[arr.length-1] +'</a>' }
-else{ var SEARCHtag_1 = '' }
-if(arr[arr.length-2] != undefined){ var SEARCHtag_2 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-2] +'&amp;max-results=9">'+ arr[arr.length-2] +'</a>' }
-else{ var SEARCHtag_2 = '' }
-if(arr[arr.length-3] != undefined){ var SEARCHtag_3 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-3] +'&amp;max-results=9">'+ arr[arr.length-3] +'</a>' }
-else{ var SEARCHtag_3 = '' }
-if(arr[arr.length-4] != undefined){ var SEARCHtag_4 = '<a class="SEARCHtag" href="/search?q='+ arr[arr.length-4] +'&amp;max-results=9">'+ arr[arr.length-4] +'</a>' }
-else{ var SEARCHtag_4 = '' }
+//ENVIAR BOOKMARK [OK]
+var BTNcount = document.querySelectorAll('.BTNfav').length;
+for(var i = 0; i < BTNcount; i++){
+var BTNclick = document.querySelectorAll('.BTNfav');
 
-var POPULARinst = document.querySelector('.POPULARinst');
-POPULARinst.innerHTML = '<i class="LASTsearch"></i>' +SEARCHtag_1+SEARCHtag_2+SEARCHtag_3+SEARCHtag_4;}}
+BTNclick[i].addEventListener('click', function(){
+var BTNrel = this.getAttribute('rel');
+var POSTinst = document.getElementById(BTNrel);
+var RELtitle = POSTinst.querySelector('.POSTurl').innerText;
+var RELhref = POSTinst.querySelector('.POSTurl').href;
+var RELdate = POSTinst.querySelector('.POSTdate').innerText;
+var RELimage = POSTinst.querySelector('.THUMBnail').src;
+var RELprice = POSTinst.querySelector('.POSTprice').innerText;
+
+	var ACTIVEpost = document.getElementById(BTNrel);
+	ACTIVEpost.classList.add('ACTIVElist');
+
+if(localStorage.BOOKmark != undefined){
+var GETitem = localStorage.BOOKmark;
+if(!~GETitem.indexOf(BTNrel)){
+var MARKexist = GETitem.substring(1, GETitem.length-1);
+var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
+localStorage.setItem('BOOKmark', BOOKmark);
+}}else{
+var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
+localStorage.setItem('BOOKmark', BOOKmark);}
+});}
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('/p/favoritos.html') > -1){
@@ -142,119 +207,10 @@ for(var i = 0; i < OBJname.length; i++){
 	var ACTIVEpost = document.getElementById(OBJname[i]);
 ACTIVEpost.classList.add('ACTIVElist');}}}
 
-//ENVIAR BOOKMARK [OK]
-var BTNcount = document.querySelectorAll('.BTNfav').length;
-for(var i = 0; i < BTNcount; i++){
-var BTNclick = document.querySelectorAll('.BTNfav');
-
-BTNclick[i].addEventListener('click', function(){
-var BTNrel = this.getAttribute('rel');
-var POSTinst = document.getElementById(BTNrel);
-var RELtitle = POSTinst.querySelector('.POSTurl').innerText;
-var RELhref = POSTinst.querySelector('.POSTurl').href;
-var RELdate = POSTinst.querySelector('.POSTdate').innerText;
-var RELimage = POSTinst.querySelector('.THUMBnail').src;
-var RELprice = POSTinst.querySelector('.POSTprice').innerText;
-
-	var ACTIVEpost = document.getElementById(BTNrel);
-	ACTIVEpost.classList.add('ACTIVElist');
-
-if(localStorage.BOOKmark != undefined){
-var GETitem = localStorage.BOOKmark;
-if(!~GETitem.indexOf(BTNrel)){
-var MARKexist = GETitem.substring(1, GETitem.length-1);
-var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
-localStorage.setItem('BOOKmark', BOOKmark);
-}}else{
-var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
-localStorage.setItem('BOOKmark', BOOKmark);}
-});}
-	
-if(document.querySelector('.SEARCHbar') > -1 ? false : true == true){
-var SEARCHwhere = document.querySelector('.SEARCHwhere');
-var SEARCHbar = document.querySelector('.SEARCHbar');
-var HEADERnav = document.querySelector('.HEADERnav');
-var BACKmenu = document.querySelector('.BACKmenu');
-SEARCHwhere.addEventListener('click', function(){
-HEADERnav.style.cssText = "opacity:0;";
-SEARCHbar.style.cssText = "display:block";
-setTimeout(HEADmenuON, 100)});
-
-function HEADmenuON(){
-HEADERnav.style.cssText = "top: -56px;opacity:0;";
-SEARCHbar.style.cssText = "opacity:1;display:flex;";}
-
-BACKmenu.addEventListener('click', function(){
-SEARCHbar.style.cssText = "opacity:0;display:flex";
-setTimeout(HEADmenuOFF, 100)});
-
-function HEADmenuOFF(){
-SEARCHbar.removeAttribute("style");
-HEADERnav.style.cssText = "top:0;opacity:1";}}
-
 if(window.location.href.indexOf('/p/sobre.html') > -1){
 var BLOGinst = document.querySelector('.Blog');
 var POSTstatic = '<h3 class="STATICtitle">Sobre a empresa</h3><section class="BREADcrumb"><a href="#">Início</a><em class="CROSSicon"></em><span>Páginas</span><em class="CROSSicon"></em><span class="CURRENTurl">Sobre</span></section><div class="POSTstatic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at. Viverra accumsan in nisl nisi. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Mauris nunc congue nisi vitae suscipit tellus. Elementum integer enim neque volutpat ac tincidunt vitae. Donec adipiscing tristique risus nec. Posuere urna nec tincidunt praesent semper feugiat. Mattis enim ut tellus elementum sagittis vitae. Ut tellus elementum sagittis vitae et leo duis.</div>'
 BLOGinst.innerHTML = POSTstatic;}
-
-if(document.querySelector('.ITEMpost') > -1 ? false : true == true){
-var POSTbody = document.querySelector('.POSTbody').offsetHeight;
-var DOCUMENTtab = document.querySelector('.DOCUMENTtab').offsetHeight;
-var comments = document.querySelector('.comments').offsetHeight;
-
-//MENUMASTER
-var css = new Blob([".DISABLEdiv{height:0}"], {type:'text/css'});
-var style = document.createElement('link');
-style.href = URL.createObjectURL(css) + '#style.css';
-style.rel = 'stylesheet';
-document.head.appendChild(style);
-
-for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
-var COMMENTSwid = document.querySelectorAll('.SELECTtab');
-
-COMMENTSwid[i].addEventListener('click', function(){
-	var SELECTtab = this.getAttribute('for');
-	var CURRENTspot = document.querySelector('.CURRENTspot');
-	var CURRENTurl = document.querySelector('.' +SELECTtab);
-	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
-
-if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
-	FIRSTelement.classList.remove('ZEROdiv');
-	CURRENTurl.classList.remove('ZEROdiv');
-
-setTimeout(function(){
-	FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl); }, 700);
-
-setTimeout(function(){
-FIRSTelement.classList.add('DISABLEdiv') }, 700);
-
-//FECHA O PRIMEIRO ELEMENTO
-$(FIRSTelement).animate({ height: 0 },{ duration: 700 });
-
-//ADICIONA ALTURA NA DIV/ABA CHAMADA ------ [ 400 MILI-S ] DEPOIS DO CLICK
-setTimeout(function(){
-if(SELECTtab == 'comments'){	
-$(CURRENTurl).animate({ height: comments, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
-}else if(SELECTtab == 'DOCUMENTtab'){
-$(CURRENTurl).animate({ height: DOCUMENTtab, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
-}else if(SELECTtab == 'POSTbody'){
-$(CURRENTurl).animate({ height: POSTbody, opacity: 1 },{duration: 700, complete: function(){ $(CURRENTurl).removeAttr('style') }});
-}}, 400);
-
-//DISABLE BUTTONS
-for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
-	COMMENTSwid[i].setAttribute('disable', '');}
-	
-setTimeout(function(){
-	CURRENTurl.classList.remove('DISABLEdiv');
-	FIRSTelement.removeAttribute('style');
-	FIRSTelement.classList.remove('ACTIVEdiv');
-	
-for(var i = 0; i < COMMENTSwid.length; i++){
-	COMMENTSwid[i].removeAttribute("disable");}}, 800);
-	this.setAttribute('class', 'SELECTtab CURRENTspot');
-	CURRENTspot.setAttribute('class', 'SELECTtab');}
-});}}
 
 if(window.location.href.indexOf('/p/login.html') > -1){
 document.body.setAttribute('login', '');
