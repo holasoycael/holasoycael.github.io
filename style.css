@@ -55,7 +55,7 @@ DIV.POSTbox .POSTbtn LI A,
 .PURCHASEbox,
 SPAN.CHECKOUTbtn A,
 .INFORMATIONpage,
-.relatedSpot A {
+.RELATEDinst A {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -69,8 +69,8 @@ SPAN.CHECKOUTbtn A,
     -o-border-radius: 0 0 3px 3px;
     border-radius: 0 0 3px 3px;
 }
-.POSTdoor img,
-.relatedSpot IMG {
+.POSTdoor IMG,
+.RELATEDinst IMG {
     -webkit-border-radius: 3px 3px 0 0;
     -moz-border-radius: 3px 3px 0 0;
     -ms-border-radius: 3px 3px 0 0;
@@ -95,15 +95,21 @@ MAIN.BODYmain { display: block; }
 @media screen and (min-width: 550px) { .MAINsec, .STATICpage, .page-navi { max-width: 550px; } }
 @media screen and (min-width: 754px) { .MAINsec, .STATICpage, .page-navi { max-width: 100%; } DIV.POSTbox, DIV.POSTbox.BOOKmark { max-width: 50%; } }
 @media screen and (min-width: 900px) { .MAINsec, .STATICpage, .page-navi { max-width: 100%; } }
-@media screen and (min-width: 1056px) { DIV.HEADERnav { max-width: 1076px !IMPORTANT; } }
+@media screen and (min-width: 1056px) { HEADER.HEADmenu DIV.HEADERnav, .MASTERpost SECTION.BREADcrumb { max-width: 1076px !IMPORTANT; } }
 @media screen and (min-width: 1166px) { .MAINsec, .STATICpage, .page-navi { max-width: 1088px; } }
 
 @media screen and (max-width: 1056px) {
-H3.STATICtitle { padding: 26px 16px !IMPORTANT; }
-SECTION.BREADcrumb { padding: 16px 8px 0 !IMPORTANT; }
+.MASTERpost H3.STATICtitle {
+    padding: 26px 16px;
+}
+.MASTERpost SECTION.BREADcrumb { padding: 16px 8px 0; }
 .MENUpost { margin: 0 16px; }
 .ITEMpost { padding: 0 16px; }
 .HEADERnav { padding: 0 8px; width: calc(100% + -16px) !IMPORTANT; }
+.RELATEDelement .RELATEDinst {
+    padding: 16px 16px 32px;
+}
+
 
 }
 
@@ -293,7 +299,7 @@ NAV.PUSHmenu.MENUactive .BTNmenu {
     right: -56px;
 }
 P.BTNmenu {
-    right: -40px;
+    right: -48px;
     position: absolute;
     background: transparent;
     z-index: 9;
@@ -362,7 +368,36 @@ NAV.PUSHmenu P.BTNmenu I.CROSSicon {
 HEADER.HEADmenu .BTNhref::hover { background-color: rgba(60,64,67,0.08); }
 HEADER.HEADmenu .BTNhref::active { background-color: rgba(60,64,67,0.12); }
 HEADER.HEADmenu .BTNhref::focus::hover { background-color: rgba(60,64,67,0.1); }
-@media screen and (max-width: 848px) { NAV.PUSHmenu .BTNmenu { display: block; } }
+@media screen and (max-width: 848px) { NAV.PUSHmenu .BTNmenu { display: block; }
+.MASTERpost H3.STATICtitle {
+    padding: 18px 16px 26px;
+    font-size: 2.2rem;
+}
+.POSTright, .ACTIONpost .LIVEspot {
+    display: none;
+}
+.POSTbody .POSTleft {
+    width: 100%;
+}
+.POSTbody .LEFTinst {
+    margin: 0;
+}
+
+
+}
+
+@media screen and (max-width: 440px) {
+.MENUpost LI {
+    padding: 0 16px !IMPORTANT;
+}
+}
+
+@media screen and (max-width: 390px) {
+.MENUpost LI {
+    font-size: 12px !IMPORTANT;
+}
+}
+
 
 DIV.HEADERnav {
     max-width: 1056px;
@@ -960,9 +995,11 @@ display:none;
 .FOOTERcolumn {
     padding: 0;
 }
+H1.COLUMNtitle {
+    height: 54px;
+}
 .COLUMNspot {
     display: none;
-    padding: 16px 0 0;
 }}
 
 @media screen and (max-width: 1119px) {
@@ -1377,6 +1414,26 @@ DIV.POSTbox .POSTup .POSTspot.EXEfav:hover .BTNfav::before {
     width: 70%;
 }
 @media screen and (max-width: 754px) {
+.RELATEDelement .RELATEDinst {
+    padding: 16px 0 0px;
+}
+.RELATEDelement .RELATEDinst H2 {
+    padding: 32px 16px;
+}
+.RELATEDspot {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.RELATEDinst UL {
+    width: 900px !IMPORTANT;
+    padding: 0 12px 0 16px;
+}
+.RELATEDinst LI {
+    margin-bottom: 32px;
+}
+
+
+
 .SPOTfav {
 display: block;
 }
@@ -1878,7 +1935,7 @@ a.btn.CHECKout {
 SPAN.PREMIUMval {
     font-size: 28px;
     font-family: var(--font-oswald);
-    color: #42a31f;
+    color: #53cc27;
     float: right;
 }
 .TOOLSpost {
@@ -1972,7 +2029,7 @@ blockquote {
 .POSTdoor {
     display: table;
 }
-.POSTdoor img {
+.POSTdoor IMG {
     width: 100%;
     float: left;
 }
@@ -2455,34 +2512,40 @@ span.btn-download-right-secondary {
 .RELATEDelement {
     background: #ddd;
 }
-.relatedSpot {
+.RELATEDinst {
     max-width: 1056px;
     margin: 0 auto;
     font-family: var(--font-poppins);
     padding: 16px 0 32px;
 }
-.relatedSpot H2 {
+.RELATEDinst H2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
     padding: 42px 0 32px;
     color: #4d4d4d;
 }
-.relatedSpot UL {
+.RELATEDinst UL {
+    width: 100%;
     display: flex;
 }
-.relatedSpot LI {
+.RELATEDinst LI {
     width: 31.2%;
     margin-bottom: 3%;
     transition: all 0.4s;
 }
-.relatedSpot LI:hover {
+.RELATEDinst LI:hover {
     box-shadow: 0 45px 85px rgba(0,0,0,.08);
 }
-.relatedSpot LI:not(:last-child) {
+.RELATEDinst LI:not(:last-child) {
     margin-right: 3%;
 }
-.relatedSpot LI::after {
+.RELATEDinst A {
+    background: #fff;
+    float: left;
+    z-index: 5;
+}
+.RELATEDinst LI::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -2496,28 +2559,26 @@ span.btn-download-right-secondary {
     left: 10%;
     right: 10%;
 }
-.relatedSpot A {
-    background: #fff;
-    float: left;
-    z-index: 5;
-}
-.relatedSpot LI P {
+.RELATEDinst LI P {
     font-family: var(--font-lato);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
     color: #000;
 }
-.relatedSpot IMG {
+.RELATEDinst IMG {
     width: 100%;
     float: left;
 }
 .RELATEDbttm {
     padding: 10%!important;
-    display: table;
+    overflow: hidden;
+    display: inline-grid;
+}
+.RELATEDbttm * {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .RELATEDbttm .RELATEDdate {
     color: #888;
