@@ -45,11 +45,18 @@ COMMENTSwid[i].addEventListener('click', function(){
 	var CURRENTspot = document.querySelector('.CURRENTspot');
 	var CURRENTurl = document.querySelector('.' +SELECTtab);
 	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
-	
+
 if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
+if(document.querySelector('.POSTbody') === CURRENTurl){
+setTimeout(function(){
+document.querySelector('.POSTright').removeAttribute("style"); }, 1240); }
+if(document.querySelector('.POSTbody') === FIRSTelement){
+document.querySelector('.POSTright').style.cssText = "top:0"; }
+
 FIRSTelement.insertAdjacentElement("beforebegin", CURRENTurl);
+
 $(FIRSTelement).animate({ height: "toggle", opacity: "toggle" },{duration: 700});
-setTimeout(function(){	
+setTimeout(function(){
 $(CURRENTurl).animate({ height: "toggle", opacity: "toggle" },{duration: 700});}, 520);
 
 //------DISABLE BUTTONS
