@@ -442,7 +442,7 @@ HEADER.HEADmenu .BTNhref::focus::hover { background-color: rgba(60,64,67,0.1); }
 }
 .TOOLSpost .ACTIONpost .btn.LIVEtemplate {
     margin: 14px auto 0;
-    border: none;
+    padding: 8px 16px;
 }
 
 }
@@ -2138,10 +2138,8 @@ A.BTNit.URLfree {
 .ACTIONpost A.LIVEtemplate {
     color: black;
     background: #eee;
-    border-radius: 4px;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-bottom-width: 4px;
-    padding: 8px 16px;
+    border-radius: 3px;
+    padding: 10px 16px;
     line-height: 17px;
     font-family: var(--font-oswald);
     transition: all .3s;
