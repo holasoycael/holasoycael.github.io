@@ -1988,7 +1988,7 @@ H3.STATICtitle {
     margin: 32px auto;
 }
 .MAINsec {
-    margin: 16px auto;
+    margin: 16px auto 0;
 }
 .POSTleft, .POSTright {
     float: left;
