@@ -323,9 +323,9 @@ NAV.PUSHmenu FOOTER SPAN.LASTupdate {
     font-size: 10px;
 }
 #CONTENTframe.SWIPEopen::before { background: var(--black-transparent-bg); z-index: 999; }
-#CONTENTframe.SEARCHopen::before {
+#CONTENTframe.SWIPEnav::before {
     background: var(--black-transparent-bg);
-    z-index: 19000;
+    z-index: 99999;
 }
 #CONTENTframe::before {
     content: '';
@@ -2553,6 +2553,7 @@ overflow:hidden
 .DESCpost H3 I.CROSSicon {
     float: right;
     padding: 4px;
+    cursor: pointer;
 }
 .DESCpost H3 I.CROSSicon, .DESCpost H3 I.CROSSicon::after {
     width: 24px;
@@ -3026,4 +3027,198 @@ BODY[login] {
     background-repeat: repeat;
     background-attachment: fixed;
     width: 100%;
+}
+
+
+
+SECTION.SIDEnav {
+    background: var(--body-bg);
+    position: fixed;
+    top: 0;
+    right: -6px;
+    z-index: 999999;
+    width: 412px;
+    -webkit-transform: translate3d(calc(100% + 6px), 0, 0);
+    -moz-transform: translate3d(calc(100% + 6px), 0, 0);
+    transform: translate3d(calc(100% + 6px), 0, 0);
+    -webkit-transition: var(--ease-tre-time);
+    -o-transition: var(--ease-tre-time);
+    transition: var(--ease-tre-time);
+    font-family: var(--font-lato);
+    height: 100vh;
+}
+SECTION.SIDEnav.ACTIVEit {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.SIDENAVinst {
+    height: 100%;
+}
+SECTION.SIDEnav H3 {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    background: #ad49ec;
+    padding-left: 16px;
+    height: 48px;
+    line-height: 0;
+    font-weight: 500;
+}
+.BTNit.CLOSEout {
+    position: absolute;
+    padding: 12px;
+    right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.BTNit.CLOSEout:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+SECTION.SIDEnav H3 I.CROSSdown, SECTION.SIDEnav H3 I.CROSSdown::after {
+    display: block;
+    width: 12.5px;
+    height: 12.5px;
+}
+SECTION.SIDEnav H3 I.CROSSdown::after {
+    content: '';
+}
+
+SECTION.SIDEnav .ACTIVEit {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.INSETEDcontent {
+    opacity: 0;
+    margin-right: 6px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh + -48px);
+    transition: transform 0.2s linear, opacity 0.15s linear;
+    -webkit-transform: translate3d(calc(100% + 6px), 0, 0);
+    -moz-transform: translate3d(calc(100% + 6px), 0, 0);
+    transform: translate3d(calc(100% + 6px), 0, 0);
+    position: absolute;
+    top: 48px;
+}
+.INSETEDcontent .CONinset {
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    padding: 16px 0;
+}
+
+.INSETEDcontent .FLOATdiv {
+    color: var(--color-menu-secundary);
+    font-family: var(--font-open);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+}
+.FLEXdiv {
+    background: #ffffff;
+}
+.FLEXdiv:not(:first-child) {
+    margin-top: 1px;
+    box-shadow: inset 0 -1px 0px 0px rgba(255, 255, 255, 0.05);
+}
+.FLEXdiv A {
+    padding: 8px;
+    display: flex;
+}
+.FLEXdiv A SPAN.IMGthub IMG {
+    border-radius: 50%;
+}
+SPAN.IMGthub {
+    margin-top: 2px;
+    margin-right: 12px;
+    display: block;
+}
+SECTION.DATEcomment {
+    margin-top: 4px;
+}
+
+H3.SHIFTmenu.ACTIVEit .SELECTitem {
+    box-shadow: none;
+    background: #ba59f7;
+}
+
+.SELECTitem {
+    padding: 8px;
+    box-shadow: inset 0 0 0 1px #d6a4f5;
+    transition: box-shadow 0.1s linear, background 0.1s linear;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.SELECTitem::after {
+    content: '';
+    width: 12.5px;
+    height: 12.5px;
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.OPTIONelmnt {
+    position: absolute;
+    top: 8px;
+    background: #d6a4f5;
+    border-radius: 3px;
+    left: 16px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    transition: opacity 0.15s ease-in-out, transform 0.1s ease-in-out, top 0.1s ease-in-out;
+    transform: scaleY(0);
+    opacity: 0;
+    z-index: 99;
+}
+SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
+    transform: scaleY(1);
+    opacity: 1;
+    top: 40px;
+}
+.OPTIONelmnt LI:not(:last-child) {
+    border-bottom: 1px solid #e3b6ff;
+}
+.OPTIONelmnt LI {
+    line-height: 20px;
+    cursor: pointer;
+    text-indent: 12px;
+    padding: 6px 16px 6px 0px;
+}
+.SEEmore {
+    padding: 10px 0;
+    background: #fff;
+    margin-top: 6px;
+    text-align: center;
+    color: #ad49ec;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+}
+.INFOcmmt {
+    padding: 0 0 12px;
+    text-align: center;
+    color: #aaa;
+}
+
+
+.FRONTend {
+    bottom: 0;
+    position: fixed;
+    left: calc(-100vw + 406px);
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
 }
