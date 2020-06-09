@@ -90,7 +90,7 @@ MAIN.BODYmain { display: block; }
     margin: 0 auto;
 }
 .MAINsec, .page-navi, .STATICpage {
-	display: table;
+    display: flex;
     margin: auto;
 }
 .MAINsec, .page-navi {
