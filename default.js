@@ -1,4 +1,15 @@
 window.onload = function(){
+
+//BOOOKMARK EXISTENTE
+if(document.body.contains(document.querySelector('.POSTinst')) === true){
+if(localStorage.BOOKmark != undefined){
+	var GETitem = localStorage.BOOKmark;
+	var JSONparse = JSON.parse(GETitem);
+	var OBJname = Object.getOwnPropertyNames(JSONparse);
+for(var i = 0; i < OBJname.length; i++){
+	var ACTIVEpost = document.getElementById(OBJname[i]);
+ACTIVEpost.classList.add('ACTIVElist');}}}
+
 setInterval(function(){
 var HTMLoffset = document.querySelector('HTML');
 document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);
@@ -227,16 +238,7 @@ setTimeout(ZEROmark, 700)}});}}
 else{
 var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
-BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
-
-//BOOOKMARK EXISTENTE
-if(localStorage.BOOKmark != undefined){
-	var GETitem = localStorage.BOOKmark;
-	var JSONparse = JSON.parse(GETitem);
-	var OBJname = Object.getOwnPropertyNames(JSONparse);
-for(var i = 0; i < OBJname.length; i++){
-	var ACTIVEpost = document.getElementById(OBJname[i]);
-ACTIVEpost.classList.add('ACTIVElist');}}}
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
 
 if(window.location.href.indexOf('/p/login.html') > -1){
 document.body.setAttribute('login', '');
