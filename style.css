@@ -376,9 +376,9 @@ P.BTNmenu {
     top: 0;
 }
 NAV.PUSHmenu.MENUactive P.BTNmenu, NAV.PUSHmenu.MENUactive P.BTNmenu * {
-    -webkit-transition: transform .5s linear, top .5s linear, background .35s linear;
-    -o-transition: transform .5s linear, top .5s linear, background .35s linear;
-    transition: transform .5s linear, top .5s linear, background .35s linear;
+    -webkit-transition: transform .3s linear, top .3s linear, background .25s linear;
+    -o-transition: transform .3s linear, top .3s linear, background .25s linear;
+    transition: transform .3s linear, top .3s linear, background .25s linear;
 }
 NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon {
     top: 2.2em;
@@ -414,9 +414,9 @@ NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before, NAV.PUSHmenu.MENUactive P
     position: absolute;
     width: 20px;
     height: 2px;
-    -webkit-transition: transform .5s linear, top .5s linear, background .35s linear;
-    -o-transition: transform .5s linear, top .5s linear, background .35s linear;
-    transition: transform .5s linear, top .5s linear, background .35s linear;
+    -webkit-transition: transform .3s linear, top .3s linear, background .25s linear;
+    -o-transition: transform .3s linear, top .3s linear, background .25s linear;
+    transition: transform .3s linear, top .3s linear, background .25s linear;
     background: #fff;
 }
 NAV.PUSHmenu P.BTNmenu I.CROSSicon {
@@ -3115,6 +3115,7 @@ SECTION.SIDEnav .ACTIVEit {
     transform: translate3d(calc(100% + 6px), 0, 0);
     position: absolute;
     top: 48px;
+    width: 100%;
 }
 .INSETEDcontent .CONinset {
     flex-grow: 1;
@@ -3132,6 +3133,10 @@ SECTION.SIDEnav .ACTIVEit {
 }
 .FLEXdiv {
     background: #ffffff;
+    transition: background 0.1s linear;
+}
+.FLEXdiv:hover {
+    background: #f9f9f9;
 }
 .FLEXdiv:not(:first-child) {
     margin-top: 1px;
@@ -3206,12 +3211,17 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
 .SEEmore {
     padding: 10px 0;
     background: #fff;
-    margin-top: 6px;
+    margin: 12px auto 0;
     text-align: center;
     color: #ad49ec;
-    border-bottom: 1px solid #e6e6e6;
-    border-top: 1px solid #e6e6e6;
     cursor: pointer;
+    max-width: 190px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+    transition: box-shadow 200ms ease-in-out 0s, background-color 200ms ease-in-out 0s;
+}
+.SEEmore:hover {
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 0px 0px 4px;
 }
 .INFOcmmt {
     padding: 0 0 12px;
@@ -3230,4 +3240,30 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     background: transparent;
     width: 100vw;
     height: 100vh;
+}
+
+
+.PROMOdiv .EMPTYmsg * {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.PROMOdiv .EMPTYmsg I.CROSSicon {
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.PROMOdiv .EMPTYmsg I.CROSSicon {
+    width: 100%;
+    height: 300px;
+    margin: 10% 0 12px;
+}
+.PROMOdiv .EMPTYmsg P {
+    color: #9A7BCC;
+    margin: 0 0 8px;
+    font-size: 35px;
+}
+.PROMOdiv .EMPTYmsg SPAN {
+    color: #717B85;
+    font-size: 16px;
 }
