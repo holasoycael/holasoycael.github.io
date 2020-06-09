@@ -3242,7 +3242,9 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     height: 100vh;
 }
 
-
+.EMPTYmsg {
+    font-family: var(--font-open);
+}
 .PROMOdiv .EMPTYmsg * {
     display: table;
     text-align: center;
