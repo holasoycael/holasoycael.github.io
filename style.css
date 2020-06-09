@@ -376,9 +376,9 @@ P.BTNmenu {
     top: 0;
 }
 NAV.PUSHmenu.MENUactive P.BTNmenu, NAV.PUSHmenu.MENUactive P.BTNmenu * {
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: transform .5s linear, top .5s linear, background .35s linear;
+    -o-transition: transform .5s linear, top .5s linear, background .35s linear;
+    transition: transform .5s linear, top .5s linear, background .35s linear;
 }
 NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon {
     top: 2.2em;
@@ -414,7 +414,9 @@ NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before, NAV.PUSHmenu.MENUactive P
     position: absolute;
     width: 20px;
     height: 2px;
-    transition: transform .5s ease, top .5s ease, background .5s ease;
+    -webkit-transition: transform .5s linear, top .5s linear, background .35s linear;
+    -o-transition: transform .5s linear, top .5s linear, background .35s linear;
+    transition: transform .5s linear, top .5s linear, background .35s linear;
     background: #fff;
 }
 NAV.PUSHmenu P.BTNmenu I.CROSSicon {
@@ -1596,6 +1598,12 @@ display: block;
     padding: 0;
 }}
 @media screen and (max-width: 580px) {
+SECTION.SIDEnav .FRONTend {
+    left: calc(-100vw + 336px);
+}
+BODY SECTION.SIDEnav {
+    width: 342px;
+}
 .DESCpost .DESCpost H3 {
     margin: 0 0 12px;
 }
@@ -3060,14 +3068,14 @@ SECTION.SIDEnav H3 {
     color: #fff;
     display: flex;
     flex-shrink: 0;
-    font-size: 16px;
+    font-size: 14px;
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(0, 0, 0, 0.05);
     z-index: 1;
     background: #ad49ec;
     padding-left: 16px;
     height: 48px;
     line-height: 0;
-    font-weight: 500;
+    font-weight: 700;
 }
 .BTNit.CLOSEout {
     position: absolute;
@@ -3170,7 +3178,7 @@ H3.SHIFTmenu.ACTIVEit .SELECTitem {
 
 .OPTIONelmnt {
     position: absolute;
-    top: 8px;
+    top: 10px;
     background: #d6a4f5;
     border-radius: 3px;
     left: 16px;
@@ -3203,6 +3211,7 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     color: #ad49ec;
     border-bottom: 1px solid #e6e6e6;
     border-top: 1px solid #e6e6e6;
+    cursor: pointer;
 }
 .INFOcmmt {
     padding: 0 0 12px;
