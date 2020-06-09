@@ -90,8 +90,11 @@ MAIN.BODYmain { display: block; }
     margin: 0 auto;
 }
 .MAINsec, .page-navi, .STATICpage {
-    overflow: hidden;
+	display: table;
     margin: auto;
+}
+.MAINsec, .page-navi {
+    overflow: hidden;
 }
 
 
@@ -1751,7 +1754,6 @@ DIV.POSTbox.BOOKmark {
     -ms-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
     -o-transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
     transition: max-width 1s ease-in-out, max-height 1s ease-in-out, opacity 0.5s linear;
-    overflow: hidden;
     max-height: 412px;
     opacity: 1;
 }
