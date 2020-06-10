@@ -85,6 +85,7 @@ MAIN.BODYmain { display: block; }
 
 
 .main, #main {
+    width: 100%;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -98,7 +99,9 @@ MAIN.BODYmain { display: block; }
 .MAINsec, .page-navi {
     overflow: hidden;
 }
-
+SECTION.STATICpage {
+    display: flex;
+}
 
 @media screen and (max-width: 400px) {
 .TOOLSpost .ACTIONpost .btn.LIVEtemplate {
