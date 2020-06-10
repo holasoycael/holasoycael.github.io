@@ -259,7 +259,7 @@ SECTION.STATICpage {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     background-color: #fff;
-    padding: 40px 30px;
+    padding: 34px 30px 40px;
 }
 
 
@@ -2038,7 +2038,7 @@ H3.BOOKtitle::before {
     margin: 0 auto;
 }
 .ARTICLEsttc SECTION.BREADcrumb {
-    padding: 0 0 16px;
+    padding: 0 0 12px;
 }
 .STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN, .STATICexcl SECTION.BREADcrumb A, .STATICexcl SECTION.BREADcrumb SPAN {
     color: var(--black-transparent-bg);
@@ -2111,7 +2111,7 @@ SECTION.STATICexcl .POSTstatic {
     margin: 0 10px;
 }
 .POSTstatic {
-    padding: 22px 0 0;
+    padding: 16px 0 0;
     line-height: 1.7em;
     font-size: 16px;
     color: var(--color-black-out);
