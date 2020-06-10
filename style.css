@@ -3112,6 +3112,7 @@ SECTION.SIDEnav .ACTIVEit {
 
 .INSETEDcontent {
     opacity: 0;
+    width: calc(100% - 6px);
     margin-right: 6px;
     display: flex;
     flex-direction: column;
@@ -3122,7 +3123,6 @@ SECTION.SIDEnav .ACTIVEit {
     transform: translate3d(calc(100% + 6px), 0, 0);
     position: absolute;
     top: 48px;
-    width: 100%;
 }
 .INSETEDcontent .CONinset {
     flex-grow: 1;
