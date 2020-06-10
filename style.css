@@ -1970,6 +1970,9 @@ H3.BOOKtitle::before {
 .ARTICLEsttc SECTION.BREADcrumb {
     padding: 0 0 16px;
 }
+.STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN {
+    color: var(--black-transparent-bg);
+}
 .MASTERpost SECTION.BREADcrumb {
     padding: 16px 0 0;
 }
