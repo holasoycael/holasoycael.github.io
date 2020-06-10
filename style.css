@@ -3258,7 +3258,7 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     width: 100%;
 }
 .PROMOdiv .EMPTYmsg I.CROSSicon {
-    background-size: 200px;
+    background-size: 56%;
     background-repeat: no-repeat;
     background-position: center;
 }
