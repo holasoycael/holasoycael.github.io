@@ -19,9 +19,35 @@ ALTdat = JSONit.gd$extendedProperty[1].value;
 ALTimg = JSONit.author[0].gd$image.src;
 break;}}
 
+//*****************************************//
+
+const dateTimeFormat = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true })
+const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = dateTimeFormat.formatToParts(new Date()) 
+
+const DATAhoje = `${day}/${month}/${year}`;
+var YESTERdd = `${day-1}/${month}/${year}`;
+
+//DATA ONTEM
+if((YESTERdd.substring(0, 1) != '0') ){
+	var YESTERdd = '0'+YESTERdd;}
+else{
+	var YESTERdd = YESTERdd;}
+
+//DATA HOJE
+if(DATAhoje === ALTdat.split(' ')[0]){
+	var ALTdat = 'Hoje às ' + ALTdat.split(' ')[1];}
+else if(YESTERdd === ALTdat.split(' ')[0]){
+	var ALTdat = 'Ontem às ' + ALTdat.split(' ')[1];}
+else{
+	var ALTdat = ALTdat.split(' ')[0] +' às '+ ALTdat.split(' ')[1];}
+
+// console.log(`${weekday}, ${day} de ${month} de ${year} às ${hour}:${minute} ${hour12}`)
+
+//*****************************************//
+
     if (ALTimg == "https://img1.blogblog.com/img/blank.gif" != "") { ALTimg = urlNoAvatar; }
 
-	document.write('<div class="FLEXdiv"><a href="' +ALTurl.split('?')[0]+ '"><div class="FLOATdiv"><span class="IMGthub"><img src="' +ALTimg+ '" width="42" height="42"/></span></div><div class="FLOATdiv"><section><b>' + ALTnam + '</b> fez um novo comentario: "'+ALTtit+'"</section><section class="DATEcomment">' + ALTdat + '</section></div></a></div>');} //FIM DO LOOP
+	document.write('<div class="FLEXdiv"><a href="' +ALTurl.split('?')[0]+ '"><div class="FLOATdiv"><span class="IMGthub"><img src="' +ALTimg+ '" width="42" height="42"/></span></div><div class="FLOATdiv"><section><b>' + ALTnam + '</b> fez um novo comentario: “'+ALTtit+'”;</section><section class="DATEcomment">' + ALTdat + '</section></div></a></div>');} //FIM DO LOOP
 
 	document.querySelector('.COMMENTdiv ').children[0].insertAdjacentHTML('beforeend', '<div class="SEEmore">Mostrar tudo</div>');
 	document.querySelector('.COMMENTdiv ').children[0].insertAdjacentHTML('afterbegin', '<div class="INFOcmmt">' +json.feed.entry.length+ ' comentários sendo exidos.</div>');
