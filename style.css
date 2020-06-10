@@ -1970,7 +1970,7 @@ H3.BOOKtitle::before {
 .ARTICLEsttc SECTION.BREADcrumb {
     padding: 0 0 16px;
 }
-.STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN {
+.STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN, .STATICexcl SECTION.BREADcrumb A, .STATICexcl SECTION.BREADcrumb SPAN {
     color: var(--black-transparent-bg);
 }
 .MASTERpost SECTION.BREADcrumb {
@@ -2013,7 +2013,7 @@ SECTION.BREADcrumb EM.CROSSicon::after {
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
 }
-.STATICpage SECTION.BREADcrumb EM.CROSSicon::after {
+.STATICpage SECTION.BREADcrumb EM.CROSSicon::after, .STATICexcl SECTION.BREADcrumb EM.CROSSicon::after {
     color: var(--input-placeholder);
 }
 H3.STATICtitle {
@@ -2024,7 +2024,7 @@ H3.STATICtitle {
     font-family: var(--font-poppins);
     padding: 26px 0;
 }
-.STATICpage H3.STATICtitle {
+.STATICpage H3.STATICtitle, .STATICexcl H3.STATICtitle {
     padding: 0 !IMPORTANT;
     color: var(--navbar-bg-out);
 }
