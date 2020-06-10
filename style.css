@@ -1990,7 +1990,7 @@ SECTION.BREADcrumb A, SECTION.BREADcrumb SPAN {
     float: left;
     padding: 8px;
 }
-SECTION.BREADcrumb SPAN.CURRENTurl::after {
+.MASTERinst SECTION.BREADcrumb SPAN.CURRENTurl::after {
     content: '';
     box-sizing: border-box;
     border-bottom: .1875rem solid rgba(255, 255, 255, 0.7);
@@ -2015,9 +2015,6 @@ SECTION.BREADcrumb EM.CROSSicon::after {
 }
 .STATICpage SECTION.BREADcrumb EM.CROSSicon::after {
     color: var(--input-placeholder);
-}
-.STATICpage SECTION.BREADcrumb SPAN.CURRENTurl::after {
-    border-bottom: .1875rem solid var(--border-push-menu-ol);
 }
 H3.STATICtitle {
     font-weight: 100;
