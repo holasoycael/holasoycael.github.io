@@ -1967,33 +1967,25 @@ H3.BOOKtitle::before {
     max-width: 1056px;
     margin: 0 auto;
 }
+.ARTICLEsttc SECTION.BREADcrumb {
+    padding: 0 0 16px;
+}
+.MASTERpost SECTION.BREADcrumb {
+    padding: 16px 0 0;
+}
 SECTION.BREADcrumb {
     font-size: 13px;
     font-family: var(--font-open);
-    padding: 16px 0 0;
     font-weight: 100;
     max-width: 1056px;
     margin: 0 auto;
     overflow: hidden;
-}
-.STATICpage SECTION.BREADcrumb {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-}
-.STATICpage SECTION.BREADcrumb {
-    border-bottom: 1px solid var(--border-push-menu-ol);
 }
 SECTION.BREADcrumb A, SECTION.BREADcrumb SPAN {
     color: var(--color-clean);
     display: inline-block;
     float: left;
     padding: 8px;
-}
-.STATICpage SECTION.BREADcrumb A, .STATICpage SECTION.BREADcrumb SPAN {
-    color: var(--black-transparent-bg);
-}
-.STATICpage SECTION.BREADcrumb SPAN.CURRENTurl::after {
-    border-left: .1875rem solid transparent;
-    border-right: .1875rem solid transparent;
 }
 SECTION.BREADcrumb SPAN.CURRENTurl::after {
     content: '';
@@ -3358,4 +3350,95 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
 .PROMOdiv .EMPTYmsg SPAN {
     color: #717B85;
     font-size: 16px;
+}
+
+
+.ContactForm {
+    max-width: 720px;
+    font-family: var(--font-open);
+    margin: 0 auto;
+}
+.ContactForm, #ContactForm {
+    width: 100%;
+}
+.ContactForm input, .ContactForm textarea {
+    border-radius: 3px;
+    font-family: var(--font-lato);
+    transition: box-shadow 0.2s linear, border-color 0.2s linear;
+    border-color: #e2e2e2;
+    border-style: solid;
+    border-width: 1px;
+    resize: none;
+}
+.ContactForm input:focus:not(.contact-form-button-submit), .ContactForm textarea:focus:not(.contact-form-button-submit) {
+    border-color: #dc6cf7;
+    box-shadow: 0 0 0 3px rgba(204, 0, 255, 0.15);
+}
+.ContactForm textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    min-height: 220px;
+}
+.ContactForm input.contact-form-email, .ContactForm input.contact-form-name {
+    text-indent: 8px;
+    padding: 8px 0;
+}
+.SECelement:not(:first-child) {
+    margin-top: 12px;
+}
+.SECelement P {
+    color: #999999;
+    text-indent: 4px;
+    padding: 0 0 6px;
+}
+.SECelement P SPAN {
+    margin-left: 4px;
+    color: #ff8383;
+}
+.MSGform {
+    display: inline-block;
+    margin: 12px 0;
+}
+.MSGform P {
+    color: #707070;
+    display: inline-block;
+    float: left;
+}
+.contact-form-button-submit {
+    padding: 6px 12px;
+    max-width: 100px;
+    text-align: center;
+    float: right;
+    width: 100%;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+.contact-form-button-submit:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 2px;
+}
+.contact-form-button-submit:active {
+    background: #f9f9f9;
+}
+.contact-form-button-submit:focus {
+    border-color: #6cbbf7;
+    box-shadow: 0 0 0 2px rgba(0, 149, 255, 0.15);
+    color: #6cbbf7;
+}
+.contact-form-button-submit.disabled:focus {
+    border-color: #8ef76c;
+    box-shadow: 0 0 0 2px rgba(0, 255, 55, 0.15);
+    color: #4eda5f;
+}
+.MSGform P.contact-form-error-message-with-border {
+    color: #FF5555;
+    background: #FFF0F0;
+    box-shadow: inset 0 0 0 1px #FFD6D6;
+    border-radius: 3px;
+    padding: 6px 10px;
+}
+.MSGform P.contact-form-error-message-with-border IMG {
+    top: 2px;
+    margin-left: 8px;
 }
