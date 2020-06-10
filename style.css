@@ -103,6 +103,75 @@ SECTION.STATICpage {
     display: flex;
 }
 
+@media screen and (min-width: 350px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 128px;
+}}
+@media screen and (min-width: 351px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 129px;
+}}
+@media screen and (min-width: 352px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 130px;
+}}
+@media screen and (min-width: 353px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 131px;
+}}
+@media screen and (min-width: 354px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 132px;
+}}
+@media screen and (min-width: 355px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 133px;
+}}
+@media screen and (min-width: 356px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 134px;
+}}
+@media screen and (min-width: 357px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 135px;
+}}
+@media screen and (min-width: 358px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 136px;
+}}
+@media screen and (min-width: 359px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 137px;
+}}
+@media screen and (min-width: 360px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 138px;
+}}
+@media screen and (min-width: 361px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 139px;
+}}
+@media screen and (min-width: 362px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 140px;
+}}
+@media screen and (min-width: 363px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 141px;
+}}
+@media screen and (min-width: 364px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 142px;
+}}
+@media screen and (min-width: 365px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 143px;
+}}
+@media screen and (min-width: 366px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 144px;
+}}
+
 @media screen and (max-width: 400px) {
 .TOOLSpost .ACTIONpost .btn.LIVEtemplate {
     display: flex;
@@ -670,6 +739,9 @@ SECTION.COOKIESbar .COOKIESbttm I.CROSSicon {
 }
 
 @media screen and (min-width: 438px) {
+.HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
+    width: 178px;
+}
 SECTION.COOKIESbar P {
     max-width: 300px;
     float: left;
@@ -1606,6 +1678,9 @@ display: block;
     padding: 0;
 }}
 @media screen and (max-width: 580px) {
+SECTION.SIDEnav .PROMOdiv .EMPTYmsg I.CROSSicon {
+    background-size: 50%;
+}
 SECTION.SIDEnav .FRONTend {
     left: calc(-100vw + 336px);
 }
@@ -1835,9 +1910,6 @@ H3.BOOKtitle::before {
     z-index: 99;
     float: left;
 }
-.SEARCHbar.ACTIVEit {
-    margin-left: 40px;
-}
 .SEARCHbar, .SEARCHbar * {
     transition: all 0.2s linear;
 }
@@ -1872,7 +1944,7 @@ H3.BOOKtitle::before {
 
 
 .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
-    width: 160px;
+    width: 144px;
     z-index: 10;
     padding-right: 32px;
 }
@@ -3149,6 +3221,9 @@ SECTION.SIDEnav .ACTIVEit {
     margin-top: 1px;
     box-shadow: inset 0 -1px 0px 0px rgba(255, 255, 255, 0.05);
 }
+.INSETEDcontent .FLOATdiv SECTION:not(.DATEcomment) {
+    color: #606060;
+}
 .FLEXdiv A {
     padding: 8px;
     display: flex;
@@ -3164,7 +3239,14 @@ SPAN.IMGthub {
 SECTION.DATEcomment {
     margin-top: 4px;
 }
-
+SECTION.DATEcomment::before {
+    float: left;
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
 H3.SHIFTmenu.ACTIVEit .SELECTitem {
     box-shadow: none;
     background: #ba59f7;
@@ -3226,6 +3308,7 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
     transition: box-shadow 200ms ease-in-out 0s, background-color 200ms ease-in-out 0s;
+    font-weight: 700;
 }
 .SEEmore:hover {
     box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px, rgba(0, 0, 0, 0.06) 0px 0px 0px 4px;
@@ -3258,14 +3341,14 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     width: 100%;
 }
 .PROMOdiv .EMPTYmsg I.CROSSicon {
-    background-size: 56%;
+    background-size: 46%;
     background-repeat: no-repeat;
     background-position: center;
 }
 .PROMOdiv .EMPTYmsg I.CROSSicon {
     width: 100%;
     height: 300px;
-    margin: 10% 0 12px;
+    margin: 10% 0 0;
 }
 .PROMOdiv .EMPTYmsg P {
     color: #9A7BCC;
