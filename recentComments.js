@@ -21,26 +21,99 @@ break;}}
 
 //*****************************************//
 
-const dateTimeFormat = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true })
-const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = dateTimeFormat.formatToParts(new Date()) 
+const dateTimeFormat = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
+const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = dateTimeFormat.formatToParts(new Date());
 
-const DATAhoje = `${day}/${month}/${year}`;
-var YESTERdd = `${day-1}/${month}/${year}`;
+var DATAhoje = `${day}/${month}/${year} ${hour}:${minute} ${hour12}`;
+var DATAnew = ALTdat.split(' ')[0].split('/');
+var DATAhor = ALTdat.split(' ')[1].split(':');
+
+var SEMANAit = new Date(ALTdat);
+var SEMANAfeira = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+// console.log(SEMANAfeira[SEMANAit.getDay()]);
+
+if(DATAnew[0].length < 2){
+	var ALTdat = DATAnew[1] +'/0' + DATAnew[0] +'/'+ DATAnew[2] +' '+ DATAhor[0] +':'+ DATAhor[1] +' '+ ALTdat.split(' ')[2];}
+else{
+	var ALTdat = DATAnew[1] +'/' + DATAnew[0] +'/'+ DATAnew[2] +' '+ DATAhor[0] +':'+ DATAhor[1] +' '+ ALTdat.split(' ')[2];}
 
 //DATA ONTEM
-if((YESTERdd.substring(0, 1) != '0') ){
-	var YESTERdd = '0'+YESTERdd;}
-else{
-	var YESTERdd = YESTERdd;}
+var MOMENTit = new Date();
+	var dd = new Date(MOMENTit.setDate(MOMENTit.getDate() + -1)).getDate(); 
+	var mm = new Date(MOMENTit.setDate(MOMENTit.getDate() + -1)).getMonth() + 1;
+	var yy = new Date(MOMENTit.setDate(MOMENTit.getDate() + -1)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var YESTERdd = dd + '/' + mm + '/' + yy;
+
+//DATA TERCEIRO DIA
+var THRDday = new Date();
+	var dd = new Date(THRDday.setDate(THRDday.getDate() + -2)).getDate(); 
+	var mm = new Date(THRDday.setDate(THRDday.getDate() + -2)).getMonth() + 1;
+	var yy = new Date(THRDday.setDate(THRDday.getDate() + -2)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var THRDday = dd + '/' + mm + '/' + yy;
+
+// DATA TERCEIRO DIA
+var FOUTHday = new Date();
+	var dd = new Date(FOUTHday.setDate(FOUTHday.getDate() + -3)).getDate(); 
+	var mm = new Date(FOUTHday.setDate(FOUTHday.getDate() + -3)).getMonth() + 1;
+	var yy = new Date(FOUTHday.setDate(FOUTHday.getDate() + -3)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var FOUTHday = dd + '/' + mm + '/' + yy;
+
+// DATA QUARTO DIA
+var FIFTHday = new Date();
+	var dd = new Date(FIFTHday.setDate(FIFTHday.getDate() + -4)).getDate(); 
+	var mm = new Date(FIFTHday.setDate(FIFTHday.getDate() + -4)).getMonth() + 1;
+	var yy = new Date(FIFTHday.setDate(FIFTHday.getDate() + -4)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var FIFTHday = dd + '/' + mm + '/' + yy;
+
+// DATA QUINTO DIA
+var SIXTHday = new Date();
+	var dd = new Date(SIXTHday.setDate(SIXTHday.getDate() + -5)).getDate(); 
+	var mm = new Date(SIXTHday.setDate(SIXTHday.getDate() + -5)).getMonth() + 1;
+	var yy = new Date(SIXTHday.setDate(SIXTHday.getDate() + -5)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var SIXTHday = dd + '/' + mm + '/' + yy;
+
+// DATA SEXTO DIA
+var SEVENTHday = new Date();
+	var dd = new Date(SEVENTHday.setDate(SEVENTHday.getDate() + -6)).getDate(); 
+	var mm = new Date(SEVENTHday.setDate(SEVENTHday.getDate() + -6)).getMonth() + 1;
+	var yy = new Date(SEVENTHday.setDate(SEVENTHday.getDate() + -6)).getFullYear(); 
+    if (dd < 10) { 
+	dd = '0' + dd;}
+	if (mm < 10) { 
+	mm = '0' + mm;}
+	var SEVENTHday = dd + '/' + mm + '/' + yy;
 
 //DATA HOJE
-if(DATAhoje === ALTdat.split(' ')[0]){
-	var ALTdat = 'Hoje às ' + ALTdat.split(' ')[1];}
+if(DATAhoje.split(' ')[0] === ALTdat.split(' ')[0]){
+	var ALTdat = 'Hoje às ' +ALTdat.split(' ')[1]+ ' ' +ALTdat.split(' ')[2];}
+//DATA ONTEM
 else if(YESTERdd === ALTdat.split(' ')[0]){
-	var ALTdat = 'Ontem às ' + ALTdat.split(' ')[1];}
+	var ALTdat = 'Ontem às ' + ALTdat.split(' ')[1]+ ' ' +ALTdat.split(' ')[2];}
+// DATA TERCEIRO DIA
+else if(THRDday === ALTdat.split(' ')[0] || FOUTHday === ALTdat.split(' ')[0] || FIFTHday === ALTdat.split(' ')[0] || SIXTHday === ALTdat.split(' ')[0] || SEVENTHday === ALTdat.split(' ')[0]){
+	var ALTdat = SEMANAfeira[SEMANAit.getDay()]+ ' às ' + ALTdat.split(' ')[1]+ ' ' +ALTdat.split(' ')[2];}
 else{
-	var ALTdat = ALTdat.split(' ')[0] +' às '+ ALTdat.split(' ')[1];}
-
+	var ALTdat = ALTdat.split(' ')[0] +' às '+ ALTdat.split(' ')[1]+ ' ' +ALTdat.split(' ')[2];}
 // console.log(`${weekday}, ${day} de ${month} de ${year} às ${hour}:${minute} ${hour12}`)
 
 //*****************************************//
