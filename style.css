@@ -266,8 +266,8 @@ SECTION.STATICpage {
 SECTION.STATICexcl {
     display: grid;
     grid-gap: 24px;
-    -ms-grid-columns: minmax(268px,1fr) 24px minmax(752px,936px) 24px 1fr;
-    grid-template-columns: minmax(220px,1fr) minmax(506px,936px) 1fr;
+    -ms-grid-columns: minmax(220px,1fr) minmax(0, calc(100% - 440px)) 24px 1fr;
+    grid-template-columns: minmax(220px,1fr) minmax(0, calc(100% - 440px)) 24px 1fr;
     grid-template-rows: 1fr;
     float: left;
 }
