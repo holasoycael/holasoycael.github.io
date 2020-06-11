@@ -1,4 +1,20 @@
 window.onload = function(){
+if(document.body.contains(document.querySelector('.ARTICLEsttc')) === true){
+const target = document.querySelectorAll('[data-text]')
+function animeScroll(){
+const windowTop = window.pageYOffset;
+
+target.forEach(function(it){
+var data = it.getAttribute('data-text')
+if((windowTop) > it.offsetTop){
+	document.querySelector('[href="#'+data+'"]').classList.add('SLTit');}
+else{
+	document.querySelector('[href="#'+data+'"]').classList.remove('SLTit');}})}
+
+	animeScroll();
+window.addEventListener('scroll', function(){
+animeScroll();});}
+
 //BOOOKMARK EXISTENTE
 if(document.body.contains(document.querySelector('.POSTinst')) === true){
 if(localStorage.BOOKmark != undefined){
