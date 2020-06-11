@@ -1,5 +1,4 @@
 window.onload = function(){
-
 //BOOOKMARK EXISTENTE
 if(document.body.contains(document.querySelector('.POSTinst')) === true){
 if(localStorage.BOOKmark != undefined){
@@ -46,12 +45,13 @@ document.querySelector('.BTNhref').addEventListener('click', function(){
 	this.classList.toggle('HREFactive');
 	PUSHmenu.classList.toggle('MENUactive');
 	CONTENTframe.classList.toggle('SWIPEopen');
+	document.body.style.cssText = "overflow:hidden";
 if(document.body.contains(document.querySelector('.SWIPEopen')) === true){
 document.querySelector('.SWIPEopen').addEventListener('click', function(){
 	document.querySelector('.BTNhref').classList.remove('HREFactive');
 	PUSHmenu.classList.remove('MENUactive');
 	CONTENTframe.classList.remove('SWIPEopen');
-});}});
+	document.body.removeAttribute('style');});}});
 
 //TOGLE FOOTER
 if(document.body.contains(document.querySelector('.CROSSdown')) === true){
