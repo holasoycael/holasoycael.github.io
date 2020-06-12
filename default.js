@@ -49,9 +49,9 @@ for(var i = 0; i < OBJname.length; i++){
 ACTIVEpost.classList.add('ACTIVElist');}}}
 
 //RESIZE WIDTH RESPONSIVE
-window.addEventListener('resize', function(){
+setInterval(function(){
 var HTMLoffset = document.querySelector('HTML');
-document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; });
+document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);
 
 if(document.body.contains(document.querySelector('.NOTIFYit')) === true && document.body.contains(document.querySelector('.SIDEnav')) === true){
 document.querySelector('.SELECTitem').addEventListener('click', function(){
