@@ -3596,7 +3596,17 @@ div#FEEDback {
     resize: none;
     float: left;
 }
-
+.CLOSEfeed {
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+}
 .ContactForm textarea {
     width: calc(100% - 32px);
     padding: 16px;
