@@ -11,9 +11,11 @@ for(var a = 0; a < document.querySelectorAll('.CLOSEmodal').length; a++){
 document.querySelectorAll('.CLOSEmodal')[a].addEventListener('click', function(){
 	if(!document.body.contains(document.querySelector('NAV.PUSHmenu.MENUactive'))){
 	document.body.removeAttribute('style');}
+
 	document.querySelector('.MODALfeedback').classList.remove('ACTIVEit');
 	$('.MODALfeedback').fadeOut(500);
-	document.querySelector('.CLOSEfeed.CLOSEmodal').remove();});}});}
+	if(!document.body.contains(document.querySelector('.CLOSEfeed.CLOSEmodal'))){
+	document.querySelector('.CLOSEfeed.CLOSEmodal').remove();}});}});}
 
 //TOGGLE CATEGORIAS MENUNAV
 document.querySelector('.HREFmost').addEventListener('click', function(){
