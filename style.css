@@ -602,6 +602,9 @@ NAV.PUSHmenu LI A.HREFmost.ACTIVEit::after {
     padding: 0 10px;
     display: block;
 }
+.BTNmenu.HREFactive A.BTNhref {
+    width: 36px;
+}
 .BTNhref.HREFactive {
     padding: 0 18px;
 }
@@ -3548,7 +3551,6 @@ div#FEEDback {
     transform: translate3d(0, -50px, 0);
     width: 100%;
     max-width: 500px;
-    padding: 16px;
     opacity: 0;
     transition: transform 0.35s, opacity 0.35s;
 }
