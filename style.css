@@ -252,6 +252,122 @@ SECTION.STATICpage {
 }
 
 
+
+SECTION.STATICwrap {
+    width: 100%;
+    max-width: 1056px;
+    margin: 0 auto;
+}
+
+SECTION.STATICexcl {
+    display: grid;
+    grid-gap: 16px;
+    -ms-grid-columns: minmax(220px,1fr) minmax(0, calc(100% - 440px)) 1fr;
+    grid-template-columns: minmax(150px,1fr) minmax(0, calc(100% - 300px)) 1fr;
+    grid-template-rows: 1fr;
+}
+.sidebar .widget, .MAPOSTinst {
+    position: sticky;
+    position: -webkit-sticky;
+    margin: 32px 0;
+    top: 72px;
+}
+.sidebar h2 {
+    background: #ecb7eb;
+    color: #ffffff;
+    box-shadow: 0 1px 0 0 #daa4de, 0 3px 0 0 #ecd4ec;
+    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-open);
+    border-radius: 3px;
+}
+div#sidebar .widget-content {
+    padding: 2px 0;
+}
+div#sidebar .widget-content LI:not(:first-child) {
+    border-top: 1px solid #e8e8e8;
+}
+div#sidebar .widget-content LI.selected A {
+    background: #e0e0e0;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.11), inset 0 3px 0 0 rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s linear;
+    border-radius: 3px;
+}
+div#sidebar .widget-content LI A {
+    color: #606060;
+    padding: 12px 16px;
+    display: block;
+    width: calc(100% - 32px);
+    font-family: var(--font-poppins);
+    font-weight: 100;
+}
+
+
+.STATICexcl .main, .STATICexcl #main {
+    margin: 32px 0;
+}
+.ARTICLEsttc {
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 40px 30px;
+}
+
+.MAPpost {
+    font-family: var(--font-lato);
+    font-weight: 400;
+}
+.MAPOSTinst {
+    border-color: #7810a2;
+    border-width: 0 0 0 3px;
+    border-style: solid;
+    display: inline-block;
+}
+.MAPpost LI {
+    float: left;
+    width: 100%;
+}
+.MAPpost A, .MAPpost LI.CONTENTSit B {
+    font-size: 14px;
+    padding: 4px 12px;
+    transition: 0.18s linear;
+    display: block;
+}
+.MAPpost LI.CONTENTSit B {
+    background: #7810a2;
+    color: #fff;
+}
+.MAPpost A {
+    color: #202124;
+    font-style: italic;
+}
+.MAPpost A.SLTit {
+    color: #7810a2;
+    background: #e2e2e2;
+}
+
+
+
+.status-msg-wrap {
+    margin: 16px 16px 18px;
+    background: #e0e0e0;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.11), inset 0 3px 0 0 rgba(0, 0, 0, 0.05);
+    color: #908f8f;
+    border-radius: 3px;
+    font-family: var(--font-lato);
+    font-weight: 500;
+    font-size: 12px;
+}
+.status-msg-body {
+    padding: 16px 14px;
+}
+
+
+
+
 /*-------------------------------*/
 /*---------- PAGENAVI -----------*/
 /*-------------------------------*/
@@ -361,6 +477,7 @@ NAV.PUSHmenu LI A::after {
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.25s linear;
     left: 26px;
     top: 11px;
 }
@@ -472,6 +589,12 @@ NAV.PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before, NAV.PUSHmenu.MENUactive P
     width: 24px;
 }
 
+.LABELspot {
+    display: none;
+}
+NAV.PUSHmenu LI A.HREFmost.ACTIVEit::after {
+    transform: rotate(180deg);
+}
 
 .BTNhref {
     width: 20px;
@@ -3003,13 +3126,12 @@ span.btn-download-right-secondary {
     display: block;
     min-height: 46px;
     background-color: #0161cd;
-    margin: 26px 0 0;
     font-family: var(--font-poppins);
-    width: 100%;
     font-weight: 500;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
+    width: 35%;
 }
 .LOGINspot button:focus {
     -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
@@ -3033,6 +3155,19 @@ span.btn-download-right-secondary {
 }
 .GROUPinput SVG {
     transition: all 0.05s ease-in-out !IMPORTANT;
+}
+.FOOTERlogin {
+    display: flex;
+    margin: 26px 0 0;
+}
+.FOOTERlogin P {
+    padding: 12px 0;
+    font-size: 14px;
+    color: #1a73e8;
+    font-weight: 700;
+}
+.FOOTERlogin * {
+    width: 100%;
 }
 .LOGINspot .GROUPinput input:focus ~ label {
     color: #1273EB;
@@ -3442,4 +3577,27 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
 .MSGform P.contact-form-error-message-with-border IMG {
     top: 2px;
     margin-left: 8px;
+}
+
+.status-msg-wrap {
+    margin: 16px 16px 18px;
+    background: #e0e0e0;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.11), inset 0 3px 0 0 rgba(0, 0, 0, 0.05);
+    color: #908f8f;
+    border-radius: 3px;
+    font-family: var(--font-lato);
+    font-weight: 500;
+    font-size: 12px;
+}
+.status-msg-body {
+    padding: 16px 14px;
+}
+.status-msg-wrap A {
+    color: #7810a2;
+    -webkit-transition: background-size .4s ease;
+    transition: background-size .4s ease;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, transparent), color-stop(0, rgba(245, 164, 255, 0.35))) center center/0% 75% no-repeat;
+    background: linear-gradient(to bottom, transparent 62%, rgba(245, 164, 255, 0.35) 0) center center/0% 75% no-repeat;
+    text-decoration: none;
+    background-size: 76% 100%;
 }
