@@ -3511,3 +3511,158 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     text-decoration: none;
     background-size: 76% 100%;
 }
+
+
+.MODALfeedback {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+.MODALinst {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+.MODALfeedback::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+div#FEEDback {
+    position: relative;
+    z-index: 99;
+    margin: auto;
+    transform: translate3d(0, -50px, 0);
+    width: 100%;
+    max-width: 500px;
+    padding: 16px;
+    opacity: 0;
+    transition: transform 0.35s, opacity 0.35s;
+}
+.MODALfeedback.ACTIVEit div#FEEDback {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.ContactForm {
+    max-width: 720px;
+    font-family: var(--font-open);
+    margin: 0 auto;
+    border-radius: 3px;
+}
+.MODALfeedback h3.title {
+    background: #ae7abb;
+    padding: 12px 16px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.MODALfeedback h3.title I.CROSSicon {
+    float: right;
+}
+.MODALfeedback h3.title I.CROSSicon {
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    display: block;
+    cursor: pointer;
+}
+.MODALfeedback h3.title I.CROSSicon SVG {
+    color: #f1bbff;
+    transition: color 0.2s;
+}
+.MODALfeedback h3.title I.CROSSicon:hover SVG {
+    color: #f8daff;
+}
+.contact-form-widget {
+    background: #fff;
+}
+.ContactForm input:not(.contact-form-button-submit), .ContactForm textarea {
+    font-family: monospace;
+    font-style: italic;
+    letter-spacing: -0.3px;
+    resize: none;
+    float: left;
+}
+
+.ContactForm textarea {
+    width: calc(100% - 32px);
+    padding: 16px;
+    min-height: 120px;
+}
+.ContactForm input.contact-form-email, .ContactForm input.contact-form-name {
+    text-indent: 16px;
+    padding: 12px 0;
+}
+.GROUPinfo {
+    display: grid;
+    grid-gap: 16px;
+    -ms-grid-columns: minmax(50%,1fr) 1fr;
+    grid-template-columns: minmax(50%,1fr) 1fr;
+    grid-template-rows: 1fr;
+}
+.SECelement, .GROUPinfo {
+    float: left;
+    width: 100%;
+}
+.GROUPinfo, .MSGform {
+    background: #ececec;
+}
+.GROUPinfo input {
+    background: #d8d5d5;
+    margin: 0 auto;
+    width: 100%;
+}
+.MSGform {
+    padding: 16px 0;
+    float: left;
+}
+.MSGform .MSGinst {
+    padding: 0 16px;
+    display: flow-root;
+}
+.MSGform P {
+    color: #707070;
+    display: inline-block;
+    padding: 9px 0;
+    float: left;
+}
+.contact-form-button-submit {
+    padding: 9px 12px;
+    max-width: 100px;
+    text-align: center;
+    float: right;
+    width: 100%;
+    background: transparent;
+    border-radius: 3px;
+    font-family: var(--font-open);
+    cursor: pointer;
+    font-weight: 700;
+    color: #696969;
+}
+.contact-form-button-submit:hover {
+    background: #dcdcdc;
+}
+.contact-form-button-submit:focus {
+    background: #d8d5d5;
+    color: #fff;
+}
+.contact-form-button-submit:active {
+    background: #a9a9a9;
+}
+.MSGform P.contact-form-error-message-with-border IMG {
+    top: 2px;
+    margin-left: 8px;
+}
