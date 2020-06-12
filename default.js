@@ -11,10 +11,9 @@ for(var a = 0; a < document.querySelectorAll('.CLOSEmodal').length; a++){
 document.querySelectorAll('.CLOSEmodal')[a].addEventListener('click', function(){
 	if(!document.body.contains(document.querySelector('NAV.PUSHmenu.MENUactive'))){
 	document.body.removeAttribute('style');}
-
 	document.querySelector('.MODALfeedback').classList.remove('ACTIVEit');
 	$('.MODALfeedback').fadeOut(500);
-	if(!document.body.contains(document.querySelector('.CLOSEfeed.CLOSEmodal'))){
+	if(document.body.contains(document.querySelector('.CLOSEfeed.CLOSEmodal'))){
 	document.querySelector('.CLOSEfeed.CLOSEmodal').remove();}});}});}
 
 //TOGGLE CATEGORIAS MENUNAV
@@ -90,7 +89,10 @@ document.querySelector('.BTNhref').addEventListener('click', function(){
 	this.classList.toggle('HREFactive');
 	PUSHmenu.classList.toggle('MENUactive');
 	CONTENTframe.classList.toggle('SWIPEopen');
-	document.body.style.cssText = "overflow:hidden";
+if(document.body.hasAttribute('style')) {
+	document.body.removeAttribute('style');}
+	else{
+	document.body.style.cssText = "overflow:hidden";}
 if(document.body.contains(document.querySelector('.SWIPEopen')) === true){
 document.querySelector('.SWIPEopen').addEventListener('click', function(){
 	document.querySelector('.BTNhref').classList.remove('HREFactive');
