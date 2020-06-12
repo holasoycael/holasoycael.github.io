@@ -6,11 +6,14 @@ document.querySelectorAll('[feedback]')[i].addEventListener('click', function(){
 	document.querySelector('.MODALfeedback').classList.add('ACTIVEit');
 	if(!document.body.hasAttribute('style')){
 	document.body.style.cssText = "overflow:hidden";}
-document.querySelector('.CLOSEmodal').addEventListener('click', function(){
+	document.getElementById('FEEDback').insertAdjacentHTML('beforebegin', '<div class="CLOSEfeed CLOSEmodal" ></div>');
+for(var a = 0; a < document.querySelectorAll('.CLOSEmodal').length; a++){
+document.querySelectorAll('.CLOSEmodal')[a].addEventListener('click', function(){
 	if(!document.body.contains(document.querySelector('NAV.PUSHmenu.MENUactive'))){
 	document.body.removeAttribute('style');}
 	document.querySelector('.MODALfeedback').classList.remove('ACTIVEit');
-	$('.MODALfeedback').fadeOut(500);});});}
+	$('.MODALfeedback').fadeOut(500);
+	document.querySelector('.CLOSEfeed.CLOSEmodal').remove();});}});}
 
 //TOGGLE CATEGORIAS MENUNAV
 document.querySelector('.HREFmost').addEventListener('click', function(){
