@@ -1,0 +1,1 @@
+function abrir(URL){var width=764;var height=500;var left=120;var top=100;window.open(URL,'janela','width='+width+', height='+height+', top='+top+', left='+left+', scrollbars=yes, status=no, toolbar=no, location=no, directories=no, menubar=no, resizable=no, fullscreen=no');}

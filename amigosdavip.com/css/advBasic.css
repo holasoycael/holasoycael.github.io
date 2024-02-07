@@ -1,0 +1,57 @@
+* { margin: 0; outline: 0; padding: 0; list-style: none; border: none; vertical-align: baseline; outline: none; }
+
+body { width: 468px; background: transparent; font-family: arial, sans-serif; overflow: hidden; height: 444px; } 
+p::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+p::-webkit-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+p::selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+::selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+.tipsy { padding: 5px; font-size: 10px; position: absolute; z-index: 9999; }
+.tipsy-arrow { position: absolute; z-index: 1000; bottom: 0; width: 0; height: 0; top: 0; left: 50%; margin-left: -4px; vertical-align: top; border: 1px solid rgba(0, 0, 0, 0); border-width: 0px 5px 5px 5px; border-bottom-color: #FFF; }
+.tipsy-inner { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; padding: 5px 8px 4px 8px; background-color: rgba(255, 255, 255, 1); color: rgba(0, 0, 0, 1); max-width: 200px; text-align: center; font-family: Tahoma,Geneva,sans-serif; font-size: 12px; }
+
+#floatLayer { background: rgba(0, 0, 0, 0.8); border-radius: 5px; padding: 8px; }
+#xbtn { width: 290px; border-radius: 2px; background: rgba(255, 255, 255, 0.1); margin-top: 4px; padding: 5px; line-height: 16px; color: #FFF; float: left; }
+#xbtn strong { font-size: 10px; float: left; }
+#xbtn #xXx { width: 18px; cursor: pointer; font-size: 10px; font-family: Tahoma,Geneva,sans-serif; background: rgba(255, 255, 255, 0.2); border-radius: 2px; text-align: center; float: right; }
+
+#outer-wrapper { width: 468px; overflow: hidden; height: 444px; }
+
+#wrapper { margin: 0px auto; width: 468px; height: 444px; }
+#wrapper #ibody { margin: 8px; width: 452px; float: left; }
+#wrapper li { color: #CCC; font: 13px verdana,helvetica,clean,sans-serif; margin: 0px 0px 10px; }
+#wrapper a { text-decoration: underline; color: #DEDEDE; }
+
+.carregando p { width: 468px; padding: 206px 0px; }
+#canaloff { width: 468px; background: rgba(255, 255, 255, 0.1); padding: 185px 0px; }
+#error_page { width: 408px; padding: 177px 30px; }
+.carregando p, #canaloff, #error_page { font-family: 'rancho', cursive; text-decoration: none; color: #DEDEDE; font-size: 36px; letter-spacing: 0.8pt; text-shadow: 1px 1px 0px #000; text-align: center; line-height: 46px; float: left; }
+.box .content h1, .box .content h3, .channel-title { color: #CCC; text-shadow: 1px 1px 0px #000; font-family: 'Reenie Beanie','Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: normal; font-size: 22px; text-align: left; margin: 0; padding: 0px 2px 2px 6px; }
+.off a { color: #DEDEDE; font-family: Helvetica,Arial,sans-serif; line-height: 28px; font-size: 12px; margin-right: 5px; text-decoration: none; font-weight: bold; float: right; }
+.box .content h3 strong, .channel-title strong { font-weight: normal; text-decoration: none; }
+.post-body { overflow: hidden; }
+.post-body iframe, #channel iframe, .post-body object, #channel object, .post-body embed, #channel embed { background: #000; float: left; }
+
+#channel { overflow: hidden; }
+#option { background: rgba(0, 0, 0, .3); overflow: hidden; height: 336px; padding: 40px 0px; }
+#option li { float: left; margin: 0px 10px 20px; }
+#option strong, .not-found strong { color: #FFF; width: 310px; background: rgba(0, 0, 0, .3); padding: 20px; font-family: Tahoma,Geneva,sans-serif; font-size: 12px; font-weight: 300; -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; border: 1px solid rgba(255, 255, 255, .2); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; margin: 0px 58px; text-align: center; float: left; }
+#option ul { overflow: hidden; margin: 35px auto; }
+#option #listchannel1 { width: 100px; }
+#option #listchannel2 { width: 200px; }
+#option #listchannel3 { width: 300px; }
+#option #listchannel4 { width: 400px; }
+#option ul li { float: left; margin: 10px; height: 60px; width: 80px; }
+#option a { display: block; position: relative; height: 60px; width: 80px; text-decoration: none; }
+#option img { background: #EFEFEF; background: -moz-linear-gradient(-45deg, rgba(239, 239, 239, 1) 0%, rgba(187, 187, 187, 1) 100%); background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(239, 239, 239, 1)), color-stop(100%,rgba(187, 187, 187, 1))); background: -webkit-linear-gradient(-45deg, rgba(239, 239, 239, 1) 0%,rgba(187, 187, 187, 1) 100%); background: -o-linear-gradient(-45deg, rgba(239, 239, 239, 1) 0%,rgba(187, 187, 187, 1) 100%); background: -ms-linear-gradient(-45deg, rgba(239, 239, 239, 1) 0%,rgba(187, 187, 187, 1) 100%); background: linear-gradient(135deg, rgba(239, 239, 239, 1) 0%,rgba(187, 187, 187, 1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#bbbbbb',GradientType=1 ); border: 1px solid #BBB; position: absolute; height: 50px; width: 70px; padding: 4px; }
+#option a span { position: absolute; display: block; width: 76px; height: 56px; }
+#option a:hover span { border: 2px solid #AAA; }
+
+#advertise { margin: 2px 0px 0px; }
+
+.st { width: 428px; background: rgba(255, 255, 255, 0.1); padding: 20px; height: 376px; }
+.st li { float: left; margin: 0px 14px 4px 0px; }
+.st li img { background: rgba(0, 0, 0, 0.1); border: 1px solid rgba(0, 0, 0, 0.1); height: 50px; width: 70px; padding: 4px; }
+.st p { color: #DEDEDE; font: 14px arial; line-height: 25px; font-size: 17px; margin: -6px 0 0; text-decoration: none; font-weight: 300; }
+.st strong { width: 310px; background: rgba(0, 0, 0, .3); padding: 20px; -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; box-shadow: 0px 0px 20px rgba(255, 255, 255, .2) inset; border: 1px solid rgba(255, 255, 255, .2); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; margin: 0px 34px; position: absolute; text-align: center; float: left; bottom: 56px; }
+.st strong a { color: #DDDDDD; font-size: 12px; font-family: Tahoma,Geneva,sans-serif; text-decoration: none; font-weight: 300; }
