@@ -1107,7 +1107,7 @@ margin: 2px 0px;
 text-shadow: 0px 1px 10px #FFF;
 font-family: 'rancho', cursive;
 font-size: 17px;
-font-weight: 700;
+font-weight: 500;
 color: #FFF;
 text-align: center;
 }
@@ -1144,6 +1144,7 @@ font-weight: 400;
 text-decoration: none;
 text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
 text-align: center;
+white-space: nowrap;
 float: left;
 }
 #gallery a div {
