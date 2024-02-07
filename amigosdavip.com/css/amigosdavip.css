@@ -1,3 +1,7 @@
+/*-------------------[FONT FACE]------------------*/
+@font-face { font-family: 'Merienda'; font-style: normal; font-weight: 400; src: local('Merienda'), local('Merienda-Regular_0_wt'), url(https://holasoycael.github.io/amigosdavip.com/fonts/merienda.woff) format('woff'); }
+@font-face { font-family: 'Rancho'; font-style: normal; font-weight: 400; src: local('Rancho'), url(https://holasoycael.github.io/amigosdavip.com/fonts/rancho.woff) format('woff'); }
+@font-face { font-family: 'OpenSansLight'; font-style: normal; font-weight: 300; src: local('Open Sans Light'), local('OpenSans-Light'), url(https://holasoycael.github.io/amigosdavip.com/fonts/opensans.woff) format('woff'); }
 /*-------------------[BASE STYLE]-----------------*/
 body { background: #788797 url(https://holasoycael.github.io/amigosdavip.com/images/body.png) repeat; font-family: 'OpenSansLight', arial, sans-serif; margin: 0px; }
 p::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
