@@ -1,7 +1,7 @@
 function setActiveStyleSheet(title) {
   var i, a, main;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.hasAttribute("media") && a.getAttribute("media") === "all" && a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+    if(a.hasAttribute("media") && a.getAttribute("media") === "all" && a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") !== "default") {
       a.disabled = true;
       if(a.getAttribute("title") == title) a.disabled = false;
     }
@@ -11,7 +11,7 @@ function setActiveStyleSheet(title) {
 function getActiveStyleSheet() {
   var i, a;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")
+    if(a.hasAttribute("media") && a.getAttribute("media") === "all" && a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")
      && !a.disabled) return a.getAttribute("title");
   }
   return null;
