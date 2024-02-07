@@ -1,5 +1,5 @@
 /*-------------------[BASE STYLE]-----------------*/
-body { background: #788797 url(https://sites.google.com/site/bloggcoder/ui/images/body.png) repeat; font-family: 'OpenSansLight', arial, sans-serif; margin: 0px; }
+body { background: #788797 url(https://holasoycael.github.io/amigosdavip.com/images/body.png) repeat; font-family: 'OpenSansLight', arial, sans-serif; margin: 0px; }
 p::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
 p::-webkit-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
 p::selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
@@ -122,7 +122,7 @@ color: #DEDEDE;
 .btnLight {
 z-index: 999;
 position: relative;
-background-image: url(https://sites.google.com/site/bloggcoder/ui/images/luces-on.png);
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/luces-on.png);
 background-repeat: no-repeat;
 background-position: left 8px;
 padding: 0 0 0 20px;
@@ -130,7 +130,7 @@ padding: 0 0 0 20px;
 .lightSwitcher:hover { text-decoration: underline; }
 .turnedOff {
 color: #FFD700 !important;
-background-image:url(https://sites.google.com/site/bloggcoder/ui/images/luces-off.png);
+background-image:url(https://holasoycael.github.io/amigosdavip.com/images/luces-off.png);
 }
 .barra-servicios li.last {
 border: 0px;
@@ -169,7 +169,7 @@ overflow: hidden;
 }
 .header {
 width: 250px;
-background: url(https://sites.google.com/site/bloggcoder/ui/images/logo.png) no-repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/logo.png) no-repeat;
 cursor: default;
 overflow: hidden;
 margin: 10px 0px 0px 32px;
@@ -336,7 +336,7 @@ div.anythingSlider .back {
 left: 0;
 }
 div.anythingSlider .back {
-background-image: url(https://sites.google.com/site/bloggcoder/ui/images/thslide_link_previous.gif);
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/thslide_link_previous.gif);
 background-position: 0 0;
 background-repeat: no-repeat;
 float: left;
@@ -359,7 +359,7 @@ div.anythingSlider .forward {
 right: 0;
 }
 div.anythingSlider .forward {
-background-image: url(https://sites.google.com/site/bloggcoder/ui/images/thslide_link_next.gif);
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/thslide_link_next.gif);
 background-position: 0 0;
 background-repeat: no-repeat;
 float: right;
@@ -801,7 +801,7 @@ display: block;
 overflow: hidden;
 width: 32px;
 height: 32px;
-background-image: url(https://sites.google.com/site/bloggcoder/ui/images/play.png);
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/play.png);
 float: right;
 background-size: 24px;
 background-position: 5px;
@@ -1003,7 +1003,7 @@ overflow: hidden;
 }
 .gridtp {
 width: 105px;
-background: url(https://sites.google.com/site/bloggcoder/ui/images/logo-bootom-pqe.png);
+background: url(https://holasoycael.github.io/amigosdavip.com/images/logo-bootom-pqe.png);
 margin: 18px auto 0px;
 overflow: hidden;
 height: 5px;
@@ -1155,31 +1155,31 @@ height: 66px;
 border-radius: 3px;
 }
 #gallery #blue {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/body.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/body.png) repeat;
 background-color: #788797;
 }
 #gallery #gold {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodygold.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygold.png) repeat;
 background-color: #8D8459;
 }
 #gallery #green {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodygreen.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygreen.png) repeat;
 background-color: #85977A;
 }
 #gallery #grey {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodygrey.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygrey.png) repeat;
 background-color: #979797;
 }
 #gallery #pink {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodypink.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodypink.png) repeat;
 background-color: #97798A;
 }
 #gallery #orange {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodyrange.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodyrange.png) repeat;
 background-color: #978679;
 }
 #gallery #red {
-background: url(https://sites.google.com/site/bloggcoder/ui/images/bodyred.png) repeat;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodyred.png) repeat;
 background-color: #9C7272;
 }
 
