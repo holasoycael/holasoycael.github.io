@@ -1,0 +1,1195 @@
+/*-------------------[FONT FACE]------------------*/
+@font-face { font-family: 'Merienda'; font-style: normal; font-weight: 400; src: local('Merienda'), local('Merienda-Regular_0_wt'), url(https://holasoycael.github.io/amigosdavip.com/fonts/merienda.woff) format('woff'); }
+@font-face { font-family: 'Rancho'; font-style: normal; font-weight: 400; src: local('Rancho'), url(https://holasoycael.github.io/amigosdavip.com/fonts/rancho.woff) format('woff'); }
+@font-face { font-family: 'OpenSansLight'; font-style: normal; font-weight: 300; src: local('Open Sans Light'), local('OpenSans-Light'), url(https://holasoycael.github.io/amigosdavip.com/fonts/opensans.woff) format('woff'); }
+/*-------------------[BASE STYLE]-----------------*/
+body { background: #788797 url(https://holasoycael.github.io/amigosdavip.com/images/body.png) repeat; font-family: 'OpenSansLight', arial, sans-serif; margin: 0px; }
+p::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+p::-webkit-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+p::selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+::-moz-selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+::selection { background: rgba(255, 255, 255, 0.4); color: #424242; text-shadow: 1px 1px 0px #FFF; }
+.tipsy {
+padding: 5px;
+font-size: 10px;
+position: absolute;
+z-index: 9999;
+}
+.tipsy-arrow {
+position: absolute;
+z-index: 1000;
+bottom: 0;
+width: 0;
+height: 0;
+top: 0;
+left: 50%;
+margin-left: -4px;
+vertical-align: top;
+border: 1px solid rgba(0, 0, 0, 0);
+border-width: 0px 5px 5px 5px;
+border-bottom-color: #FFF;
+}
+.tipsy-inner {
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+padding: 5px 8px 4px 8px;
+background-color: rgba(255, 255, 255, 1);
+color: rgba(0, 0, 0, 1);
+max-width: 200px;
+text-align: center;
+font-family: Tahoma,Geneva,sans-serif;
+font-size: 12px;
+}
+
+#fanback { display: none; background: rgba(255, 255, 255, .4); z-index: 999999999; width: 100%; height: 100%; position: fixed; top: 0; left: 0; }
+.fanbox { background: rgba(82, 82, 82, .7); padding: 10px; margin: -220px 0 0 -375px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; z-index: 10001; width: 500px; height: 294px; position: fixed; top: 58%; left: 63%; }
+
+#wrapper-bar { display: none; }
+body .container { width: 982px; margin: 0px auto; }
+
+/*------------------------------------------------*/
+/*---------------------[HEADER]-------------------*/
+/*------------------------------------------------*/
+.y-menu {
+width: 100%;
+background: rgba(0, 0, 0, 0.3);
+padding: 1px 0px 3px;
+overflow: hidden;
+float: left;
+}
+.y-menu .menu-content {
+width: 982px;
+margin: 0px auto;
+}
+.menu-inset strong {
+color: #DEDEDE;
+font-family: 'rancho', cursive;
+font-size: 17px;
+text-decoration: none;
+text-shadow: 0 1px 0 #000000;
+float: left;
+}
+.menu-inset .barra-itens {
+float: left;
+border-color: #CCC;
+border-width: 0px 0px 0px 1px;
+border-style: dashed;
+padding: 0px 0px 0px 10px;
+margin: 8px 0px 8px 10px;
+}
+.barra-itens li {
+float: left;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+line-height: 10px;
+padding: 0px 10px 0px 0px;
+margin: 0px 10px 0px 0px;
+}
+.barra-itens li:last-child {
+border: 0;
+}
+.barra-itens a {
+font-family: 'rancho', cursive;
+font-size: 17px;
+text-decoration: none;
+text-transform: lowercase;
+text-shadow: 1px 1px 0px #000;
+line-height: 11px;
+color: #DEDEDE;
+}
+.menu-inset .barra-servicios {
+float: right;
+margin: 8px 0px 8px 10px;
+}
+.barra-servicios li {
+float: left;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+line-height: 10px;
+padding: 0px 10px 0px 0px;
+margin: 0px 10px 0px 0px;
+}
+.barra-servicios a {
+font-family: 'rancho', cursive;
+font-size: 17px;
+text-decoration: none;
+text-transform: lowercase;
+text-shadow: 1px 1px 0px #000;
+line-height: 11px;
+color: #DEDEDE;
+}
+.btnLight {
+z-index: 999;
+position: relative;
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/luces-on.png);
+background-repeat: no-repeat;
+background-position: left 8px;
+padding: 0 0 0 20px;
+}
+.lightSwitcher:hover { text-decoration: underline; }
+.turnedOff {
+color: #FFD700 !important;
+background-image:url(https://holasoycael.github.io/amigosdavip.com/images/luces-off.png);
+}
+.barra-servicios li.last {
+border: 0px;
+margin: 0px;
+padding: 0px;
+}
+.barra-itens a:hover, .barra-servicios a:hover {
+color: #00BCD2;
+}
+
+.wrapper {
+width: 100%;
+background: rgba(0, 0, 0, 0.2);
+overflow: hidden;
+margin: 0px 0px 10px;
+border-color: #CCC;
+border-style: solid;
+border-width: 0px 0px 1px;
+float: left;
+}
+.wrapper-inset {
+background: rgba(255, 255, 255, 0.1);
+}
+.wrapper .wrapper-content {
+width: 982px;
+margin: 0px auto;
+overflow: hidden;
+}
+#header-wrap {
+width: 982px;
+background: rgba(0, 0, 0, 0);
+border: none;
+z-index: 100;
+margin: 15px auto;
+overflow: hidden;
+}
+.header {
+width: 250px;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/logo.png) no-repeat;
+cursor: default;
+overflow: hidden;
+margin: 10px 0px 0px 32px;
+height: 58px;
+float: left;
+}
+
+#publicidade {
+overflow: hidden;
+width: 468px;
+height: 60px;
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+-moz-box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+-webkit-box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+padding: 3px;
+float: right;
+}
+#publicidade a {
+width: 468px;
+background: rgba(255, 255, 255, 0.2);
+float: left;
+height: 60px;
+}
+
+/*------------------------------------------------*/
+/*----------------------[MENU]--------------------*/
+/*------------------------------------------------*/
+.menu {
+width: 982px;
+float: left;
+border-color: #CCC;
+border-style: solid;
+border-width: 1px 0px 0px;
+margin: 0px;
+}
+.menu ul { display: block; text-align: center; height: 32px; }
+.menu li { cursor: pointer; font-size: 12px; font-weight: normal; text-align: center; padding: 10px 0px; display: inline-block; margin-left: -5px; }
+.menu li:last-child a { border: 0; }
+.menu li:hover { border-top: 1px solid #00BCD2; margin: -1px 0px 0px -5px; }
+.menu a {
+float: left;
+font-family: 'rancho', cursive;
+font-size: 17px;
+text-decoration: none;
+text-transform: lowercase;
+text-shadow: 1px 1px 0px #000;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+line-height: 11px;
+color: #00BCD2;
+padding: 0px 10px;
+}
+
+/*----------------------[MAIN]--------------------*/
+#mycarousel {
+background: rgba(0, 0, 0, 0.4);
+width: 970px;
+height: 162px;
+padding: 6px;
+margin: 0px 0px 10px;
+z-index: 999;
+position: relative;
+float: left;
+}
+#header_centro_canais {
+float: left;
+overflow: hidden;
+position: relative;
+width: 970px;
+height: 162px;
+}
+div.anythingSlider {
+display: block;
+overflow: visible !important;
+padding-right: 58px;
+position: relative;
+}
+div.anythingSlider .anythingWindow {
+overflow: hidden;
+position: relative;
+margin: 0px 32px;
+width: 906px;
+float: left;
+height: 100%;
+}
+#carousel {
+float: left;
+width: 912px;
+padding: 0;
+margin: 0;
+list-style: none;
+height: 162px;
+}
+.anythingBase {
+background: transparent;
+list-style: none;
+position: absolute;
+overflow: visible !important;
+top: 0;
+left: 0;
+margin: 0;
+padding: 0;
+}
+.anythingBase .panel {
+background: transparent;
+display: block;
+overflow: hidden;
+float: left;
+padding: 0px;
+margin: 0px;
+}
+#carousel ul li {
+float: left;
+margin-right: 6px;
+margin-bottom: 6px;
+height: 50px;
+width: 70px;
+}
+#carousel a {
+color: transparent;
+display: block;
+position: relative;
+height: 50px;
+width: 70px;
+text-decoration: none;
+}
+#carousel img {
+background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 0.3)), color-stop(100%,rgba(255, 255, 255, 0)));
+background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0) 100%);
+background: -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0) 100%);
+background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0) 100%);
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgba(255, 255, 255, 0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
+border: 1px solid rgba(115, 122, 130, 0.8);
+position: absolute;
+height: 40px;
+width: 60px;
+padding: 4px;
+}
+#carousel a span {
+position: absolute;
+display: none;
+width: 68px;
+height: 48px;
+}
+#carousel a:hover span {
+width: 66px;
+-webkit-box-shadow: inset 0px 0px 11px 1px rgba(108, 116, 124, 0.6);
+-moz-box-shadow: inset 0px 0px 11px 1px rgba(108, 116, 124, 0.6);
+box-shadow: inset 0px 0px 11px 1px rgba(108, 116, 124, 0.6);
+transition: all 0.2s ease;
+-webkit-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+border: 2px solid rgba(115, 122, 130, 0.8);
+display: block;
+height: 46px;
+}
+div.anythingSlider .back {
+left: 0;
+}
+div.anythingSlider .back {
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/thslide_link_previous.gif);
+background-position: 0 0;
+background-repeat: no-repeat;
+float: left;
+}
+div.anythingSlider .back a {
+background-position: left top;
+}
+div.anythingSlider .arrow a {
+display: block;
+height: 162px;
+width: 26px;
+text-align: center;
+outline: 0;
+}
+div.anythingSlider .arrow a span {
+display: block;
+visibility: hidden;
+}
+div.anythingSlider .forward {
+right: 0;
+}
+div.anythingSlider .forward {
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/thslide_link_next.gif);
+background-position: 0 0;
+background-repeat: no-repeat;
+float: right;
+}
+div.anythingSlider .arrow {
+background-color: rgba(255, 255, 255, 0.2);
+cursor: pointer;
+display: block;
+width: 26px;
+text-decoration: none;
+position: absolute;
+height: 164px;
+top: 0px;
+}
+div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .anythingControls ul a, div.anythingSlider .arrow a {
+transition-duration: 0;
+-o-transition-duration: 0;
+-moz-transition-duration: 0;
+-webkit-transition-duration: 0;
+}
+
+.tickerContent {
+width: 970px;
+background: rgba(0, 0, 0, 0.4);
+font-family: Arial, Helvetica, sans-serif;
+clear: both;
+padding: 6px;
+overflow: hidden;
+margin: 0px 0px 10px;
+height: 34px;
+float: left;
+}
+.tickerContent iframe {
+width: 970px;
+background: rgba(255, 255, 255, 0.1);
+border-width: 1px 0px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.1);
+height: 32px;
+}
+
+/*----------------------[MAIN]--------------------*/
+.magnum {
+background: rgba(0, 0, 0, 0.4);
+height: 512px;
+position: relative;
+line-height: 13px;
+margin: 0 0 10px;
+float: left;
+width: 970px;
+overflow: hidden;
+padding: 6px;
+z-index: 999;
+}
+.magnum .wrapone {
+margin: 0 6px 0 0;
+width: 468px;
+height: 512px;
+float: left;
+}
+.wrap-magnum, .wraptwo {
+background: rgba(255, 255, 255, 0.1) !important;
+}
+.wrap-magnum {
+float: left;
+}
+.wraptwo {
+width: 496px;
+height: 512px;
+float: left;
+}
+.television {
+width: 468px;
+float: left;
+overflow: hidden;
+height: 444px;
+display: block;
+}
+.saludos {
+margin: auto;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 13px;
+color: #00BCD2;
+float: left;
+}
+.saludos p {
+width: 468px;
+color: #00BCD2;
+font-size: 36px;
+font-family: 'rancho', cursive;
+letter-spacing: 0.8pt;
+text-shadow: 1px 1px 0px #000;
+text-align: center;
+padding: 97px 0px;
+}
+.saludos span {
+color: #DEDEDE;
+font-family: 'Merienda', arial, sans-serif;
+font-weight: 400;
+font-size: 17px;
+text-shadow: 1px 1px 0px #000;
+letter-spacing: -1px;
+margin: 5px 0 0 3px;
+display: block;
+}
+#compartilhe {
+margin: 0px 20px 20px;
+background: rgba(255, 255, 255, 0.1);
+float: left;
+}
+#compartilhe h2 {
+width: 428px;
+color: #00BCD2;
+font-size: 36px;
+font-family: 'rancho', cursive;
+letter-spacing: 0.8pt;
+text-shadow: 1px 1px 0px #000;
+text-align: center;
+padding: 24px 0px;
+font-weight: normal;
+}
+#addthis {
+width: 380px;
+padding: 0px 24px 24px;
+overflow: hidden;
+}
+#addthis ul li {
+float: left;
+margin: 3px;
+}
+#addthis a,  #addthis img {
+width: 32px;
+height: 32px;
+float: left;
+}
+.magnum .adstelevision {
+float: left;
+background: rgba(255, 255, 255, 0.2);
+border-width: 1px 0px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.2);
+margin: 6px 0px 0px;
+height: 60px;
+}
+.legend {
+width: 484px;
+padding: 6px 0px;
+float: left;
+color: #FFF;
+}
+.legend ul {
+background: rgba(255, 255, 255, 0.1);
+padding: 6px 31px;
+width: 434px;
+overflow: hidden;
+margin: 0px auto;
+}
+.legend li {
+float: left;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+padding: 0px 10px 0px 0px;
+margin-right: 10px;
+height: 12px;
+}
+.legend li.last {
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+.legend li strong {
+float: right;
+font-size: 12px;
+text-transform: lowercase;
+color: #DEDEDE;
+text-shadow: 1px 1px 0px #000;
+text-decoration: none;
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+display: inline-block;
+font-family: 'OpenSansLight', arial, sans-serif;
+line-height: 12px;
+letter-spacing: -1px;
+}
+.legend li p {
+width: 12px;
+height: 12px;
+float: left;
+margin: 0px 6px 0px 0px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+-o-border-radius: 2px;
+border-radius: 2px;
+}
+.legend .adm {
+background: rgb(199, 123, 15);
+vertical-align: middle;
+display: inline-block;
+}
+.legend .mod {
+background: rgb(216, 220, 230);
+vertical-align: middle;
+display: inline-block;
+}
+.legend .mem {
+background: rgb(78, 82, 214);
+vertical-align: middle;
+display: inline-block;
+}
+.legend .vis {
+background: rgb(15, 183, 25);
+vertical-align: middle;
+display: inline-block;
+}
+.legend .off {
+background: rgb(199, 4, 15);
+vertical-align: middle;
+display: inline-block;
+}
+.legend .ban {
+background: rgb(111, 62, 23);
+vertical-align: middle;
+display: inline-block;
+}
+.magnum .xat {
+overflow: hidden;
+width: 496px;
+float: left;
+height: 444px;
+display: block;
+}
+.salmo {
+width: 496px;
+background: rgba(255, 255, 255, 0.1);
+overflow: hidden;
+float: left;
+display: none;
+height: 444px;
+}
+.salmo p {
+width: 430px;
+color: #DEDEDE;
+font-family: 'Merienda', arial, sans-serif;
+font-weight: 400;
+font-size: 17px;
+text-shadow: 1px 1px 0px #000;
+line-height: 26px;
+text-align: center;
+padding: 53px 0px;
+margin: 0px auto;
+}
+.lighten {
+width: 478px;
+height: 16px;
+padding: 9px;
+float: left;
+color: white;
+}
+.closexat, .openxat {
+float: left;
+}
+.lighten li.rules {
+float: right;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+padding: 0px 10px 0px 0px;
+margin-right: 10px;
+height: 16px;
+}
+.lighten li.smile {
+float: right;
+}
+.lighten strong {
+font-size: 12px;
+text-transform: lowercase;
+color: #DEDEDE;
+text-shadow: 1px 1px 0px #000;
+text-decoration: none;
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+display: inline-block;
+font-family: 'OpenSansLight', arial, sans-serif;
+letter-spacing: -1px;
+}
+.lighten strong:hover {
+color: #00BCD2;
+}
+.publicidade {
+width: 982px;
+text-align: center;
+background-color: #788797;
+padding: 16px 0;
+position: relative;
+margin: 0 0 10px;
+float: left;
+height: 90px;
+}
+.publicidade span {
+position: absolute;
+top: 16px;
+right: 16px;
+font-size: 12px;
+font-weight: normal;
+letter-spacing: -1px;
+color: #FFF;
+line-height: 12px;
+}
+.banner {
+width: 728px;
+background: rgba(255, 255, 255, 0.1);
+margin: 0px auto;
+height: 90px;
+}
+
+.corpo {
+width: 970px;
+background: rgba(0, 0, 0, 0.4);
+padding: 6px;
+margin: 0px 0px 10px;
+float: left;
+}
+.corpo .title {
+font-size: 20px;
+letter-spacing: -1px;
+background: rgba(255, 255, 255, 0.1);
+font-family: 'OpenSansLight';
+text-shadow: 0 1px 0 #505050;
+color: #00BCD2;
+line-height: 26px;
+font-weight: normal;
+padding: 0px 5px;
+}
+.corpo .content {
+padding: 6px;
+float: left;
+}
+.programing {
+width: 312px;
+background: rgba(255, 255, 255, 0.1);
+margin: 0px 6px 0px 0px;
+float: left;
+}
+.content .programacao {
+font-family: 'OpenSansLight', arial, sans-serif;
+font-size: 12px;
+text-shadow: 0 1px 0px #000;
+text-align: left;
+font-weight: normal;
+letter-spacing: -1px;
+color: #DEDEDE;
+line-height: 13px;
+margin: 2px 0 8px;
+float: left;
+}
+.styled-select {
+width: 300px;
+height: 32px;
+overflow: hidden;
+background-color: #DDD;
+background-image: url(http://cdn.bavotasan.com/wp-content/uploads/2011/05/down_arrow_select.jpg);
+background-position: right 0px;
+background-repeat: no-repeat;
+}
+.prog_select {
+background: rgba(0, 0, 0, 0);
+width: 300px;
+padding: 6px;
+border: 0;
+border-radius: 0;
+font-size: 16px;
+height: 32px;
+-webkit-appearance: none;
+font-family: 'OpenSansLight';
+line-height: 19px;
+font-weight: normal;
+}
+.humor {
+width: 172px;
+background: rgba(255, 255, 255, 0.1);
+height: 442px;
+float: right;
+}
+.humor .title {
+text-align: center;
+}
+.radio {
+width: 474px;
+background: rgba(255, 255, 255, 0.1);
+margin: 0px 6px 0px 0px;
+float: right;
+}
+.radio .content {
+height: 198px;
+overflow-x: hidden;
+table-layout: fixed;
+word-wrap: break-word;
+margin: 6px;
+padding: 0px;
+position: relative;
+display: block;
+}
+.radio li {
+width: 204px;
+background: rgba(255, 255, 255, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+margin: 0px 6px 6px 0px;
+padding: 6px;
+display: block;
+float: left;
+}
+.radio a {
+font-family: 'OpenSansLight', arial, sans-serif;
+font-size: 12px;
+text-shadow: 0 1px 0px #000;
+text-align: left;
+text-decoration: none;
+font-weight: normal;
+color: #DEDEDE;
+letter-spacing: -1px;
+line-height: 16px;
+float: left;
+}
+.radio a:hover {
+color: #FFF;
+}
+.radio p {
+width: 132px;
+float: left;
+}
+.radio .press {
+color: #00BCD2;
+background-color: rgba(255, 255, 255, 0.1);
+display: block;
+overflow: hidden;
+width: 32px;
+height: 32px;
+background-image: url(https://holasoycael.github.io/amigosdavip.com/images/play.png);
+float: right;
+background-size: 24px;
+background-position: 5px;
+background-repeat: no-repeat;
+font-weight: bold;
+line-height: 32px;
+padding: 0px 4px 0px 36px;
+font-size: 11px;
+}
+.radio li.last {
+margin-bottom: 0px;
+}
+.signos {
+width: 312px;
+background: rgba(255, 255, 255, 0.1);
+margin: 6px 6px 0px 0px;
+float: left;
+}
+.signos .frame {
+background: rgba(255, 255, 255, 0.1);
+}
+.face {
+width: 474px;
+background: rgba(255, 255, 255, 0.1);
+margin: 6px 6px 0px 0px;
+float: left;
+}
+.face .facebook {
+width: 460px;
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+overflow: hidden;
+height: 160px;
+}
+.partner {
+width: 970px;
+background: rgba(0, 0, 0, 0.4);
+padding: 6px;
+margin: 0px auto 10px;
+overflow: hidden;
+float: left;
+}
+.partner .partner-inset {
+width: 918px;
+background: rgba(255, 255, 255, 0.1);
+border-color: rgba(255, 255, 255, 0.1) !important;
+border: 4px solid;
+display: table;
+clear: both;
+padding: 33px 22px;
+padding-top: 20px;
+}
+.partner .barra-banner {
+float: left;
+}
+.partner .barra-banner ul {
+overflow: hidden;
+padding: 0px 6px;
+}
+.item {
+background: rgba(0, 0, 0, 0.2);
+width: 125px;
+height: 125px;
+overflow: hidden;
+position: relative;
+padding: 3px;
+margin: 0px 10px;
+float: left;
+}
+.item .caption {
+margin: 3px;
+height: 113px;
+width: 125px;
+padding: 6px 0px;
+background: black;
+color: white;
+text-align: center;
+font-weight: bold;
+position: absolute;
+display: none;
+filter: alpha(opacity=60);
+-moz-opacity: 0.6;
+-khtml-opacity: 0.6;
+opacity: 0.6;
+left: 0;
+top: 0;
+}
+.barra-banner .item a {
+color: rgb(153, 153, 153);
+text-decoration: none;
+width: 125px;
+height: 125px;
+overflow: hidden;
+display: block;
+float: left;
+}
+.item .caption p {
+padding: 8px 5px 5px;
+margin: 0;
+font: bold 11px Arial, Verdana, Helvetica, sans-serif;
+}
+.item img {
+width: 125px;
+height: 125px;
+top: 0px;
+left: 0px;
+}
+.partner .barra-url {
+margin-bottom: -15px;
+clear: both;
+width: 100%;
+font-family: Arial;
+line-height: 14px;
+font-size: 13px;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+margin-top: 15px;
+padding-top: 10px;
+float: left;
+}
+.barra-url ul {
+margin: 0px 6px;
+}
+.barra-url li {
+display: block;
+float: left;
+font-size: 12px;
+border-left-width: 1px;
+margin-left: 10px;
+padding-right: 10px;
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+}
+.barra-url a {
+font-size: 12px;
+text-transform: lowercase;
+color: #DEDEDE;
+text-shadow: 1px 1px 0px #000;
+text-decoration: none;
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+display: inline-block;
+font-family: 'OpenSansLight', arial, sans-serif;
+letter-spacing: -1px;
+}
+.barra-url a:hover {
+color: #00BCD2;
+}
+.barra-url li.last {
+margin-right: 0px;
+padding-right: 0px;
+border: 0px;
+}
+
+.filmes {
+width: 970px;
+background: rgba(0, 0, 0, 0.4);
+padding: 6px;
+margin: 0px auto 10px;
+overflow: hidden;
+float: left;
+}
+.filmes .filmes-inset {
+width: 952px;
+background: rgba(255, 255, 255, 0.1);
+border-color: rgba(255, 255, 255, 0.1) !important;
+border: 2px solid;
+display: table;
+clear: both;
+padding: 7px;
+}
+.filmes capa {
+background: rgba(255, 255, 255, .1);
+margin: 4px;
+float: left;
+}
+.filmes capa a {
+width: 122px;
+height: 175px;
+overflow: hidden;
+display: block;
+padding: 3px;
+}
+.filmes capa a img {
+width: 122px;
+height: 175px;
+float: left;
+}
+
+.footer {
+width: 100%;
+background-color: rgba(0, 0, 0, 0.4);
+float: left;
+}
+.footer .container {
+padding: 18px 0px;
+overflow: hidden;
+}
+.gridtp {
+width: 105px;
+background: url(https://holasoycael.github.io/amigosdavip.com/images/logo-bootom-pqe.png);
+margin: 18px auto 0px;
+overflow: hidden;
+height: 5px;
+}
+.gridbt {
+width: 466px;
+margin: 0px auto;
+display: table;
+}
+.url li {
+border-color: #CCC;
+border-width: 0px 1px 0px 0px;
+border-style: dashed;
+padding: 0px 10px 0px 0px;
+margin-right: 10px;
+float: left;
+}
+.url li.last {
+margin-right: 0px;
+padding-right: 0px;
+border-right: none;
+}
+.url li a {
+font-size: 12px;
+text-transform: lowercase;
+color: #DEDEDE;
+text-shadow: 0 1px 10px #FFF;
+text-decoration: none;
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+display: inline-block;
+font-family: 'OpenSansLight', arial, sans-serif;
+letter-spacing: -1px;
+padding: 0px 0px 0px;
+line-height: 11px;
+float: left;
+}
+.url li a:hover {
+color: #00BCD2;
+}
+.copyright {
+width: 466px;
+font-family: 'OpenSansLight', arial, sans-serif;
+text-shadow: 0 1px 0 #505050;
+line-height: normal;
+font-weight: normal;
+text-align: center;
+color: #DEDEDE;
+font-size: 10px;
+margin-top: 8px;
+float: left;
+}
+.copyright a {
+text-decoration: none;
+color: #DEDEDE;
+text-shadow: 0 1px 10px #FFF;
+}
+.copyright a:hover {
+color: #00BCD2;
+}
+.creator {
+clear: both;
+width: 500px;
+margin: 0px auto 10px;
+padding: 0px 0px 8px 0px;
+border-bottom: 1px solid #CCC;
+position: relative;
+font-family: 'OpenSansLight', arial, sans-serif;
+text-shadow: 0 1px 0 #505050;
+font-weight: normal;
+text-align: center;
+color: #DEDEDE;
+font-size: 10px;
+}
+.creator a {
+text-transform: lowercase;
+color: #DEDEDE;
+text-shadow: 0 1px 10px #FFF;
+text-decoration: none;
+font-family: 'OpenSansLight', arial, sans-serif;
+}
+.creator a:hover {
+color: #00BCD2;
+}
+
+#gallery {
+border: 1px solid #303030 !important;
+background: #404040 !important;
+padding: 5px!important;
+overflow: hidden;
+float: left;
+display: block;
+}
+#gallery #title {
+margin: 2px 0px;
+text-shadow: 0px 1px 10px #FFF;
+font-family: 'rancho', cursive;
+font-size: 17px;
+font-weight: 500;
+color: #FFF;
+text-align: center;
+}
+#gallery ul {
+width: 318px;
+}
+#gallery ul, #gallery a {
+overflow: hidden;
+float: left;
+display: block;
+}
+#gallery li {
+margin: 8px;
+overflow: hidden;
+float: left;
+display: block;
+}
+#gallery strong {
+width: 40px;
+background: rgb(101, 169, 214);
+border: 1px solid rgb(60, 105, 134);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+color: white;
+line-height: 28px;
+-webkit-box-shadow: inset 0 1px 0 0 rgba(127, 204, 255, 1);
+box-shadow: inset 0 1px 0 0 rgba(127, 204, 255, 1);
+padding: 0px 6px;
+margin: 18px;
+font-size: 12px;
+font-family: 'Open Sans', arial, sans-serif;
+font-weight: 400;
+text-decoration: none;
+text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+text-align: center;
+white-space: nowrap;
+float: left;
+}
+#gallery a div {
+-webkit-box-shadow: inset 0px 0px 11px 1px rgba(0, 0, 0, 0.8);
+-moz-box-shadow: inset 0px 0px 11px 1px rgba(0, 0, 0, 0.8);
+box-shadow: inset 0px 0px 11px 1px rgba(0, 0, 0, 0.8);
+width: 90px;
+height: 66px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+}
+#gallery #blue {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/body.png) repeat;
+background-color: #788797;
+}
+#gallery #gold {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygold.png) repeat;
+background-color: #8D8459;
+}
+#gallery #green {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygreen.png) repeat;
+background-color: #85977A;
+}
+#gallery #grey {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodygrey.png) repeat;
+background-color: #979797;
+}
+#gallery #pink {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodypink.png) repeat;
+background-color: #97798A;
+}
+#gallery #orange {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodyrange.png) repeat;
+background-color: #978679;
+}
+#gallery #red {
+background: url(https://holasoycael.github.io/amigosdavip.com/images/bodyred.png) repeat;
+background-color: #9C7272;
+}
+
+.window {  display: none; position: fixed; left: 0; top: 0; background: rgba(255, 255, 255, .3); z-index: 9900; padding: 9px; border-radius: 5px; }
+#blackout { padding: 5px!important; overflow: hidden; float: left; display: block; }
+.night { border: 1px solid #A2A2A2 !important; background: #FFFFFF !important; }
+#mascara { display:none; position:absolute; left:0; top:0; z-index: 9000; background-color:#000; }
+#overlay { position: fixed; top: 0; left: 0; bottom: 0; right: 0; height: 100%; margin: 0; padding: 0; background: black; opacity: 0.80; filter: alpha(opacity=90); -moz-opacity: 0.80; z-index: 99; display: none; }
